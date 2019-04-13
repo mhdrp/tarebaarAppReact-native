@@ -55,7 +55,7 @@ export default class SingIn extends Component {
                             onPress={() =>{
                                 let x = this.state.txtPhoneNumberValue;
                                 console.log(x);
-                                // this.props.navigation.navigate('Verify');
+                                this.props.navigation.navigate('Verify');
                             }}>
                             <Text style={styles.txtBtn}>{strings.msg.login.login}</Text>
                         </Button>
