@@ -3,7 +3,7 @@ import {Content, Container, Button, H1, Text, Item, Label, Input, Form, Card, Ca
 import styles from '../styles'
 import strings from '../strings'
 import {I18nManager, TextInput, Alert, View} from 'react-native';
-
+import CustomIcon from '../icons/CustomIcon'
 I18nManager.forceRTL(true);
 
 export default class SingIn extends Component {
@@ -60,6 +60,7 @@ export default class SingIn extends Component {
                             <Text style={styles.txtBtn}>{strings.msg.login.login}</Text>
                         </Button>
                     </Card>
+                    <CustomIcon name='award' /> //To use the icon
                 </Content>
             </Container>
         );
