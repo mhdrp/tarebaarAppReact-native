@@ -44,7 +44,7 @@ export default {
         smallBtn: 16,
     },
     font: {
-        medium: "IRANSansWeb Medium",
-        light: "IRANSansWeb Light",
+        medium: "IRANSansWeb-Medium",
+        light: "IRANSansWeb-Light",
     },
 }
