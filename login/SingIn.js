@@ -7,6 +7,14 @@ import {I18nManager, TextInput, Alert, View} from 'react-native';
 I18nManager.forceRTL(true);
 
 export default class SingIn extends Component {
+    constructor() {
+        super();
+        this.state = {
+            txtPhoneNumberValue: "",
+            txtErrorPhoneNumber: "",
+
+        };
+    }
     render() {
         return (
             <Container style={[styles.body, styles.textRight]}>
@@ -19,6 +27,18 @@ export default class SingIn extends Component {
                                 <Form>
                                     <Item style={[styles.itemInput]}>
                                         <Input
+                                            value={this.state.txtPhoneNumberValue}
+                                            keyboardType='numeric'
+                                            type="number"
+                                            maxLength={11}
+                                            style={[styles.txtInputNumber]}
+                                            placeholderTextColor={strings.color.txtPlaceInput}
+                                            placeholder={strings.msg.login.phoneNumber}
+                                            onChangeText={(phoneNumber) => {
+                                                this.setState({
+                                                    txtPhoneNumberValue: phoneNumber,
+                                                })
+                                            }}
                                         />
 
                                     </Item>
@@ -33,6 +53,9 @@ export default class SingIn extends Component {
                             block
                             style={[styles.btnPrimary, styles.btnColorPrimary]}
                             onPress={() =>{
+                                let x = this.state.txtPhoneNumberValue;
+                                console.log(x);
+                                // this.props.navigation.navigate('Verify');
                             }}>
                             <Text style={styles.txtBtn}>{strings.msg.login.login}</Text>
                         </Button>
@@ -41,4 +64,4 @@ export default class SingIn extends Component {
             </Container>
         );
     }
-} 
+}
