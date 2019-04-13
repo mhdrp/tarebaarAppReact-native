@@ -1,13 +1,18 @@
 export default {
     color: {
         bgColor: "#f9f9fb",
+        bgSecondary: "#e1e3e9",
         txtPlaceInput: "#adb3bf",
         txtInput:"#434b55",
         txtBtn: "#ffffff",
+        txtDisable:"#b4b4b4",
+        txtSecondary:"#434b55",
+
 
         title: "#404852",
         text: "#afb5c0",
 
+        primary: "#535bfe",
         primaryBtn: "#535bfe",
     },
 
@@ -17,6 +22,11 @@ export default {
             login: "ورود",
             phoneNumber: "شماره موبایل",
         },
+        /* verify */
+        verifyNumMobile: "تایید شماره موبایل",
+        txtSubmittedCode: "لطفا کدی که به شماره شما ارسال میشود را وارد کنید",
+        resendCode: "ارسال مجدد کد ",
+        verification: "تایید",
 
     },
 

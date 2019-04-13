@@ -27,6 +27,13 @@ const styles = StyleSheet.create({
         fontSize: strings.size.normalTitle,
         lineHeight: 45,
     },
+    subTitle: {
+        textAlign: 'center',
+        color: strings.color.text,
+        fontFamily: strings.font.light,
+        fontSize: strings.size.normalText,
+        lineHeight: 26
+    },
     cardBorderButton: {
         borderRadius: strings.size.borderRadius,
     },
@@ -67,6 +74,34 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         marginTop: 20,
         borderRadius: 10,
+    },
+    verifyResendDisable: {
+        textAlign: 'center',
+        color: strings.color.txtDisable,
+        fontFamily: strings.font.light,
+        fontSize: strings.size.smallText,
+    },
+    verifyResendEnable: {
+        textAlign: 'center',
+        color: strings.color.primary,
+        fontFamily: strings.font.light,
+        fontSize: strings.size.smallText,
+
+    },
+    bgInputVerifyCode: {
+        textAlign: 'center',
+        backgroundColor: strings.color.bgSecondary,
+        color: strings.color.txtSecondary,
+        borderRadius: strings.size.normalBorderRadius,
+        paddingLeft: 10,
+        paddingRight: 10,
+        paddingTop: 10,
+        paddingBottom: 10,
+        width: "20%",
+        height: 60,
+        margin: 5,
+        alignItems: "center",
+
     },
 
 
