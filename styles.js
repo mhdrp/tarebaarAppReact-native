@@ -105,6 +105,42 @@ const styles = StyleSheet.create({
     },
 
 
+    /* footer tab navigation style*/
+    footerNavigation: {
+        borderTopWidth: 0,
+        borderColor: strings.color.bgColor,
+        backgroundColor: strings.color.bgColor,
+        shadowOffset: {height: 0, width: 0},
+        shadowOpacity: 0,
+        elevation: 0,
+    },
+    containerFooter: {
+        width: "80%",
+        marginLeft: "10%",
+        marginRight: "10%",
+        backgroundColor: strings.color.bgColor,
+    },
+
+    iconFooterTab: {
+        color: strings.color.iconFooterColor
+    },
+    iconActiveFooterTab: {
+        color: strings.color.iconActiveFooterColor
+    },
+    buttonFooterTab: {
+        color: strings.color.iconFooterColor
+    },
+    footerBg: {
+        backgroundColor: strings.color.bgColor,
+        borderTopWidth: 1,
+        borderTopColor: strings.color.borderColor,
+    },
+    buttonActiveFooterTab: {
+        borderTopWidth: 1,
+        backgroundColor: strings.color.bgColor,
+        borderTopColor: strings.color.borderColor,
+    },
+
     /*just margins style*/
     mgTop10: {
         marginTop: 10,

@@ -14,6 +14,11 @@ export default {
 
         primary: "#535bfe",
         primaryBtn: "#535bfe",
+
+        iconHeaderColor:"#5d656d",
+        iconFooterColor:"#5d656d",
+        iconBoxSearch:"#adb3bf",
+        iconActiveFooterColor:"#535bfe",
     },
 
     msg: {
