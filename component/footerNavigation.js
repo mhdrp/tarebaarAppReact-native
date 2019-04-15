@@ -42,7 +42,7 @@ class FooterNavigation extends Component {
                         />
                     </Button>
                     <Button onPress={()=>{
-                        this.props.navigation.navigate('SignIn');
+                        this.props.navigation.navigate('Orders');
                     }}>
                         <CustomIcon
                             size={22}
