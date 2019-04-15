@@ -52,7 +52,7 @@ class FooterNavigation extends Component {
 
                     </Button>
                     <Button badge  onPress={()=>{
-                        this.props.navigation.navigate('Verify');
+                        this.props.navigation.navigate('Cart');
                     }}>
                         <Badge><Text>51</Text></Badge>
                         <Icon style={styles.iconFooterTab} name="cart"/>
