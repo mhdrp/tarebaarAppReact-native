@@ -4,7 +4,8 @@ import {I18nManager,  View,Text} from 'react-native';
 import FooterTab from '../component/FooterTab'
 I18nManager.forceRTL(true);
 
-export default class Index extends Component {
+import FooterNavigation from '../component/footerNavigation'
+export default class Main extends Component {
     constructor() {
         super();
     }
@@ -15,7 +16,7 @@ export default class Index extends Component {
                 <Text>
                     main-page
                 </Text>
-                <FooterTab/>
+                <FooterNavigation/>
             </View>
         );
     }
