@@ -12,7 +12,7 @@ import {
 } from 'native-base'
 import styles from '../styles'
 import strings from '../strings'
-import {I18nManager, Alert, View,} from 'react-native';
+import {I18nManager, Alert, View, ScrollView,} from 'react-native';
 import CompleteComponent from '../counter/CompleteComponent'
 
 import FooterNavigation from "../component/footerNavigation";
@@ -109,6 +109,47 @@ export default class Cart extends Component {
                         </CardItem>
                     </Card>
                 </Content>
+
+
+                <View style={{padding:15,flex:1}}>
+                    {/* title box*/}
+                    <View style={{flex:1,  justifyContent: 'space-between', flexDirection: 'row',}}>
+                        <H2 style={styles.titleNormal}>
+                            میوه فروشی
+                        </H2>
+                        <H2 style={styles.titleNormal}>
+                            میوه فروشی
+                        </H2>
+                    </View>
+                    <View style={{flex:1,  justifyContent: 'space-between', flexDirection: 'row',}}>
+                        <H2 style={styles.titleNormal}>
+                            میوه فروشی
+                        </H2>
+                        <H2 style={styles.titleNormal}>
+                            میوه فروشی
+                        </H2>
+                    </View>
+                    <View style={{flex:1,  justifyContent: 'space-between', flexDirection: 'row',}}>
+                        <H2 style={styles.titleNormal}>
+                            میوه فروشی
+                        </H2>
+                        <H2 style={styles.titleNormal}>
+                            میوه فروشی
+                        </H2>
+                    </View>
+                    {/* card button */}
+                    <Card style={[styles.cardBorderButton]}>
+                        <Button
+                            block
+                            style={[styles.btnPrimary, styles.btnColorPrimary]}
+                            onPress={() =>{
+                                this.props.navigation.navigate('Verify');
+                            }}>
+                            <Text style={styles.txtBtn}>{strings.msg.continueShopping}</Text>
+                        </Button>
+                    </Card>
+                </View>
+
                 <FooterNavigation/>
             </Container>
         );

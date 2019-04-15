@@ -71,7 +71,7 @@ export default {
 
     /* messages*/
         messages:"پیام ها",
-
+        continueShopping:"ادامه خرید",
     },
 
     size: {
