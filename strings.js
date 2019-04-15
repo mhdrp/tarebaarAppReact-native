@@ -3,6 +3,9 @@ export default {
         bgColor: "#f9f9fb",
         bgSecondary: "#e1e3e9",
         txtPlaceInput: "#adb3bf",
+        statusBar: "#d4d6dc",
+        white:"#ffffff",
+
         txtInput:"#434b55",
         txtBtn: "#ffffff",
         txtDisable:"#b4b4b4",
@@ -14,6 +17,12 @@ export default {
 
         primary: "#535bfe",
         primaryBtn: "#535bfe",
+
+        textPrimary: "#5961fe",
+
+        borderColor:"#dbdbe7",
+        borderCardColor:"#e4e4f0",
+
 
         iconHeaderColor:"#5d656d",
         iconFooterColor:"#5d656d",

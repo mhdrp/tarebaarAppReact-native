@@ -4,8 +4,16 @@ import strings from './strings'
 
 const styles = StyleSheet.create({
     /* Essential style */
+    rtl: {
+        flexDirection: 'row-reverse'
+    },
     body: {
         backgroundColor: strings.color.bgColor,
+    },
+    headerTop: {
+        backgroundColor: strings.color.bgColor,
+        elevation: 0,
+        /* height:40,*/
     },
     container: {
         width: "94%",
@@ -103,6 +111,90 @@ const styles = StyleSheet.create({
         alignItems: "center",
 
     },
+    /*ezafe ha baraye test*/
+    test: {
+        backgroundColor: '#cf001a',
+        flex: 1,
+        width: 300,
+        justifyContent: "flex-start"
+    },
+    shadows: {
+        shadowColor: '#cf001a',
+        shadowOffset: {width: 0, height: 0},
+        shadowOpacity: 0.2,
+        shadowRadius: 10,
+        elevation: 7,
+    },
+
+    center: {
+        textAlign: 'center',
+        justifyContent: "flex-start", alignItems: "center",
+    },
+
+    searchBox: {
+        flex: 1,
+        flexDirection: 'row',
+        backgroundColor: strings.color.white,
+        borderRadius: strings.size.borderRadius,
+        borderWidth: 0,
+        borderColor: '#d4d6dc',
+        borderBottomWidth: 0,
+        shadowColor: '#000',
+        shadowOffset: {width: 10, height: 12},
+        shadowOpacity: 1.8,
+        shadowRadius: 2,
+        elevation: 2,
+        marginBottom: 40,
+
+    },
+    itemInputSearch: {
+        flex: 5
+    },
+    txtInputSearch: {
+        color: strings.color.txtInput,
+        fontFamily: strings.font.light,
+        fontSize: strings.size.normalText,
+        height: 40,
+        textAlign: "right",
+        paddingBottom: 7,
+    },
+    iconSearchBox: {
+        color: strings.color.iconBoxSearch,
+        fontSize: strings.size.smallIcon
+    },
+
+    /*header bar*/
+    titleHeader: {
+        alignItems: "center",
+        backgroundColor: strings.color.white,
+        justifyContent: "center",
+        flexDirection: 'row',
+        width: "150%",
+        borderRadius: 20,
+        paddingRight: 20,
+        paddingLeft: 20,
+        paddingTop: 5,
+        paddingBottom: 5,
+
+    },
+    txtTitleHeader: {
+        color: strings.color.textPrimary,
+        fontFamily: strings.font.light,
+        fontSize: strings.size.smallText,
+        textAlign: 'center',
+    },
+    iconTitleHeader: {
+        justifyContent: "center",
+        color: strings.color.textPrimary,
+        fontFamily: strings.font.light,
+        fontSize: strings.size.normalText,
+        marginRight: 10,
+
+    },
+
+    iconHeaderColor: {
+        color: strings.color.iconHeaderColor
+    },
 
 
     /* footer tab navigation style*/
@@ -174,5 +266,58 @@ const styles = StyleSheet.create({
     mgAll10: {
         margin: 10
     },
+
+
+
+    titleBox: {
+        width: "88%",
+        marginLeft: "6%",
+        marginRight: "6%",
+        marginTop: 20,
+        marginBottom: 20,
+        flex: 1,
+        justifyContent: 'space-between',
+        flexDirection: 'row',
+    },
+    titleBoxOne: {
+        width: "88%",
+        marginLeft: "6%",
+        marginRight: "6%",
+        marginTop: 7,
+        marginBottom: 7,
+        justifyContent: 'space-between',
+        flexDirection: 'row',
+    },
+    txtTitleOne: {
+        textAlign: 'right',
+        color: strings.color.title,
+        fontFamily: strings.font.medium,
+        fontSize: strings.size.smallTitle,
+        lineHeight: 36,
+    },
+    titleNormal: {
+        textAlign: 'right',
+        color: strings.color.title,
+        fontFamily: strings.font.medium,
+        fontSize: strings.size.smallerTitle,
+    },
+    txtMore: {
+        textAlign: 'left',
+        color: strings.color.text,
+        fontFamily: strings.font.medium,
+        fontSize: strings.size.smallerText,
+
+    },
+    txtDetails: {
+        textAlign: 'left',
+        color: strings.color.primary,
+        fontFamily: strings.font.medium,
+        fontSize: strings.size.smallerText,
+        alignSelf: 'flex-end',
+        alignItems: 'flex-end',
+        padding:0
+
+    },
+
 });
 export default styles;
