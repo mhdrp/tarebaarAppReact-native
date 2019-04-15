@@ -66,7 +66,10 @@ export default {
         largeBtn: 22,
         normalBtn: 18,
         smallBtn: 16,
+
+        smallIcon:16,
     },
+
     font: {
         medium: "IRANSansWeb-Medium",
         light: "IRANSansWeb-Light",

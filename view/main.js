@@ -20,7 +20,7 @@ import {
     H2,
     Input
 } from 'native-base'
-import {I18nManager, Image, Alert, View, ScrollView} from 'react-native';
+import {I18nManager, Image, Alert, View, ScrollView,TouchableHighlight,Dimensions} from 'react-native';
 import styles from '../styles'
 import strings from '../strings'
 
@@ -33,6 +33,7 @@ export default class Main extends Component {
     }
 
     render() {
+        const win = Dimensions.get('window');
         return (
             <Container style={styles.body}>
 
@@ -80,7 +81,7 @@ export default class Main extends Component {
                             </Button>
                         </View>
                     </View>
-
+                    {/* txt */}
                     <View>
                         {/* title box*/}
                         <View style={styles.titleBox}>
@@ -109,6 +110,31 @@ export default class Main extends Component {
                         </View>
 
                     </View>
+
+
+
+                    <Image
+                        width={Dimensions.get('window').width}
+                        source={require('../assets/banner.jpg')} />
+                    <Card style={styles.cardBorderRadius}>
+                        <CardItem style={[styles.cardBorderRadius,styles.noPadding]}>
+                            <Body style={{padding:0}}>
+                            <View style={{flex: 1, flexDirection: 'row',padding:0}}>
+
+                                <TouchableHighlight
+                                    onPress={() => (Alert.alert("banner test2"))}
+                                >
+<Text>
+    test
+</Text>
+                                </TouchableHighlight>
+                            </View>
+
+                            </Body>
+
+                        </CardItem>
+
+                    </Card>
 
 
                 </Content>
