@@ -63,10 +63,14 @@ export default {
         orders:"سفارشات",
         toman:" تومان",
         details:" جزئیات",
+
+        /* wallet */
         increaseCredit:"افزایش اعتبار",
         yourCurrentCredentials:"اعتبار فعلی شما",
         txtSelectAmountPrice:"مبلغ مورد نظر برای افزایش اعتبار را انتخاب/وارد کنید",
 
+    /* messages*/
+        messages:"پیام ها",
 
     },
 

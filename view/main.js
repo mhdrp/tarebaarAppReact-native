@@ -57,7 +57,7 @@ export default class Main extends Component {
                             </Title>*/}
                     </Body>
                     <Right>
-                        <Button transparent>
+                        <Button transparent    onPress={() => this.props.navigation.navigate('Messages')}>
                             <Icon style={styles.iconHeaderColor} name='mail'/>
                         </Button>
                     </Right>

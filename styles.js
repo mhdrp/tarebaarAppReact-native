@@ -341,6 +341,13 @@ const styles = StyleSheet.create({
         fontSize: strings.size.normalText,
         lineHeight: 36,
     },
+    txtMessages: {
+        textAlign: 'left',
+        color: strings.color.text,
+        fontFamily: strings.font.light,
+        fontSize: strings.size.normalText,
+        lineHeight:30,
+    },
     txtMore: {
         textAlign: 'left',
         color: strings.color.text,

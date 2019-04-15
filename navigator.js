@@ -5,6 +5,7 @@ import Main from './view/main';
 import Cart from './view/cart';
 import Orders from './orders/orders';
 import Wallet from './view/wallet';
+import Messages from './view/messages';
 
 const RootStack = createStackNavigator(
     {
@@ -14,6 +15,7 @@ const RootStack = createStackNavigator(
         Cart: Cart,
         Orders: Orders,
         Wallet: Wallet,
+        Messages: Messages,
     },
     {
         initialRouteName: 'Main',
