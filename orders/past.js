@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Container, Header, Content, Card, CardItem, Body, Text, Thumbnail, Button} from 'native-base';
-import {Alert, I18nManager, View, TouchableNativeFeedback} from 'react-native';
+import {Alert, I18nManager, View, TouchableOpacity} from 'react-native';
 import styles from '../styles'
 import strings from '../strings'
 import { Rating, AirbnbRating } from 'react-native-ratings';
@@ -91,7 +91,7 @@ export default class Past extends Component {
                                 <View style={{width: "27%",  alignItems: "flex-end",}}>
 
                                     {/*button Details */}
-                                    <TouchableNativeFeedback
+                                    <TouchableOpacity
                                         onPress={() => (Alert.alert("test"))}
                                     >
                                         <View>
@@ -99,7 +99,7 @@ export default class Past extends Component {
                                                 {strings.msg.details}
                                             </Text>
                                         </View>
-                                    </TouchableNativeFeedback>
+                                    </TouchableOpacity>
 
                                 </View>
                             </View>
