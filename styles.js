@@ -56,6 +56,14 @@ const styles = StyleSheet.create({
         fontSize: strings.size.normalBtn,
         lineHeight: 26
     },
+    txtSmallBtn: {
+        textAlign: 'center',
+        color: strings.color.txtBtn,
+        fontFamily: strings.font.light,
+        fontSize: strings.size.smallText,
+    },
+
+
     btnPrimary: {
         borderRadius: strings.size.borderRadius,
     },
@@ -70,6 +78,14 @@ const styles = StyleSheet.create({
         fontSize: strings.size.normalText,
         height: 40,
         paddingBottom: 2,
+    },
+    txtInput: {
+        color: strings.color.txtInput,
+        fontFamily: strings.font.light,
+        fontSize: strings.size.normalText,
+        height: 40,
+        paddingBottom: 2,
+        textAlign: "right"
     },
     itemInput: {
         flexDirection: 'row-reverse',
@@ -319,5 +335,40 @@ const styles = StyleSheet.create({
 
     },
 
+    /* tab style*/
+    tabTabBarUnderlineStyle: {
+        backgroundColor: strings.color.textPrimary,
+    },
+    tabActiveTextStyle: {
+        color: strings.color.textPrimary,
+    },
+    tabTextStyle: {
+        color: strings.color.text
+    },
+    tabTabStyle: {
+        backgroundColor: strings.color.bgColor
+    },
+    tabActiveTabStyle: {
+        backgroundColor: strings.color.bgColor,
+
+
+    },
+    /*just color style*/
+    colorTitle: {
+        color: strings.color.title
+    },
+    colorPrimary: {
+        color: strings.color.primary,
+    },
+
+    textAlignLeft: {
+        textAlign: "left"
+    },
+    textAlignRight: {
+
+        textAlign: "right",
+
+    }
+    
 });
 export default styles;
