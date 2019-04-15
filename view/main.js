@@ -139,6 +139,16 @@ export default class Main extends Component {
                                     </Text>
                                 </TouchableHighlight>
                             </View>
+                            <View style={{flex: 1, flexDirection: 'row', padding: 0}}>
+
+                                <TouchableHighlight
+                                    onPress={() => this.props.navigation.navigate('List')}
+                                >
+                                    <Text>
+                                       list
+                                    </Text>
+                                </TouchableHighlight>
+                            </View>
 
                             </Body>
 
