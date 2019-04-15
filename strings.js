@@ -6,6 +6,10 @@ export default {
         statusBar: "#d4d6dc",
         white:"#ffffff",
 
+        bgColorSlide1:"#DBDBF0",
+        bgColorSlide2:"#718AF4",
+        bgColorSlide3:"#5252a3",
+
         txtInput:"#434b55",
         txtBtn: "#ffffff",
         txtDisable:"#b4b4b4",
@@ -23,6 +27,9 @@ export default {
         borderColor:"#dbdbe7",
         borderCardColor:"#e4e4f0",
 
+        bgRating:"#ebecef",
+        rating:"#ffd553",
+        ratingRegistered:"#535bfe",
 
         iconHeaderColor:"#5d656d",
         iconFooterColor:"#5d656d",
@@ -36,11 +43,20 @@ export default {
             login: "ورود",
             phoneNumber: "شماره موبایل",
         },
+        introSlider:{
+            next:"بعدی",
+            done:"شروع برنامه",
+        },
         /* verify */
         verifyNumMobile: "تایید شماره موبایل",
         txtSubmittedCode: "لطفا کدی که به شماره شما ارسال میشود را وارد کنید",
         resendCode: "ارسال مجدد کد ",
         verification: "تایید",
+        search:"جستجو",
+        orders:"سفارشات",
+        toman:" تومان",
+        details:" جزئیات",
+
 
     },
 
