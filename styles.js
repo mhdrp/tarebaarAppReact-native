@@ -244,7 +244,7 @@ const styles = StyleSheet.create({
         borderTopColor: strings.color.borderColor,
     },
     buttonActiveFooterTab: {
-        borderTopWidth: 1,
+        borderTopWidth: 0,
         backgroundColor: strings.color.bgColor,
         borderTopColor: strings.color.borderColor,
     },

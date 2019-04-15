@@ -41,7 +41,8 @@ class FooterNavigation extends Component {
                             style={styles.iconFooterTab}
                         />
                     </Button>
-                    <Button onPress={()=>{
+                    <Button  style={styles.buttonActiveFooterTab}
+                        onPress={()=>{
                         this.props.navigation.navigate('Orders');
                     }}>
                         <CustomIcon
@@ -51,7 +52,7 @@ class FooterNavigation extends Component {
                         />
 
                     </Button>
-                    <Button badge  onPress={()=>{
+                    <Button badge   style={styles.buttonActiveFooterTab} onPress={()=>{
                         this.props.navigation.navigate('Cart');
                     }}>
                         <Badge><Text>51</Text></Badge>
@@ -63,7 +64,7 @@ class FooterNavigation extends Component {
                             style={styles.iconFooterTab}
                         />*/}
                     </Button>
-                    <Button>
+                    <Button  style={styles.buttonActiveFooterTab}>
                         <CustomIcon
                             size={22}
                             name="user"
