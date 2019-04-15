@@ -6,25 +6,20 @@ import {
     Button,
     Header,
     Text,
-    Footer,
-    FooterTab,
-    Badge,
     Right,
     Body,
     Left,
     Icon,
-    Title,
-    Item,
     Card,
     CardItem,
     H2,
     Input, Thumbnail
 } from 'native-base'
-import {I18nManager, Image, Alert, FlatList, View, ScrollView, TouchableHighlight, Dimensions} from 'react-native';
+import {I18nManager, Alert, FlatList, View} from 'react-native';
 import styles from '../styles'
 import strings from '../strings'
 import {Rating, AirbnbRating} from 'react-native-ratings';
-import CompleteComponent from "../counter/CompleteComponent";
+
 
 I18nManager.forceRTL(true);
 
@@ -52,7 +47,7 @@ export default class List extends Component {
     }
 
     render() {
-        const width = Dimensions.get('window').width;
+
 
         const uri = "https://img1.cookinglight.timeinc.net/sites/default/files/styles/4_3_horizontal_-_900x675/public/image/2017/06/main/quinoa-bowls-avocado-egg-108p68.jpg?itok=MVkxuumL";
         return (
@@ -71,10 +66,7 @@ export default class List extends Component {
                         <Icon style={styles.iconTitleHeader} name='pin'/>
                         <Text style={styles.txtTitleHeader}>خیابان شریعتی </Text>
                     </View>
-                    {/*  <Title >
-                                <Icon style={styles.iconTitleHeader} name='pin'/>
-                                خیابان شریعتی
-                            </Title>*/}
+
                     </Body>
                     <Right>
                         <Button transparent onPress={() => this.props.navigation.navigate('Messages')}>
@@ -118,7 +110,6 @@ export default class List extends Component {
                                 renderItem={({item}) =>
                                     <Card style={{
                                         flex: 1,
-
                                         margin: 15,
                                         marginTop: 50,
                                         padding: 5, borderRadius: 5
@@ -131,8 +122,6 @@ export default class List extends Component {
                                                 top: -50,
                                                 width: "100%",
                                                 height: 180,
-                                                borderRadius: 7,
-                                                elevation: 1,
                                             }}>
                                                 <Thumbnail
                                                     style={{
@@ -183,13 +172,13 @@ export default class List extends Component {
                                                        {item.rateStore}
                                                    </Text>
                                                 </View>
-                                                <View style={{ height: 20,marginRight:10,marginLeft:10}}>
+                                                <View style={{ height: 20,marginRight:4,marginLeft:4}}>
                                                    <Text  style={{
                                                        color: strings.color.text,
                                                        fontFamily: strings.font.light,
                                                        fontSize: strings.size.smallerText,
                                                    }}>
-                                                      ( {item.countRate} )
+                                                      ({item.countRate})
                                                    </Text>
                                                 </View>
 
