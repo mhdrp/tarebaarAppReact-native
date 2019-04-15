@@ -16,7 +16,7 @@ const RootStack = createStackNavigator(
         Wallet: Wallet,
     },
     {
-        initialRouteName: 'SignIn',
+        initialRouteName: 'Main',
         headerMode: 'none',
     }
 );

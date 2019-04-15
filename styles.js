@@ -358,6 +358,13 @@ const styles = StyleSheet.create({
         padding:0
 
     },
+    txtSelectPriceWallet: {
+
+        fontFamily: strings.font.light,
+        fontSize: strings.size.smallText,
+
+
+    },
 
     /* tab style*/
     tabTabBarUnderlineStyle: {

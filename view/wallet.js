@@ -8,7 +8,8 @@ import {
     CardItem,
     Icon,
     Header,
-    Right, H2, Tabs, Tab, Body, Thumbnail
+    Right, H2, Body,
+     ListItem, Radio, Left,Thumbnail,List
 } from 'native-base'
 import styles from '../styles'
 import strings from '../strings'
@@ -17,8 +18,46 @@ import {I18nManager, Alert, View,} from 'react-native';
 I18nManager.forceRTL(true);
 
 export default class Wallet extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
+        this.state = {
+            radio1: false,
+            radio2: false,
+            radio3: false,
+            radio4: true
+        };
+    }
+    toggleRadio1() {
+        this.setState({
+            radio1: true,
+            radio2: false,
+            radio3: false,
+            radio4: false
+        });
+    }
+    toggleRadio2() {
+        this.setState({
+            radio1: false,
+            radio2: true,
+            radio3: false,
+            radio4: false
+        });
+    }
+    toggleRadio3() {
+        this.setState({
+            radio1: false,
+            radio2: false,
+            radio3: true,
+            radio4: false
+        });
+    }
+    toggleRadio4() {
+        this.setState({
+            radio1: false,
+            radio2: false,
+            radio3: false,
+            radio4: true
+        });
     }
 
     render() {
@@ -41,7 +80,6 @@ export default class Wallet extends Component {
 
                 <Content style={styles.container}>
 
-
                     <View style={styles.titleBoxCenter}>
                         <H2 style={styles.txtTitleOneCenter}>
                             {strings.msg.yourCurrentCredentials}
@@ -54,21 +92,97 @@ export default class Wallet extends Component {
                             {strings.msg.toman}
                         </H2>
                     </View>
+
                     <View style={styles.titleBoxCenter}>
                         <H2 style={styles.txtTitleOneCenter}>
                             {strings.msg.txtSelectAmountPrice}
                         </H2>
                     </View>
 
-                    <Card style={{flex: 1, borderRadius: 5}}>
+                    <Card style={styles.cardBorderRadius}>
                         <CardItem style={styles.cardBorderRadius}>
-                            <Body style={{paddingLeft: 45}}>
-                            <View>
+                              <View style={{flex: 1, flexDirection: 'column', padding: 0}}>
 
-                            </View>
-                            </Body>
+
+                                  <ListItem
+                                      style={{color:"#eee"}}
+                                      selected={this.state.radio1}
+                                      onPress={() => this.toggleRadio1()}
+                                  >
+                                      <View style={{flex: 1, flexDirection: 'row'}}>
+
+                                              <Radio style={{width: 40,alignItems:'center'}}
+                                                  selected={this.state.radio1}
+                                                  onPress={() => this.toggleRadio1()}
+                                              />
+                                          <Text style={styles.txtSelectPriceWallet}>{strings.msg.wallet.txtPrice10}</Text>
+                                      </View>
+                                  </ListItem>
+
+
+                                  <ListItem
+                                      selected={this.state.radio2}
+                                      onPress={() => this.toggleRadio2()}
+                                  >
+                                      <View style={{flex: 1, flexDirection: 'row'}}>
+
+                                          <Radio style={{width: 40,alignItems:'center'}}
+                                                 selected={this.state.radio2}
+                                                 onPress={() => this.toggleRadio2()}
+                                          />
+                                          <Text style={styles.txtSelectPriceWallet}>{strings.msg.wallet.txtPrice20}</Text>
+                                      </View>
+                                  </ListItem>
+
+
+                                  <ListItem
+                                      selected={this.state.radio3}
+                                      onPress={() => this.toggleRadio3()}
+                                  >
+                                      <View style={{flex: 1, flexDirection: 'row',color:"#eee"}}>
+
+                                          <Radio style={{width: 40,alignItems:'center'}}
+                                                 selected={this.state.radio3}
+                                                 selectedColor={"#5cb85c"}
+                                                 onPress={() => this.toggleRadio3()}
+                                          />
+                                          <Text style={styles.txtSelectPriceWallet}>{strings.msg.wallet.txtPrice50}</Text>
+                                      </View>
+                                  </ListItem>
+
+
+
+                                  <ListItem
+                                      selected={this.state.radio4}
+                                      onPress={() => this.toggleRadio4()}
+                                  >
+
+                                      <View style={{flex: 1, flexDirection: 'row'}}>
+
+                                          <Radio style={{width: 40,alignItems:'center'}}
+                                                 selected={this.state.radio4}
+                                                 onPress={() => this.toggleRadio4()}
+                                          />
+                                          <Text style={styles.txtSelectPriceWallet}>{strings.msg.wallet.txtPrice100}</Text>
+                                      </View>
+                                  </ListItem>
+
+                              </View>
                         </CardItem>
                     </Card>
+
+                    {/* card button */}
+                    <Card style={[styles.cardBorderButton, styles.mgUpDown20]}>
+                        <Button
+                            block
+                            style={[styles.btnPrimary, styles.btnColorPrimary]}
+                            onPress={() =>{
+                                this.props.navigation.navigate('Verify');
+                            }}>
+                            <Text style={styles.txtBtn}>{strings.msg.increaseCredit}</Text>
+                        </Button>
+                    </Card>
+
                 </Content>
 
             </Container>

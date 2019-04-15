@@ -48,6 +48,12 @@ export default {
             next:"بعدی",
             done:"شروع برنامه",
         },
+        wallet:{
+          txtPrice10:"۱۰,۰۰۰ تومان",
+          txtPrice20:"۲۰,۰۰۰ تومان",
+          txtPrice50:"۵۰,۰۰۰ تومان",
+          txtPrice100:"۱۰۰,۰۰۰ تومان",
+        },
         /* verify */
         verifyNumMobile: "تایید شماره موبایل",
         txtSubmittedCode: "لطفا کدی که به شماره شما ارسال میشود را وارد کنید",
