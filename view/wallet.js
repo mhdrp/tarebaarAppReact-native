@@ -143,7 +143,6 @@ export default class Wallet extends Component {
 
                                           <Radio style={{width: 40,alignItems:'center'}}
                                                  selected={this.state.radio3}
-                                                 selectedColor={"#5cb85c"}
                                                  onPress={() => this.toggleRadio3()}
                                           />
                                           <Text style={styles.txtSelectPriceWallet}>{strings.msg.wallet.txtPrice50}</Text>
