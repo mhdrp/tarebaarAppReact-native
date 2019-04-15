@@ -342,7 +342,7 @@ const styles = StyleSheet.create({
         lineHeight: 36,
     },
     txtMessages: {
-        textAlign: 'left',
+        textAlign: 'center',
         color: strings.color.text,
         fontFamily: strings.font.light,
         fontSize: strings.size.normalText,
