@@ -20,11 +20,12 @@ import {
     H2,
     Input
 } from 'native-base'
-import {I18nManager, Image, Alert, View, ScrollView,TouchableHighlight,Dimensions} from 'react-native';
+import {I18nManager, Image, Alert, View, ScrollView, TouchableHighlight, Dimensions} from 'react-native';
 import styles from '../styles'
 import strings from '../strings'
 
 import FooterNavigation from '../component/footerNavigation'
+
 I18nManager.forceRTL(true);
 
 export default class Main extends Component {
@@ -112,21 +113,30 @@ export default class Main extends Component {
                     </View>
 
 
-
                     <Image
                         width={Dimensions.get('window').width}
-                        source={require('../assets/banner.jpg')} />
+                        source={require('../assets/banner.jpg')}/>
                     <Card style={styles.cardBorderRadius}>
-                        <CardItem style={[styles.cardBorderRadius,styles.noPadding]}>
-                            <Body style={{padding:0}}>
-                            <View style={{flex: 1, flexDirection: 'row',padding:0}}>
+                        <CardItem style={[styles.cardBorderRadius, styles.noPadding]}>
+                            <Body style={{padding: 0}}>
+                            <View style={{flex: 1, flexDirection: 'row', padding: 0}}>
 
                                 <TouchableHighlight
                                     onPress={() => (Alert.alert("banner test2"))}
                                 >
-<Text>
-    test
-</Text>
+                                    <Text>
+                                        test
+                                    </Text>
+                                </TouchableHighlight>
+                            </View>
+                            <View style={{flex: 1, flexDirection: 'row', padding: 0}}>
+
+                                <TouchableHighlight
+                                    onPress={() => this.props.navigation.navigate('Wallet')}
+                                >
+                                    <Text>
+                                        {strings.msg.increaseCredit}
+                                    </Text>
                                 </TouchableHighlight>
                             </View>
 

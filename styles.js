@@ -304,6 +304,15 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         flexDirection: 'row',
     },
+    titleBoxCenter: {
+        width: "88%",
+        marginLeft: "6%",
+        marginRight: "6%",
+        marginTop: 7,
+        marginBottom: 7,
+        justifyContent: 'center',
+        flexDirection: 'row',
+    },
     txtTitleOne: {
         textAlign: 'right',
         color: strings.color.title,
@@ -311,11 +320,26 @@ const styles = StyleSheet.create({
         fontSize: strings.size.smallTitle,
         lineHeight: 36,
     },
+
     titleNormal: {
         textAlign: 'right',
         color: strings.color.title,
         fontFamily: strings.font.medium,
         fontSize: strings.size.smallerTitle,
+    },
+    txtTitleOneCenter: {
+        textAlign: 'center',
+        color: strings.color.title,
+        fontFamily: strings.font.medium,
+        fontSize: strings.size.normalText,
+        lineHeight: 36,
+    },
+    txtTomanCenter: {
+        textAlign: 'center',
+        color: strings.color.black,
+        fontFamily: strings.font.medium,
+        fontSize: strings.size.normalText,
+        lineHeight: 36,
     },
     txtMore: {
         textAlign: 'left',

@@ -4,6 +4,7 @@ import Verify from './login/Verify';
 import Main from './view/main';
 import Cart from './view/cart';
 import Orders from './orders/orders';
+import Wallet from './view/wallet';
 
 const RootStack = createStackNavigator(
     {
@@ -12,6 +13,7 @@ const RootStack = createStackNavigator(
         Main: Main,
         Cart: Cart,
         Orders: Orders,
+        Wallet: Wallet,
     },
     {
         initialRouteName: 'SignIn',

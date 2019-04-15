@@ -5,6 +5,7 @@ export default {
         txtPlaceInput: "#adb3bf",
         statusBar: "#d4d6dc",
         white:"#ffffff",
+        black:"#000000",
 
         bgColorSlide1:"#DBDBF0",
         bgColorSlide2:"#718AF4",
@@ -56,6 +57,9 @@ export default {
         orders:"سفارشات",
         toman:" تومان",
         details:" جزئیات",
+        increaseCredit:"افزایش اعتبار",
+        yourCurrentCredentials:"اعتبار فعلی شما",
+        txtSelectAmountPrice:"مبلغ مورد نظر برای افزایش اعتبار را انتخاب/وارد کنید",
 
 
     },
