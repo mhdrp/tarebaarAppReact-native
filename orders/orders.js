@@ -18,7 +18,7 @@ import Current from './current';
 import Past from './past';
 import strings from "../strings";
 import styles from "../styles";
-import FooterS from "../component/footer";
+import FooterNavigation from "../component/footerNavigation";
 
 import {Alert, I18nManager, View} from 'react-native';
 
@@ -55,7 +55,7 @@ export default class Orders extends Component {
                     </Tab>
 
                 </Tabs>
-                <FooterS/>
+                <FooterNavigation/>
             </Container>
         );
     }
