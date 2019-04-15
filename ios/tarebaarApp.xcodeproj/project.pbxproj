@@ -79,6 +79,16 @@
 		5960468532C24388A3C86F65 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA74294B3C3B471FA38ACA42 /* Octicons.ttf */; };
 		8C6DD57616374576A38AD5AA /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59BDEEF417BA4ABF9E0420C8 /* SimpleLineIcons.ttf */; };
 		25E6DDE5A244477884CE7351 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9B69DCF0CBF486D80A4A224 /* Zocial.ttf */; };
+		31E85396C6BC4B3B804DF219 /* banner.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF84220CF5234D3BA9120C24 /* banner.jpg */; };
+		241CC18D472B4C5FA16FAE61 /* cat-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5BD8868457B044F0BEAFC52D /* cat-1.jpg */; };
+		F6B230B0E341493CADE35B4F /* cat-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED93956C0AF14B6B8D2CCF96 /* cat-2.jpg */; };
+		4C575545B9E44F5B9358452C /* cat-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9ED6CDE16AE04BEF940F11DD /* cat-3.jpg */; };
+		6F4657E3A11E4E85BC4B9EC7 /* cat-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 35D318EE126E4AF188B75C2E /* cat-4.jpg */; };
+		E3CF484FD35B43DEB28C6A8E /* cat-5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DF011D5C89B440A8B1D884E7 /* cat-5.jpg */; };
+		598567C7562E4BD38016D327 /* cat-6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C77B96F12D7645BAB250416B /* cat-6.jpg */; };
+		31A97E1775874ADF9D51CB93 /* cat-7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 823B0D5808C94706B4EE8ECB /* cat-7.jpg */; };
+		70C88DF96EF04D1FA95BF3E1 /* cat-8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 80FFD1FF50974D1AAAABBC1A /* cat-8.jpg */; };
+		76BF5F80A55642F98C90F28B /* cat-9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DDDBD706EF924E568B14538C /* cat-9.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -428,6 +438,16 @@
 		BA74294B3C3B471FA38ACA42 /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		59BDEEF417BA4ABF9E0420C8 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		F9B69DCF0CBF486D80A4A224 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BF84220CF5234D3BA9120C24 /* banner.jpg */ = {isa = PBXFileReference; name = "banner.jpg"; path = "../assets/banner.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5BD8868457B044F0BEAFC52D /* cat-1.jpg */ = {isa = PBXFileReference; name = "cat-1.jpg"; path = "../assets/cat-1.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		ED93956C0AF14B6B8D2CCF96 /* cat-2.jpg */ = {isa = PBXFileReference; name = "cat-2.jpg"; path = "../assets/cat-2.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9ED6CDE16AE04BEF940F11DD /* cat-3.jpg */ = {isa = PBXFileReference; name = "cat-3.jpg"; path = "../assets/cat-3.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		35D318EE126E4AF188B75C2E /* cat-4.jpg */ = {isa = PBXFileReference; name = "cat-4.jpg"; path = "../assets/cat-4.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DF011D5C89B440A8B1D884E7 /* cat-5.jpg */ = {isa = PBXFileReference; name = "cat-5.jpg"; path = "../assets/cat-5.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C77B96F12D7645BAB250416B /* cat-6.jpg */ = {isa = PBXFileReference; name = "cat-6.jpg"; path = "../assets/cat-6.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		823B0D5808C94706B4EE8ECB /* cat-7.jpg */ = {isa = PBXFileReference; name = "cat-7.jpg"; path = "../assets/cat-7.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		80FFD1FF50974D1AAAABBC1A /* cat-8.jpg */ = {isa = PBXFileReference; name = "cat-8.jpg"; path = "../assets/cat-8.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DDDBD706EF924E568B14538C /* cat-9.jpg */ = {isa = PBXFileReference; name = "cat-9.jpg"; path = "../assets/cat-9.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -738,6 +758,16 @@
 				BA74294B3C3B471FA38ACA42 /* Octicons.ttf */,
 				59BDEEF417BA4ABF9E0420C8 /* SimpleLineIcons.ttf */,
 				F9B69DCF0CBF486D80A4A224 /* Zocial.ttf */,
+				BF84220CF5234D3BA9120C24 /* banner.jpg */,
+				5BD8868457B044F0BEAFC52D /* cat-1.jpg */,
+				ED93956C0AF14B6B8D2CCF96 /* cat-2.jpg */,
+				9ED6CDE16AE04BEF940F11DD /* cat-3.jpg */,
+				35D318EE126E4AF188B75C2E /* cat-4.jpg */,
+				DF011D5C89B440A8B1D884E7 /* cat-5.jpg */,
+				C77B96F12D7645BAB250416B /* cat-6.jpg */,
+				823B0D5808C94706B4EE8ECB /* cat-7.jpg */,
+				80FFD1FF50974D1AAAABBC1A /* cat-8.jpg */,
+				DDDBD706EF924E568B14538C /* cat-9.jpg */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1225,6 +1255,16 @@
 				5960468532C24388A3C86F65 /* Octicons.ttf in Resources */,
 				8C6DD57616374576A38AD5AA /* SimpleLineIcons.ttf in Resources */,
 				25E6DDE5A244477884CE7351 /* Zocial.ttf in Resources */,
+				31E85396C6BC4B3B804DF219 /* banner.jpg in Resources */,
+				241CC18D472B4C5FA16FAE61 /* cat-1.jpg in Resources */,
+				F6B230B0E341493CADE35B4F /* cat-2.jpg in Resources */,
+				4C575545B9E44F5B9358452C /* cat-3.jpg in Resources */,
+				6F4657E3A11E4E85BC4B9EC7 /* cat-4.jpg in Resources */,
+				E3CF484FD35B43DEB28C6A8E /* cat-5.jpg in Resources */,
+				598567C7562E4BD38016D327 /* cat-6.jpg in Resources */,
+				31A97E1775874ADF9D51CB93 /* cat-7.jpg in Resources */,
+				70C88DF96EF04D1FA95BF3E1 /* cat-8.jpg in Resources */,
+				76BF5F80A55642F98C90F28B /* cat-9.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
