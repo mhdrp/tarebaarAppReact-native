@@ -10,7 +10,7 @@ import {
 
 import styles from '../styles'
 
-import { withNavigation } from 'react-navigation';
+
 import {I18nManager,} from 'react-native';
 
 I18nManager.forceRTL(true);
