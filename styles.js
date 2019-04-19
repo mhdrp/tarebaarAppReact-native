@@ -295,6 +295,16 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         flexDirection: 'row',
     },
+    titleListAddress: {
+        width: "95%",
+        marginLeft: "6%",
+        marginRight: "6%",
+        marginTop: 20,
+        marginBottom: 20,
+        flex: 1,
+        justifyContent: 'space-between',
+        flexDirection: 'row',
+    },
     titleBoxOne: {
         width: "88%",
         marginLeft: "6%",
@@ -352,7 +362,14 @@ const styles = StyleSheet.create({
         textAlign: 'left',
         color: strings.color.text,
         fontFamily: strings.font.medium,
-        fontSize: strings.size.smallerText,
+        fontSize: strings.size.smallText,
+
+    },
+    txtMorePrimary: {
+        textAlign: 'left',
+        color: strings.color.primary,
+        fontFamily: strings.font.medium,
+        fontSize: strings.size.smallText,
 
     },
     txtDetails: {

@@ -7,6 +7,7 @@ import Orders from './orders/orders';
 import Wallet from './view/wallet';
 import Messages from './view/messages';
 import List from './view/list';
+import CheckOut from './view/check_out';
 
 const RootStack = createStackNavigator(
     {
@@ -18,9 +19,10 @@ const RootStack = createStackNavigator(
         Wallet: Wallet,
         Messages: Messages,
         List: List,
+        CheckOut: CheckOut,
     },
     {
-        initialRouteName: 'Main',
+        initialRouteName: 'CheckOut',
         headerMode: 'none',
     }
 );

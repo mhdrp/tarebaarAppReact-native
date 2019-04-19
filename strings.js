@@ -54,6 +54,12 @@ export default {
           txtPrice50:"۵۰,۰۰۰ تومان",
           txtPrice100:"۱۰۰,۰۰۰ تومان",
         },
+        cart:{
+            totalPrice:"قیمت کل",
+            discount:"تخفیف شما",
+            TotalPriceOfOrders:"مجموع قیمت سفارشات",
+
+        },
         /* verify */
         verifyNumMobile: "تایید شماره موبایل",
         txtSubmittedCode: "لطفا کدی که به شماره شما ارسال میشود را وارد کنید",

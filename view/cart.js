@@ -43,7 +43,10 @@ export default class Cart extends Component {
                     </H2>
                 </View>
 
-                <Content style={styles.container}>
+                <Content style={styles.container}
+                         showsHorizontalScrollIndicator={false}
+                         showsVerticalScrollIndicator={false}
+                >
                     <Card style={{flex: 1, marginLeft: "10%", height: 100, borderRadius: 5}}>
                         <CardItem style={styles.cardBorderRadius}>
                             <Body style={{paddingLeft:45}}>
@@ -143,7 +146,7 @@ export default class Cart extends Component {
                             block
                             style={[styles.btnPrimary, styles.btnColorPrimary]}
                             onPress={() =>{
-                                this.props.navigation.navigate('Verify');
+                                this.props.navigation.navigate('CheckOut');
                             }}>
                             <Text style={styles.txtBtn}>{strings.msg.continueShopping}</Text>
                         </Button>
