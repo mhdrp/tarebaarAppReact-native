@@ -299,6 +299,8 @@ export default class CheckOut extends Component {
 
                     {/* list address */}
                     <ScrollView
+                        showsHorizontalScrollIndicator={false}
+                        showsVerticalScrollIndicator={false}
                         horizontal={true}
                     >
 
