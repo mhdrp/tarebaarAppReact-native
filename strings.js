@@ -70,6 +70,8 @@ export default {
         toman:" تومان",
         details:" جزئیات",
 
+        addAddress:"اضافه کردن آدرس",
+        listAddress:"لیست آدرس ها",
         /* wallet */
         increaseCredit:"افزایش اعتبار",
         yourCurrentCredentials:"اعتبار فعلی شما",

@@ -262,6 +262,9 @@ const styles = StyleSheet.create({
     mgBottom20: {
         marginBottom: 20,
     },
+    mgBottom10: {
+        marginBottom: 10,
+    },
     mgRight20: {
         marginRight: 20,
     },
