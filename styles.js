@@ -9,6 +9,9 @@ const styles = StyleSheet.create({
     body: {
         backgroundColor: strings.color.bgColor,
     },
+    displayBlock:{
+        flex:1
+    },
     headerTop: {
         backgroundColor: strings.color.bgColor,
         elevation: 0,

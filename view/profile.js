@@ -145,10 +145,10 @@ export default class Profile extends Component {
 
                                     <CustomIcon style={styles.iconItem} size={20} name="map-pin"/>
                                     <TouchableOpacity
-                                        onPress={() => (this.props.navigation.navigate('Wallet'))}
+                                        onPress={() => (this.props.navigation.navigate('ListAddress'))}
                                     >
                                     <H3 style={styles.txtTitleOneCenter}>
-                                      {strings.msg.address}
+                                      {strings.msg.addresses}
                                     </H3>
                                     </TouchableOpacity>
                                 </View>

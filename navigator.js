@@ -11,6 +11,7 @@ import CheckOut from './view/check_out';
 import Profile from './view/profile';
 import EditProfile from './view/edit_profile';
 import ListAddress from './view/list_address';
+import AddAddress from './view/add_address';
 
 const RootStack = createStackNavigator(
     {
@@ -26,9 +27,10 @@ const RootStack = createStackNavigator(
         Profile: Profile,
         EditProfile: EditProfile,
         ListAddress: ListAddress,
+        AddAddress: AddAddress,
     },
     {
-        initialRouteName: 'ListAddress',
+        initialRouteName: 'Main',
         headerMode: 'none',
     }
 );
