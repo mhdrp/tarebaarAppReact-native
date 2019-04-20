@@ -15,6 +15,7 @@ import styles from '../styles'
 import strings from '../strings'
 import {I18nManager, Alert, View, TouchableHighlight, TouchableOpacity, ScrollView,} from 'react-native';
 import CustomIcon from "../icons/CustomIcon";
+import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 
 I18nManager.forceRTL(true);
 
@@ -114,7 +115,15 @@ export default class AddAddress extends Component {
                                 <Body style={{padding: 0}}>
 
                                 <View style={[styles.itemBox,styles.noBorder]}>
-
+                                    <MapView
+                                        provider={PROVIDER_GOOGLE}
+                                        initialRegion={{
+                                            latitude: 37.78825,
+                                            longitude: -122.4324,
+                                            latitudeDelta: 0.0922,
+                                            longitudeDelta: 0.0421,
+                                        }}
+                                    />
 
                                 </View>
 
