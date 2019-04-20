@@ -88,6 +88,15 @@ const styles = StyleSheet.create({
     btnColorPrimary: {
         backgroundColor: strings.color.primaryBtn,
     },
+    btnBorderBlack: {
+        backgroundColor: strings.color.bgColor,
+        borderColor: strings.color.BtnBorder,
+        borderWidth:1,
+
+    },
+    btnTextBorderBlack:{
+        color:strings.color.title
+    },
     btnColorBody: {
         backgroundColor: strings.color.bgColor,
     },
@@ -113,7 +122,12 @@ const styles = StyleSheet.create({
         marginRight: 15,
         marginBottom: 20,
         marginTop: 20,
-
+    },
+    itemInputForm: {
+        flexDirection: 'row-reverse',
+        marginRight: 15,
+        marginBottom: 5,
+        marginTop: 5,
     },
     cardStyle: {
         marginBottom: 20,
@@ -345,7 +359,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         flexDirection: 'row',
     },
-    titleBoxAccount: {
+    titleBoxBlowList: {
         width: "100%",
         marginLeft: "1%",
         marginRight: "1%",
@@ -466,14 +480,21 @@ const styles = StyleSheet.create({
     },
 
     itemBox: {
-        width:"100%",
+        width: "100%",
         flex: 1,
         flexDirection: 'row',
         padding: 3,
         alignItems: 'center',
-        borderBottomColor:strings.color.borderColor,
-        borderBottomWidth:1,
+        borderBottomColor: strings.color.borderColor,
+        borderBottomWidth: 1,
 
+    },
+    noBorder: {
+        borderBottomWidth: 0,
+    },
+
+    red: {
+        color:strings.color.red,
     }
 });
 export default styles;

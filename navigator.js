@@ -9,6 +9,7 @@ import Messages from './view/messages';
 import List from './view/list';
 import CheckOut from './view/check_out';
 import Profile from './view/profile';
+import EditProfile from './view/edit_profile';
 
 const RootStack = createStackNavigator(
     {
@@ -22,9 +23,10 @@ const RootStack = createStackNavigator(
         List: List,
         CheckOut: CheckOut,
         Profile: Profile,
+        EditProfile: EditProfile,
     },
     {
-        initialRouteName: 'Profile',
+        initialRouteName: 'EditProfile',
         headerMode: 'none',
     }
 );

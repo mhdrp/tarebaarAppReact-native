@@ -131,7 +131,7 @@ export default class Profile extends Component {
                         </View>
 
                         {/* title box*/}
-                        <View style={styles.titleBoxAccount}>
+                        <View style={styles.titleBoxBlowList}>
                             <H2 style={styles.titleNormal}>
                                {strings.msg.account}
                             </H2>

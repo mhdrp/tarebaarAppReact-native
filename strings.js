@@ -6,6 +6,7 @@ export default {
         statusBar: "#d4d6dc",
         white:"#ffffff",
         black:"#000000",
+        red:"#f44336",
 
         bgColorSlide1:"#DBDBF0",
         bgColorSlide2:"#718AF4",
@@ -22,6 +23,7 @@ export default {
 
         primary: "#535bfe",
         primaryBtn: "#535bfe",
+        BtnBorder:"#404852",
 
         textPrimary: "#5961fe",
 
@@ -74,11 +76,15 @@ export default {
         listAddress:"لیست آدرس ها",
 
         profile:"پروفایل",
+        editProfile:"ویرایش اطلاعات",
+        yourInfo:"اطلاعات شما",
         edit:"ویرایش",
         account:"اکانت",
         address:"آدرس ها",
         listOrders:"لیست سفارشات",
         creditWallet:"اعتبار(کیف پول)",
+        exitAccount:"خروج از حساب کاربری",
+        submitInfo:"ثبت اطلاعات",
 
         /* wallet */
         increaseCredit:"افزایش اعتبار",
