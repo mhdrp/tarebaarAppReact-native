@@ -114,7 +114,7 @@ export default class AddAddress extends Component {
                                 <Body style={{padding: 0}}>
 
                                 <View style={[styles.itemBox,styles.noBorder]}>
-                                    
+
 
                                 </View>
 

@@ -7,6 +7,8 @@
 
 #import "AppDelegate.h"
 
+#import <GoogleMaps/GoogleMaps.h> /** mhdrp add google map */
+
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
@@ -15,6 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+[GMSServices provideAPIKey:@"AIzaSyA8wzSPm0oTmana9YH8dU3e2T6l94I0tiY"]; /** mhdrp add google map */
+
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
                                                    moduleName:@"tarebaarApp"
