@@ -8,6 +8,7 @@ import Wallet from './view/wallet';
 import Messages from './view/messages';
 import List from './view/list';
 import CheckOut from './view/check_out';
+import Profile from './view/profile';
 
 const RootStack = createStackNavigator(
     {
@@ -20,9 +21,10 @@ const RootStack = createStackNavigator(
         Messages: Messages,
         List: List,
         CheckOut: CheckOut,
+        Profile: Profile,
     },
     {
-        initialRouteName: 'CheckOut',
+        initialRouteName: 'Profile',
         headerMode: 'none',
     }
 );

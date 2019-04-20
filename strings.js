@@ -72,6 +72,10 @@ export default {
 
         addAddress:"اضافه کردن آدرس",
         listAddress:"لیست آدرس ها",
+
+        profile:"پروفایل",
+        edit:"ویرایش",
+
         /* wallet */
         increaseCredit:"افزایش اعتبار",
         yourCurrentCredentials:"اعتبار فعلی شما",

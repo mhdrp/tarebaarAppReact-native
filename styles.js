@@ -1,4 +1,3 @@
-
 import {StyleSheet} from "react-native";
 import strings from './strings'
 
@@ -14,6 +13,7 @@ const styles = StyleSheet.create({
         backgroundColor: strings.color.bgColor,
         elevation: 0,
         /* height:40,*/
+        borderBottomWidth: 0
     },
     container: {
         width: "94%",
@@ -45,8 +45,8 @@ const styles = StyleSheet.create({
     cardBorderButton: {
         borderRadius: strings.size.borderRadius,
     },
-    cardBorderRadius:{
-        borderRadius:5
+    cardBorderRadius: {
+        borderRadius: 5
     },
 
     /*button styles*/
@@ -62,6 +62,24 @@ const styles = StyleSheet.create({
         fontFamily: strings.font.light,
         fontSize: strings.size.smallText,
     },
+    txtSmallBtnBorder: {
+        textAlign: 'center',
+        color: strings.color.primary,
+        fontFamily: strings.font.light,
+        fontSize: strings.size.smallerText,
+    },
+    btnSmallBorder: {
+
+        borderRadius: strings.size.borderRadius,
+        borderColor: strings.color.primary,
+        borderWidth: 1,
+        paddingRight:10,
+        paddingLeft:10,
+        paddingTop:5,
+        paddingBottom:5,
+        marginTop:10,
+
+    },
 
 
     btnPrimary: {
@@ -69,6 +87,9 @@ const styles = StyleSheet.create({
     },
     btnColorPrimary: {
         backgroundColor: strings.color.primaryBtn,
+    },
+    btnColorBody: {
+        backgroundColor: strings.color.bgColor,
     },
 
     /*style input*/
@@ -156,7 +177,7 @@ const styles = StyleSheet.create({
         borderColor: '#d4d6dc',
         borderBottomWidth: 0,
         shadowColor: '#b7b7b7',
-        shadowOffset: {width:0, height: 2},
+        shadowOffset: {width: 0, height: 2},
         shadowOpacity: 1.8,
         shadowRadius: 2,
         elevation: 1,
@@ -287,13 +308,12 @@ const styles = StyleSheet.create({
     },
 
 
-
     titleBox: {
         width: "88%",
         marginLeft: "6%",
         marginRight: "6%",
-        marginTop: 20,
-        marginBottom: 20,
+        marginTop: 10,
+        marginBottom: 10,
         flex: 1,
         justifyContent: 'space-between',
         flexDirection: 'row',
@@ -359,7 +379,7 @@ const styles = StyleSheet.create({
         color: strings.color.text,
         fontFamily: strings.font.light,
         fontSize: strings.size.normalText,
-        lineHeight:30,
+        lineHeight: 30,
     },
     txtMore: {
         textAlign: 'left',
@@ -382,7 +402,7 @@ const styles = StyleSheet.create({
         fontSize: strings.size.smallerText,
         alignSelf: 'flex-end',
         alignItems: 'flex-end',
-        padding:0
+        padding: 0
 
     },
     txtSelectPriceWallet: {
@@ -427,6 +447,6 @@ const styles = StyleSheet.create({
         textAlign: "right",
 
     }
-    
+
 });
 export default styles;
