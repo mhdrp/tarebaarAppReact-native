@@ -26,7 +26,7 @@ const RootStack = createStackNavigator(
         EditProfile: EditProfile,
     },
     {
-        initialRouteName: 'EditProfile',
+        initialRouteName: 'Main',
         headerMode: 'none',
     }
 );

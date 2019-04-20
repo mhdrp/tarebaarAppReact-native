@@ -95,8 +95,6 @@ export default class Profile extends Component {
                                 alignSelf: 'center',
                                 justifyContent: 'center',
                             }}>
-
-
                                 {/* name user */}
                                 <Text style={{
                                     color: strings.color.title,
@@ -117,7 +115,7 @@ export default class Profile extends Component {
                                 </Text>
 
                                 <TouchableOpacity
-                                    onPress={() => (Alert.alert("test"))}
+                                    onPress={() => (this.props.navigation.navigate('EditProfile'))}
                                 >
                                     <View style={styles.btnSmallBorder}>
                                         <Text style={styles.txtSmallBtnBorder}>
