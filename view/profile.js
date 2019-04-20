@@ -18,7 +18,7 @@ import {
     Card,
     CardItem,
     H2,
-    Input, Thumbnail
+    Input, Thumbnail, H3
 } from 'native-base'
 import {
     I18nManager,
@@ -60,7 +60,7 @@ export default class Profile extends Component {
 
                     </Body>
                     <Right>
-                        <Button transparent    onPress={() => this.props.navigation.navigate('Messages')}>
+                        <Button transparent onPress={() => (Alert.alert("go out"))}>
                             <CustomIcon style={styles.iconHeaderColor} size={20} name="log-out"/>
                         </Button>
                     </Right>
@@ -70,63 +70,136 @@ export default class Profile extends Component {
                     {/* title box*/}
                     <View style={styles.titleBox}>
                         <H2 style={styles.txtTitleOne}>
-                            فروشگاه ها
+                           {strings.msg.profile}
                         </H2>
 
                     </View>
 
 
-                <View style={styles.container}>
-                    <View style={{flex: 1, flexDirection: 'row',   justifyContent: 'center', alignItems: 'center'}}>
-                        <View style={{
-                            width: "30%",
-                            textAlign: 'center',
-                            justifyContent: "flex-start",
-                            alignItems: "center",
-                            marginLeft:20,
+                    <View style={styles.container}>
+                        <View style={{flex: 1, flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
+                            <View style={{
+                                width: "30%",
+                                textAlign: 'center',
+                                justifyContent: "flex-start",
+                                alignItems: "center",
+                                marginLeft: 20,
 
-                        }}>
-                            <Thumbnail style={{width:100,height: 100,justifyContent: "flex-start",borderRadius:50}} source={{uri: uri}}/>
+                            }}>
+                                <Thumbnail
+                                    style={{width: 100, height: 100, justifyContent: "flex-start", borderRadius: 50}}
+                                    source={{uri: uri}}/>
+                            </View>
+                            <View style={{
+                                width: "70%", paddingLeft: 35, alignItems: "flex-start",
+                                alignSelf: 'center',
+                                justifyContent: 'center',
+                            }}>
+
+
+                                {/* name user */}
+                                <Text style={{
+                                    color: strings.color.title,
+                                    fontFamily: strings.font.medium,
+                                    fontSize: strings.size.largerText,
+                                }}>
+                                    اشکان خطیبی
+                                </Text>
+
+
+                                {/* Text number user*/}
+                                <Text style={{
+                                    color: strings.color.text,
+                                    fontFamily: strings.font.light,
+                                    fontSize: strings.size.smallText,
+                                }}>
+                                    +989120258966
+                                </Text>
+
+                                <TouchableOpacity
+                                    onPress={() => (Alert.alert("test"))}
+                                >
+                                    <View style={styles.btnSmallBorder}>
+                                        <Text style={styles.txtSmallBtnBorder}>
+                                            {strings.msg.edit}
+                                        </Text>
+                                    </View>
+                                </TouchableOpacity>
+
+                            </View>
+
                         </View>
-                        <View style={{width: "70%",  paddingLeft: 35,alignItems:"flex-start",
-                            alignSelf: 'center',
-                            justifyContent: 'center',}}>
+
+                        {/* title box*/}
+                        <View style={styles.titleBoxAccount}>
+                            <H2 style={styles.titleNormal}>
+                               {strings.msg.account}
+                            </H2>
+
+                        </View>
+                        <Card style={[styles.cardStyle, styles.cardBorderRadius,styles.mgNull]}>
+                            <CardItem style={styles.cardBorderRadius}>
 
 
-                            {/* name user */}
-                            <Text style={{
-                                color: strings.color.title,
-                                fontFamily: strings.font.medium,
-                                fontSize: strings.size.largerText,
-                            }}>
-                             اشکان خطیبی
-                            </Text>
+                                <Body style={{padding: 0}}>
 
+                                <View style={styles.itemBox}>
 
-                            {/* Text number user*/}
-                            <Text style={{
-                                color: strings.color.text,
-                                fontFamily: strings.font.light,
-                                fontSize: strings.size.smallText,
-                            }}>
-                               +989120258966
-                            </Text>
-
-                            <TouchableOpacity
-                                onPress={() => (Alert.alert("test"))}
-                            >
-                                <View style={styles.btnSmallBorder}>
-                                    <Text style={styles.txtSmallBtnBorder}>
-                                        {strings.msg.edit}
-                                    </Text>
+                                    <CustomIcon style={styles.iconItem} size={20} name="map-pin"/>
+                                    <TouchableOpacity
+                                        onPress={() => (this.props.navigation.navigate('Wallet'))}
+                                    >
+                                    <H3 style={styles.txtTitleOneCenter}>
+                                      {strings.msg.address}
+                                    </H3>
+                                    </TouchableOpacity>
                                 </View>
-                            </TouchableOpacity>
+                                <View style={styles.itemBox}>
 
-                        </View>
+                                    <CustomIcon style={styles.iconItem} size={20} name="message-circle"/>
+                                    <TouchableOpacity
+                                        onPress={() => (this.props.navigation.navigate('Messages'))}
+                                    >
+                                    <H3 style={styles.txtTitleOneCenter}>
+                                      {strings.msg.messages}
+                                    </H3>
+                                    </TouchableOpacity>
+                                </View>
+                                <View style={styles.itemBox}>
+
+                                    <CustomIcon style={styles.iconItem} size={20} name="truck1"/>
+                                    <TouchableOpacity
+                                        onPress={() => (this.props.navigation.navigate('Orders'))}
+                                    >
+                                    <H3 style={styles.txtTitleOneCenter}>
+                                      {strings.msg.listAddress}
+                                    </H3>
+                                    </TouchableOpacity>
+                                </View>
+                                <View style={styles.itemBox}>
+
+                                    <CustomIcon style={styles.iconItem} size={20} name="banknote"/>
+                                    <TouchableOpacity
+                                        onPress={() => (this.props.navigation.navigate('Wallet'))}
+                                    >
+                                    <H3 style={styles.txtTitleOneCenter}>
+                                      {strings.msg.creditWallet}
+                                    </H3>
+                                    </TouchableOpacity>
+                                </View>
+
+
+
+
+                                </Body>
+                            </CardItem>
+                        </Card>
 
                     </View>
 
-                </View>
+
+
+
                 </Content>
                 <FooterNavigation/>
 

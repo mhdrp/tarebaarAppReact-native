@@ -64,7 +64,9 @@ class FooterNavigation extends Component {
                             style={styles.iconFooterTab}
                         />*/}
                     </Button>
-                    <Button  style={styles.buttonActiveFooterTab}>
+                    <Button  style={styles.buttonActiveFooterTab}  onPress={()=>{
+                        this.props.navigation.navigate('Profile');
+                    }}>
                         <CustomIcon
                             size={22}
                             name="user"

@@ -75,6 +75,10 @@ export default {
 
         profile:"پروفایل",
         edit:"ویرایش",
+        account:"اکانت",
+        address:"آدرس ها",
+        listOrders:"لیست سفارشات",
+        creditWallet:"اعتبار(کیف پول)",
 
         /* wallet */
         increaseCredit:"افزایش اعتبار",

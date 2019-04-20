@@ -73,11 +73,11 @@ const styles = StyleSheet.create({
         borderRadius: strings.size.borderRadius,
         borderColor: strings.color.primary,
         borderWidth: 1,
-        paddingRight:10,
-        paddingLeft:10,
-        paddingTop:5,
-        paddingBottom:5,
-        marginTop:10,
+        paddingRight: 10,
+        paddingLeft: 10,
+        paddingTop: 5,
+        paddingBottom: 5,
+        marginTop: 10,
 
     },
 
@@ -120,6 +120,7 @@ const styles = StyleSheet.create({
         marginTop: 20,
         borderRadius: 10,
     },
+
     verifyResendDisable: {
         textAlign: 'center',
         color: strings.color.txtDisable,
@@ -232,7 +233,11 @@ const styles = StyleSheet.create({
     iconHeaderColor: {
         color: strings.color.iconHeaderColor
     },
-
+    iconItem: {
+        color: strings.color.primary,
+        marginRight: 7,
+        marginLeft: 7,
+    },
 
     /* footer tab navigation style*/
     footerNavigation: {
@@ -306,7 +311,10 @@ const styles = StyleSheet.create({
     mgAll10: {
         margin: 10
     },
-
+    mgNull: {
+        marginBottom: 0,
+        marginTop: 0,
+    },
 
     titleBox: {
         width: "88%",
@@ -333,6 +341,15 @@ const styles = StyleSheet.create({
         marginLeft: "6%",
         marginRight: "6%",
         marginTop: 7,
+        marginBottom: 7,
+        justifyContent: 'space-between',
+        flexDirection: 'row',
+    },
+    titleBoxAccount: {
+        width: "100%",
+        marginLeft: "1%",
+        marginRight: "1%",
+        marginTop: 20,
         marginBottom: 7,
         justifyContent: 'space-between',
         flexDirection: 'row',
@@ -446,7 +463,17 @@ const styles = StyleSheet.create({
 
         textAlign: "right",
 
-    }
+    },
 
+    itemBox: {
+        width:"100%",
+        flex: 1,
+        flexDirection: 'row',
+        padding: 3,
+        alignItems: 'center',
+        borderBottomColor:strings.color.borderColor,
+        borderBottomWidth:1,
+
+    }
 });
 export default styles;
