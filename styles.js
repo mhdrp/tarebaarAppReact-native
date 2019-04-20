@@ -424,7 +424,6 @@ const styles = StyleSheet.create({
         color: strings.color.primary,
         fontFamily: strings.font.medium,
         fontSize: strings.size.smallText,
-
     },
     txtDetails: {
         textAlign: 'left',

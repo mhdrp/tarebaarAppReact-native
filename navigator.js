@@ -10,6 +10,7 @@ import List from './view/list';
 import CheckOut from './view/check_out';
 import Profile from './view/profile';
 import EditProfile from './view/edit_profile';
+import ListAddress from './view/list_address';
 
 const RootStack = createStackNavigator(
     {
@@ -24,9 +25,10 @@ const RootStack = createStackNavigator(
         CheckOut: CheckOut,
         Profile: Profile,
         EditProfile: EditProfile,
+        ListAddress: ListAddress,
     },
     {
-        initialRouteName: 'Main',
+        initialRouteName: 'ListAddress',
         headerMode: 'none',
     }
 );
