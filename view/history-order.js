@@ -24,6 +24,9 @@ export default class HistoryOrder extends Component {
     constructor() {
         super();
     }
+    ratingCompleted(rating) {
+        console.log("Rating is: " + rating)
+    }
 
     render() {
         const {goBack} = this.props.navigation;
@@ -83,10 +86,11 @@ export default class HistoryOrder extends Component {
 
                                 {/* rating store */}
                                <View style={styles.mgUpDown20}>
-                                   <Rating
-                                       readonly
-                                       imageSize={45}
-                                       startingValue={5}
+                                   <AirbnbRating
+                                       showRating={false}
+                                       defaultRating={0}
+                                       onFinishRating={this.ratingCompleted}
+                                       style={{ paddingVertical: 10 }}
                                    />
                                </View>
 
