@@ -11,14 +11,24 @@
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 
+// mhdrp support rtl
+#import <React/RCTI18nUtil.h>
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+
+  // mhdrp support rtl
+  [[RCTI18nUtil sharedInstance] allowRTL:YES];
+  // mhdrp support rtl
+  [[RCTI18nUtil sharedInstance] forceRTL:YES];
+  
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
                                                    moduleName:@"tarebaarApp"
                                             initialProperties:nil];
+
 
   rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
 
