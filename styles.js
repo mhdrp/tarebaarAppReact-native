@@ -12,6 +12,9 @@ const styles = StyleSheet.create({
     displayBlock:{
         flex:1
     },
+    column:{
+        flexDirection: 'column'
+    },
     headerTop: {
         backgroundColor: strings.color.bgColor,
         elevation: 0,
@@ -22,7 +25,7 @@ const styles = StyleSheet.create({
         width: "94%",
         marginLeft: "3%",
         marginRight: "3%",
-        marginTop: 20,
+        marginTop: 0,
         marginBottom: 10,
     },
     textRight: {
@@ -497,6 +500,9 @@ const styles = StyleSheet.create({
 
     red: {
         color:strings.color.red,
+    },
+    green: {
+        color:strings.color.green,
     }
 });
 export default styles;

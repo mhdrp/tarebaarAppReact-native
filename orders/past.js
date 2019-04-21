@@ -86,7 +86,6 @@ export default class Past extends Component {
                                         imageSize={10}
                                         startingValue={5}
                                     />
-
                                 </View>
                                 <View style={{width: "27%",  alignItems: "flex-end",}}>
 

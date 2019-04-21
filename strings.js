@@ -7,6 +7,7 @@ export default {
         white:"#ffffff",
         black:"#000000",
         red:"#f44336",
+        green:"#4caf50",
 
         bgColorSlide1:"#DBDBF0",
         bgColorSlide2:"#718AF4",
@@ -85,6 +86,7 @@ export default {
         area:"منطقه",
         plaque:"پلاک",
         unit:"واحد",
+        submit:"ثبت",
 
         newAddress:"آدرس جدید",
 
@@ -92,6 +94,7 @@ export default {
         creditWallet:"اعتبار(کیف پول)",
         exitAccount:"خروج از حساب کاربری",
         submitInfo:"ثبت اطلاعات",
+        txtRateTheStore:"لطفا به فروشگاه نظر بدهید",
 
         /* wallet */
         increaseCredit:"افزایش اعتبار",

@@ -12,6 +12,7 @@ import Profile from './view/profile';
 import EditProfile from './view/edit_profile';
 import ListAddress from './view/list_address';
 import AddAddress from './view/add_address';
+import HistoryOrder from './view/history-order';
 
 const RootStack = createStackNavigator(
     {
@@ -28,9 +29,10 @@ const RootStack = createStackNavigator(
         EditProfile: EditProfile,
         ListAddress: ListAddress,
         AddAddress: AddAddress,
+        HistoryOrder: HistoryOrder,
     },
     {
-        initialRouteName: 'Main',
+        initialRouteName: 'HistoryOrder',
         headerMode: 'none',
     }
 );
