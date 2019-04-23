@@ -27,10 +27,9 @@ export default class HistoryOrder extends Component {
     ratingCompleted(rating) {
         console.log("Rating is: " + rating)
     }
-
     render() {
         const {goBack} = this.props.navigation;
-        const uri = "https://img1.cookinglight.timeinc.net/sites/default/files/styles/4_3_horizontal_-_900x675/public/image/2017/06/main/quinoa-bowls-avocado-egg-108p68.jpg?itok=MVkxuumL";
+
         return (
             <Container style={styles.body}>
                 <Header hasTabs iosBarStyle={"light-content"} androidStatusBarColor={strings.color.statusBar}

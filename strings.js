@@ -8,6 +8,7 @@ export default {
         black:"#000000",
         red:"#f44336",
         green:"#4caf50",
+        star:"#f1c40f",
 
         bgColorSlide1:"#DBDBF0",
         bgColorSlide2:"#718AF4",

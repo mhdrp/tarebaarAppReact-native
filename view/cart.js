@@ -111,6 +111,70 @@ export default class Cart extends Component {
                             </Body>
                         </CardItem>
                     </Card>
+                    <Card style={{flex: 1, marginLeft: "10%", height: 100, borderRadius: 5}}>
+                        <CardItem style={styles.cardBorderRadius}>
+                            <Body style={{paddingLeft:45}}>
+                            <View style={{
+                                position: 'absolute',
+                                top: -2,
+                                left: -55,
+                                width: 85,
+                                height: 80,
+                                borderRadius: 7,
+                                elevation: 1,
+                            }}>
+                                <Thumbnail
+                                    style={{height: 80, justifyContent: "flex-start", width: "100%", borderRadius: 7}}
+                                    square source={{uri: uri}}/>
+                            </View>
+                            <Text style={{
+                                color: strings.color.title,
+                                fontFamily: strings.font.medium,
+                                fontSize: strings.size.normalText,
+                            }}>
+                                پاستا آلفردو
+                            </Text>
+
+                            <View style={{
+                                width: "100%",
+                                justifyContent: 'space-between',
+                                alignContent: "center",
+                                flexDirection: 'row',
+                            }}>
+                                <Text style={{
+                                    color: strings.color.text,
+                                    fontFamily: strings.font.light,
+                                    fontSize: strings.size.smallerText,
+                                }}>
+                                    13,000 {strings.msg.toman}
+                                </Text>
+                                {/*     <Text style={{
+                                    textAlign: "right",
+                                    lineHeight: 24,
+                                    color: strings.color.primary,
+                                    fontFamily: strings.font.medium,
+                                    fontSize: strings.size.smallerText,
+                                }}>
+                                    26,000 {strings.msg.toman}
+                                </Text>*/}
+                                <View style={{
+                                    textAlign: "right",
+                                    lineHeight: 24,
+                                    height:25,
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    color: strings.color.primary,
+                                    fontFamily: strings.font.medium,
+                                    fontSize: strings.size.smallerText,
+                                }}>
+                                    <CompleteComponent/>
+                                </View>
+
+
+                            </View>
+                            </Body>
+                        </CardItem>
+                    </Card>
                 </Content>
 
 

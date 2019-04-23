@@ -133,7 +133,7 @@ export default class List extends Component {
                                                     square source={{uri: uri}}/>
                                             </View>
                                             {/*space between image and text*/}
-                                            <View style={{height: 60, backgroundColor: "#fcf"}}/>
+                                            <View style={{height: 60}}/>
 
 
                                             {/* name store */}

@@ -9,11 +9,16 @@ const styles = StyleSheet.create({
     body: {
         backgroundColor: strings.color.bgColor,
     },
-    displayBlock:{
-        flex:1
+    displayBlock: {
+        flex: 1
     },
-    column:{
-        flexDirection: 'column'
+    column: {
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+    },
+    noSpaceBetween:{
+        justifyContent: 'flex-start',
     },
     headerTop: {
         backgroundColor: strings.color.bgColor,
@@ -31,6 +36,10 @@ const styles = StyleSheet.create({
     textRight: {
         justifyContent: 'space-between',
         flexDirection: 'row-reverse'
+    },
+    rightText: {
+        textAlign:"right",
+        alignItems: "flex-start",
     },
     title: {
         textAlign: 'center',
@@ -97,11 +106,11 @@ const styles = StyleSheet.create({
     btnBorderBlack: {
         backgroundColor: strings.color.bgColor,
         borderColor: strings.color.BtnBorder,
-        borderWidth:1,
+        borderWidth: 1,
 
     },
-    btnTextBorderBlack:{
-        color:strings.color.title
+    btnTextBorderBlack: {
+        color: strings.color.title
     },
     btnColorBody: {
         backgroundColor: strings.color.bgColor,
@@ -188,6 +197,17 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         justifyContent: "flex-start", alignItems: "center",
     },
+    titleStore: {
+        flex: 1,
+        flexDirection: 'row',
+        margin: 4,
+        borderColor: strings.color.borderColor,
+        borderBottomWidth: 1,
+        paddingBottom: 10
+    },
+    imgStore: {
+        width: 50, height: 50, borderRadius: 7, marginLeft: 15, marginRight: 15
+    },
 
     searchBox: {
         flex: 1,
@@ -214,7 +234,7 @@ const styles = StyleSheet.create({
         fontSize: strings.size.normalText,
         height: 40,
         textAlign: "right",
-        paddingBottom: 7,
+        paddingBottom: 4,
     },
     iconSearchBox: {
         color: strings.color.iconBoxSearch,
@@ -249,7 +269,10 @@ const styles = StyleSheet.create({
         marginRight: 10,
 
     },
-
+    iconHeader: {
+        fontSize: 20,
+        color: strings.color.iconHeaderColor
+    },
     iconHeaderColor: {
         color: strings.color.iconHeaderColor
     },
@@ -499,10 +522,28 @@ const styles = StyleSheet.create({
     },
 
     red: {
-        color:strings.color.red,
+        color: strings.color.red,
     },
     green: {
-        color:strings.color.green,
-    }
+        color: strings.color.green,
+    },
+    colorStar: {
+        color: strings.color.star,
+    },
+    itemIcon: {
+        marginRight: 4,
+        marginLeft: 4
+    },
+    itemRow: {
+        flex: 1, flexDirection: 'row', textAlign: 'right',
+        justifyContent: "center", alignItems: "center",
+    },
+    itemColumn: {
+        flex: 1,
+        textAlign: 'right',
+        justifyContent: "center", alignItems: "center",
+
+        flexDirection: 'column'
+    },
 });
 export default styles;
