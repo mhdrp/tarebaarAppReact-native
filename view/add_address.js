@@ -115,12 +115,7 @@ export default class AddAddress extends Component {
 
                                 <View style={[styles.itemBox,styles.noBorder]}>
 
-
                                 </View>
-
-
-
-
 
                                 </Body>
                             </CardItem>

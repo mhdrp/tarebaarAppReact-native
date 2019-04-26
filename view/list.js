@@ -15,7 +15,7 @@ import {
     H2,
     Input, Thumbnail
 } from 'native-base'
-import {I18nManager, Alert, FlatList, View} from 'react-native';
+import {I18nManager, Alert, FlatList, View, TouchableOpacity} from 'react-native';
 import styles from '../styles'
 import strings from '../strings'
 import {Rating, AirbnbRating} from 'react-native-ratings';
@@ -94,6 +94,9 @@ export default class List extends Component {
                                                 width: "100%",
                                                 height: 180,
                                             }}>
+                                                <TouchableOpacity
+                                                    onPress={() => (this.props.navigation.navigate('Shop'))}
+                                                >
                                                 <Thumbnail
                                                     style={{
                                                         height: 100,
@@ -102,11 +105,14 @@ export default class List extends Component {
                                                         borderRadius: 7
                                                     }}
                                                     square source={{uri: uri}}/>
+                                                </TouchableOpacity>
                                             </View>
                                             {/*space between image and text*/}
                                             <View style={{height: 60}}/>
 
-
+                                            <TouchableOpacity
+                                                onPress={() => (this.props.navigation.navigate('Shop'))}
+                                            >
                                             {/* name store */}
                                             <Text style={{
                                                 color: strings.color.title,
@@ -115,7 +121,7 @@ export default class List extends Component {
                                             }} onPress={this.GetGridViewItem.bind(this, item.key)}>
                                                 {item.name}
                                             </Text>
-
+                                            </TouchableOpacity>
                                             {/* location store*/}
                                             <Text style={{
                                                 color: strings.color.text,
