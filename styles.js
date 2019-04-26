@@ -9,6 +9,16 @@ const styles = StyleSheet.create({
     body: {
         backgroundColor: strings.color.bgColor,
     },
+    itemRight: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'flex-start',
+        justifyContent: 'flex-start'
+    },
+    rightIcon: {
+        alignSelf: 'flex-start',
+        textAlign: 'right'
+    },
     displayBlock: {
         flex: 1
     },
@@ -17,7 +27,7 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'space-between',
     },
-    noSpaceBetween:{
+    noSpaceBetween: {
         justifyContent: 'flex-start',
     },
     headerTop: {
@@ -38,7 +48,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row-reverse'
     },
     rightText: {
-        textAlign:"right",
+        textAlign: "right",
         alignItems: "flex-start",
     },
     title: {
@@ -130,7 +140,10 @@ const styles = StyleSheet.create({
         fontSize: strings.size.normalText,
         height: 40,
         paddingBottom: 2,
-        textAlign: "right"
+        /* TODO change textAlign to left in android */
+        textAlign: "right",
+        alignItems: 'flex-start',
+        alignSelf: 'flex-start',
     },
     itemInput: {
         flexDirection: 'row-reverse',
@@ -139,10 +152,15 @@ const styles = StyleSheet.create({
         marginTop: 20,
     },
     itemInputForm: {
-        flexDirection: 'row-reverse',
+        flexDirection: 'row',
         marginRight: 15,
         marginBottom: 5,
         marginTop: 5,
+        flex: 1,
+        alignItems: 'flex-start',
+        justifyContent: 'flex-start',
+        textAlign: "right",
+
     },
     cardStyle: {
         marginBottom: 20,
@@ -318,9 +336,9 @@ const styles = StyleSheet.create({
         borderTopColor: strings.color.borderColor,
     },
 
-    shoppingCart:{
-        position:"relative",
-        top:-8
+    shoppingCart: {
+        position: "relative",
+        top: -8
     },
 
     /*just margins style*/
@@ -507,7 +525,7 @@ const styles = StyleSheet.create({
         textAlign: "left"
     },
     textAlignRight: {
-
+        alignSelf:"flex-start",
         textAlign: "right",
 
     },
@@ -550,8 +568,8 @@ const styles = StyleSheet.create({
 
         flexDirection: 'column'
     },
-    noPadding:{
-        padding:0
+    noPadding: {
+        padding: 0
     },
 });
 export default styles;

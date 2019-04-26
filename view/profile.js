@@ -51,11 +51,7 @@ export default class Profile extends Component {
 
                 <Header iosBarStyle={"light-content"} androidStatusBarColor={strings.color.statusBar}
                         style={styles.headerTop}>
-                    <Left>
-                        <Button transparent>
-                            <CustomIcon style={styles.iconHeader} name='chevron-right'/>
-                        </Button>
-                    </Left>
+
                     <Body>
 
                     </Body>

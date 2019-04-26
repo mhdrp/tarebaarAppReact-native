@@ -29,7 +29,7 @@ export default class AddAddress extends Component {
             <Container style={styles.body}>
                 <Header hasTabs iosBarStyle={"light-content"} androidStatusBarColor={strings.color.statusBar}
                         style={styles.headerTop}>
-                    <Left>
+                    <Left style={styles.itemRight}>
                         <Button transparent onPress={() => goBack()}>
                             <CustomIcon style={styles.iconHeader} name='chevron-right'/>
                         </Button>
@@ -62,6 +62,7 @@ export default class AddAddress extends Component {
                                                 type="text"
                                                 style={[styles.txtInput]}
                                                 placeholderTextColor={strings.color.txtPlaceInput}
+                                                placeholderStyle={{textAlign: "right",  alignSelf:"flex-start"}}
                                                 placeholder={strings.msg.area}
 
                                             />

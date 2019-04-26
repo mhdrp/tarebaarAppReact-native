@@ -55,7 +55,7 @@ export default class List extends Component {
 
                 <Header hasTabs iosBarStyle={"light-content"} androidStatusBarColor={strings.color.statusBar}
                         style={styles.headerTop}>
-                    <Left>
+                    <Left style={styles.itemRight}>
                         <Button transparent onPress={() => goBack()}>
                             <CustomIcon style={styles.iconHeader} name='chevron-right'/>
                         </Button>

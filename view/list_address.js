@@ -31,7 +31,7 @@ export default class ListAddress extends Component {
             <Container style={styles.body}>
                 <Header hasTabs iosBarStyle={"light-content"} androidStatusBarColor={strings.color.statusBar}
                         style={styles.headerTop}>
-                    <Left>
+                    <Left style={styles.itemRight}>
                         <Button transparent onPress={() => goBack()}>
                             <CustomIcon style={styles.iconHeader} name='chevron-right'/>
                         </Button>
@@ -70,12 +70,13 @@ export default class ListAddress extends Component {
                             <View style={{
                                 flex: 1,
                                 flexDirection: 'row',
-                                justifyContent: 'center',
-                                alignItems: 'center'
+                                justifyContent: 'flex-start',
+                                alignItems: 'flex-start'
                             }}>
-                                <View style={{justifyContent: 'space-between', flexDirection: 'column',      padding: 7, flex:8,}}>
+                                <View style={{ justifyContent: 'flex-start',
+                                    alignItems: 'flex-start', flexDirection: 'column',      padding: 7, flex:8,}}>
 
-                                    <H3 style={[styles.txtMorePrimary, styles.mgBottom10]}>
+                                    <H3 style={[styles.txtMorePrimary, styles.mgBottom10,styles.textAlignRight]}>
                                         خیابان شریعتی,ابتدای پل صدر خ مصطفی
 
                                     </H3>
@@ -109,12 +110,13 @@ export default class ListAddress extends Component {
                             <View style={{
                                 flex: 1,
                                 flexDirection: 'row',
-                                justifyContent: 'center',
-                                alignItems: 'center'
+                                justifyContent: 'flex-start',
+                                alignItems: 'flex-start'
                             }}>
-                                <View style={{justifyContent: 'space-between', flexDirection: 'column',      padding: 7, flex:8,}}>
+                                <View style={{ justifyContent: 'flex-start',
+                                    alignItems: 'flex-start', flexDirection: 'column',      padding: 7, flex:8,}}>
 
-                                    <H3 style={[styles.txtMorePrimary, styles.mgBottom10]}>
+                                    <H3 style={[styles.txtMorePrimary, styles.mgBottom10,styles.textAlignRight]}>
                                         خیابان شریعتی,ابتدای پل صدر خ مصطفی
 
                                     </H3>
@@ -141,6 +143,7 @@ export default class ListAddress extends Component {
                             </Body>
                         </CardItem>
                     </Card>
+
 
 
                 </Content>

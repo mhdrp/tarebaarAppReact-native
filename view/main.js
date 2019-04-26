@@ -83,7 +83,7 @@ export default class Main extends Component {
                             <Button transparent style={{flex: 1}}>
                                 <Icon style={styles.iconSearchBox} name='search'/>
                             </Button>
-                            <View style={styles.itemInputSearch}>
+                            <View style={[styles.itemInputSearch,{alignItems: 'flex-start'}]}>
 
                                 <Input style={[styles.txtInputSearch]}
                                        placeholderTextColor={strings.color.txtPlaceInput}
