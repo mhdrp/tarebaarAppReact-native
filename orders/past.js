@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import {Container, Header, Content, Card, CardItem, Body, Text, Thumbnail, Button} from 'native-base';
-import {Alert, I18nManager, View, TouchableOpacity} from 'react-native';
+import {Alert, I18nManager, View, TouchableOpacity, TouchableHighlight} from 'react-native';
 import styles from '../styles'
 import strings from '../strings'
 import { Rating, AirbnbRating } from 'react-native-ratings';
-
+import {withNavigation} from 'react-navigation';
 I18nManager.forceRTL(true);
-export default class Past extends Component {
+class Past extends Component {
     ratingCompleted(rating) {
         console.log("Rating is: " + rating)
     }
@@ -15,20 +15,22 @@ export default class Past extends Component {
         return (
             <Container style={styles.body}>
                 <Content style={styles.container}>
+                    <TouchableHighlight
+                        onPress={() => this.props.navigation.navigate('HistoryOrder')}
+                    >
                     <Card style={styles.cardBorderRadius}>
                         <CardItem style={styles.cardBorderRadius}>
                             <Body>
-                            <View style={{flex: 1, flexDirection: 'row'}}>
+                            <View style={{flex: 1, flexDirection: 'row',alignItems:"flex-start", justifyContent: 'flex-start',}}>
                                 <View style={{
-                                    width: "18%",
-
+                                    flex:1,
                                     textAlign: 'center',
                                     justifyContent: "flex-start",
                                     alignItems: "center",
                                 }}>
                                     <Thumbnail style={{height: 50,justifyContent: "flex-start",}} source={{uri: uri}}/>
                                 </View>
-                                <View style={{width: "55%",  paddingLeft: 15}}>
+                                <View style={{flex:1,  paddingLeft: 15,alignItems:"flex-start",justifyContent: 'flex-start'}}>
                                     {/* Text date*/}
                                     <Text style={{
                                         color: strings.color.text,
@@ -108,8 +110,11 @@ export default class Past extends Component {
                         </CardItem>
 
                     </Card>
+                    </TouchableHighlight>
                 </Content>
             </Container>
         );
     }
 }
+
+export default withNavigation(Past);
