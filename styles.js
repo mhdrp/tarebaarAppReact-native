@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: 0
     },
     container: {
+        flex:1,
         width: "94%",
         marginLeft: "3%",
         marginRight: "3%",

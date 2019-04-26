@@ -28,7 +28,7 @@ import {
     ScrollView,
     TouchableHighlight,
     Dimensions,
-    TouchableOpacity
+    TouchableOpacity, FlatList
 } from 'react-native';
 import styles from '../styles'
 import strings from '../strings'
@@ -36,12 +36,30 @@ import strings from '../strings'
 import FooterNavigation from '../component/footerNavigation'
 import CustomIcon from "../icons/CustomIcon";
 import {Rating} from "react-native-ratings";
+import CompleteComponent from "../counter/CompleteComponent";
 
 I18nManager.forceRTL(true);
 
 export default class Main extends Component {
     constructor() {
         super();
+        this.state = {
+            GridListItems: [
+                {key: "1", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 5,countRate:40},
+                {key: "2", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 4,countRate:40},
+                {key: "3", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 3,countRate:40},
+                {key: "4", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 3,countRate:40},
+                {key: "5", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 3,countRate:40},
+                {key: "6", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 3,countRate:40},
+                {key: "7", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 3,countRate:40},
+                {key: "8", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 3,countRate:40},
+
+
+            ]
+        };
+    }
+    GetGridViewItem(item) {
+        Alert.alert(item);
     }
 
     render() {
@@ -125,369 +143,102 @@ export default class Main extends Component {
                     </View>
 
 
+
+
+
                     <View style={styles.container}>
-                        <ScrollView
+                        <FlatList
                             showsHorizontalScrollIndicator={false}
                             showsVerticalScrollIndicator={false}
-                            horizontal={true}
-                        >
+                            horizontal
+                            data={this.state.GridListItems}
+                            renderItem={({item}) =>
+                                <Card style={{flex: 1, margin: 15, marginTop: 50, padding: 5, borderRadius: 5}}>
+                                    <CardItem style={styles.cardBorderRadius}>
+                                        <Body style={{ height: 130,}}>
+                                        <View style={{
+                                            position: 'absolute',
+                                            alignSelf: 'center',
+                                            top: -50,
+                                            width: "100%",
+                                            height: 180,
+                                        }}>
+                                            <TouchableOpacity
+                                                onPress={() => (this.props.navigation.navigate('Shop'))}
+                                            >
+                                                <Thumbnail
+                                                    style={{
+                                                        height: 100,
+                                                        justifyContent: "flex-start",
+                                                        width: "100%",
+                                                        borderRadius: 7
+                                                    }}
+                                                    square source={{uri: uri}}/>
+                                            </TouchableOpacity>
+                                        </View>
+                                        {/*space between image and text*/}
+                                        <View style={{height: 60}}/>
 
-                            <Card style={{
-                                flex: 1,
-                                margin: 15,
-                                marginTop: 50,
-                                padding: 5, borderRadius: 5
-                            }}>
-                                <CardItem style={styles.cardBorderRadius}>
-                                    <Body style={{height: 130,}}>
-                                    <View style={{
-                                        position: 'absolute',
-                                        alignSelf: 'center',
-                                        top: -50,
-                                        width: "100%",
-                                        height: 180,
-                                    }}>
                                         <TouchableOpacity
                                             onPress={() => (this.props.navigation.navigate('Shop'))}
                                         >
-                                            <Thumbnail
-                                                style={{
-                                                    height: 100,
-                                                    justifyContent: "flex-start",
-                                                    width: "100%",
-                                                    borderRadius: 7
-                                                }}
-                                                square source={{uri: uri}}/>
+                                            {/* name store */}
+                                            <Text style={{
+                                                color: strings.color.title,
+                                                fontFamily: strings.font.medium,
+                                                fontSize: strings.size.normalText,
+                                            }} onPress={this.GetGridViewItem.bind(this, item.key)}>
+                                                {item.name}
+                                            </Text>
                                         </TouchableOpacity>
-                                    </View>
-                                    {/*space between image and text*/}
-                                    <View style={{height: 60}}/>
-
-
-                                    {/* name store */}
-                                    <TouchableOpacity
-                                        onPress={() => (this.props.navigation.navigate('Shop'))}
-                                    >
+                                        {/* location store*/}
                                         <Text style={{
-                                            color: strings.color.title,
-                                            fontFamily: strings.font.medium,
-                                            fontSize: strings.size.normalText,
+                                            color: strings.color.text,
+                                            fontFamily: strings.font.light,
+                                            fontSize: strings.size.smallText,
+                                            marginBottom:7,
                                         }}>
-
-                                            فروشگاه سوپر علی
+                                            {item.location}
                                         </Text>
-                                    </TouchableOpacity>
-                                    {/* location store*/}
-                                    <Text style={{
-                                        color: strings.color.text,
-                                        fontFamily: strings.font.light,
-                                        fontSize: strings.size.smallText,
-                                        marginBottom: 7,
-                                    }}>
-                                        خیابان شریعتی
-                                    </Text>
-                                    <View style={{flex: 1, flexDirection: 'row'}}>
-                                        <View style={{width: 70, height: 20}}>
-                                            {/* rating store */}
-                                            <Rating
-                                                readonly
-                                                imageSize={12}
-                                                startingValue={5}
-                                            />
-                                        </View>
-                                        <View style={{height: 20}}>
-                                            <Text style={{
-                                                color: strings.color.text,
-                                                fontFamily: strings.font.light,
-                                                fontSize: strings.size.smallerText,
-                                            }}>
-                                                {5}
-                                            </Text>
-                                        </View>
-                                        <View style={{height: 20, marginRight: 4, marginLeft: 4}}>
-                                            <Text style={{
-                                                color: strings.color.text,
-                                                fontFamily: strings.font.light,
-                                                fontSize: strings.size.smallerText,
-                                            }}>
-                                                (40)
-                                            </Text>
+                                        <View style={{flex: 1, flexDirection: 'row'}}>
+                                            <View style={{width: 70, height: 20}}>
+                                                {/* rating store */}
+                                                <Rating
+                                                    readonly
+                                                    imageSize={12}
+                                                    startingValue={item.rateStore}
+                                                />
+                                            </View>
+                                            <View style={{ height: 20}}>
+                                                <Text  style={{
+                                                    color: strings.color.text,
+                                                    fontFamily: strings.font.light,
+                                                    fontSize: strings.size.smallerText,
+                                                }}>
+                                                    {item.rateStore}
+                                                </Text>
+                                            </View>
+                                            <View style={{ height: 20,marginRight:4,marginLeft:4}}>
+                                                <Text  style={{
+                                                    color: strings.color.text,
+                                                    fontFamily: strings.font.light,
+                                                    fontSize: strings.size.smallerText,
+                                                }}>
+                                                    ({item.countRate})
+                                                </Text>
+                                            </View>
+
                                         </View>
 
-                                    </View>
 
+                                        </Body>
+                                    </CardItem>
+                                </Card>}
 
-                                    </Body>
-                                </CardItem>
-                            </Card>
-                            <Card style={{
-                                flex: 1,
-                                margin: 15,
-                                marginTop: 50,
-                                padding: 5, borderRadius: 5
-                            }}>
-                                <CardItem style={styles.cardBorderRadius}>
-                                    <Body style={{height: 130,}}>
-                                    <View style={{
-                                        position: 'absolute',
-                                        alignSelf: 'center',
-                                        top: -50,
-                                        width: "100%",
-                                        height: 180,
-                                    }}>
-                                        <TouchableOpacity
-                                            onPress={() => (this.props.navigation.navigate('Shop'))}
-                                        >
-                                            <Thumbnail
-                                                style={{
-                                                    height: 100,
-                                                    justifyContent: "flex-start",
-                                                    width: "100%",
-                                                    borderRadius: 7
-                                                }}
-                                                square source={{uri: uri}}/>
-                                        </TouchableOpacity>
-                                    </View>
-                                    {/*space between image and text*/}
-                                    <View style={{height: 60}}/>
-
-
-                                    {/* name store */}
-                                    <TouchableOpacity
-                                        onPress={() => (this.props.navigation.navigate('Shop'))}
-                                    >
-                                        <Text style={{
-                                            color: strings.color.title,
-                                            fontFamily: strings.font.medium,
-                                            fontSize: strings.size.normalText,
-                                        }}>
-
-                                            فروشگاه سوپر علی
-                                        </Text>
-                                    </TouchableOpacity>
-                                    {/* location store*/}
-                                    <Text style={{
-                                        color: strings.color.text,
-                                        fontFamily: strings.font.light,
-                                        fontSize: strings.size.smallText,
-                                        marginBottom: 7,
-                                    }}>
-                                        خیابان شریعتی
-                                    </Text>
-                                    <View style={{flex: 1, flexDirection: 'row'}}>
-                                        <View style={{width: 70, height: 20}}>
-                                            {/* rating store */}
-                                            <Rating
-                                                readonly
-                                                imageSize={12}
-                                                startingValue={5}
-                                            />
-                                        </View>
-                                        <View style={{height: 20}}>
-                                            <Text style={{
-                                                color: strings.color.text,
-                                                fontFamily: strings.font.light,
-                                                fontSize: strings.size.smallerText,
-                                            }}>
-                                                {5}
-                                            </Text>
-                                        </View>
-                                        <View style={{height: 20, marginRight: 4, marginLeft: 4}}>
-                                            <Text style={{
-                                                color: strings.color.text,
-                                                fontFamily: strings.font.light,
-                                                fontSize: strings.size.smallerText,
-                                            }}>
-                                                (40)
-                                            </Text>
-                                        </View>
-
-                                    </View>
-
-
-                                    </Body>
-                                </CardItem>
-                            </Card>
-                            <Card style={{
-                                flex: 1,
-                                margin: 15,
-                                marginTop: 50,
-                                padding: 5, borderRadius: 5
-                            }}>
-                                <CardItem style={styles.cardBorderRadius}>
-                                    <Body style={{height: 130,}}>
-                                    <View style={{
-                                        position: 'absolute',
-                                        alignSelf: 'center',
-                                        top: -50,
-                                        width: "100%",
-                                        height: 180,
-                                    }}>
-                                        <TouchableOpacity
-                                            onPress={() => (this.props.navigation.navigate('Shop'))}
-                                        >
-                                            <Thumbnail
-                                                style={{
-                                                    height: 100,
-                                                    justifyContent: "flex-start",
-                                                    width: "100%",
-                                                    borderRadius: 7
-                                                }}
-                                                square source={{uri: uri}}/>
-                                        </TouchableOpacity>
-                                    </View>
-                                    {/*space between image and text*/}
-                                    <View style={{height: 60}}/>
-
-
-                                    {/* name store */}
-                                    <TouchableOpacity
-                                        onPress={() => (this.props.navigation.navigate('Shop'))}
-                                    >
-                                        <Text style={{
-                                            color: strings.color.title,
-                                            fontFamily: strings.font.medium,
-                                            fontSize: strings.size.normalText,
-                                        }}>
-
-                                            فروشگاه سوپر علی
-                                        </Text>
-                                    </TouchableOpacity>
-                                    {/* location store*/}
-                                    <Text style={{
-                                        color: strings.color.text,
-                                        fontFamily: strings.font.light,
-                                        fontSize: strings.size.smallText,
-                                        marginBottom: 7,
-                                    }}>
-                                        خیابان شریعتی
-                                    </Text>
-                                    <View style={{flex: 1, flexDirection: 'row'}}>
-                                        <View style={{width: 70, height: 20}}>
-                                            {/* rating store */}
-                                            <Rating
-                                                readonly
-                                                imageSize={12}
-                                                startingValue={5}
-                                            />
-                                        </View>
-                                        <View style={{height: 20}}>
-                                            <Text style={{
-                                                color: strings.color.text,
-                                                fontFamily: strings.font.light,
-                                                fontSize: strings.size.smallerText,
-                                            }}>
-                                                {5}
-                                            </Text>
-                                        </View>
-                                        <View style={{height: 20, marginRight: 4, marginLeft: 4}}>
-                                            <Text style={{
-                                                color: strings.color.text,
-                                                fontFamily: strings.font.light,
-                                                fontSize: strings.size.smallerText,
-                                            }}>
-                                                (40)
-                                            </Text>
-                                        </View>
-
-                                    </View>
-
-
-                                    </Body>
-                                </CardItem>
-                            </Card>
-                            <Card style={{
-                                flex: 1,
-                                margin: 15,
-                                marginTop: 50,
-                                padding: 5, borderRadius: 5
-                            }}>
-                                <CardItem style={styles.cardBorderRadius}>
-                                    <Body style={{height: 130,}}>
-                                    <View style={{
-                                        position: 'absolute',
-                                        alignSelf: 'center',
-                                        top: -50,
-                                        width: "100%",
-                                        height: 180,
-                                    }}>
-                                        <TouchableOpacity
-                                            onPress={() => (this.props.navigation.navigate('Shop'))}
-                                        >
-                                            <Thumbnail
-                                                style={{
-                                                    height: 100,
-                                                    justifyContent: "flex-start",
-                                                    width: "100%",
-                                                    borderRadius: 7
-                                                }}
-                                                square source={{uri: uri}}/>
-                                        </TouchableOpacity>
-                                    </View>
-                                    {/*space between image and text*/}
-                                    <View style={{height: 60}}/>
-
-
-                                    {/* name store */}
-                                    <TouchableOpacity
-                                        onPress={() => (this.props.navigation.navigate('Shop'))}
-                                    >
-                                        <Text style={{
-                                            color: strings.color.title,
-                                            fontFamily: strings.font.medium,
-                                            fontSize: strings.size.normalText,
-                                        }}>
-
-                                            فروشگاه سوپر علی
-                                        </Text>
-                                    </TouchableOpacity>
-                                    {/* location store*/}
-                                    <Text style={{
-                                        color: strings.color.text,
-                                        fontFamily: strings.font.light,
-                                        fontSize: strings.size.smallText,
-                                        marginBottom: 7,
-                                    }}>
-                                        خیابان شریعتی
-                                    </Text>
-                                    <View style={{flex: 1, flexDirection: 'row'}}>
-                                        <View style={{width: 70, height: 20}}>
-                                            {/* rating store */}
-                                            <Rating
-                                                readonly
-                                                imageSize={12}
-                                                startingValue={5}
-                                            />
-                                        </View>
-                                        <View style={{height: 20}}>
-                                            <Text style={{
-                                                color: strings.color.text,
-                                                fontFamily: strings.font.light,
-                                                fontSize: strings.size.smallerText,
-                                            }}>
-                                                {5}
-                                            </Text>
-                                        </View>
-                                        <View style={{height: 20, marginRight: 4, marginLeft: 4}}>
-                                            <Text style={{
-                                                color: strings.color.text,
-                                                fontFamily: strings.font.light,
-                                                fontSize: strings.size.smallerText,
-                                            }}>
-                                                (40)
-                                            </Text>
-                                        </View>
-
-                                    </View>
-
-
-                                    </Body>
-                                </CardItem>
-                            </Card>
-
-
-                        </ScrollView>
+                        />
                     </View>
+
+
 
                     <View style={{flex: 1,}}>
                         <TouchableHighlight
