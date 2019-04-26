@@ -45,19 +45,20 @@ export default class Main extends Component {
         super();
         this.state = {
             GridListItems: [
-                {key: "1", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 5,countRate:40},
-                {key: "2", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 4,countRate:40},
-                {key: "3", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 3,countRate:40},
-                {key: "4", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 3,countRate:40},
-                {key: "5", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 3,countRate:40},
-                {key: "6", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 3,countRate:40},
-                {key: "7", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 3,countRate:40},
-                {key: "8", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 3,countRate:40},
+                {key: "1", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 5, countRate: 40},
+                {key: "2", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 4, countRate: 40},
+                {key: "3", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 3, countRate: 40},
+                {key: "4", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 3, countRate: 40},
+                {key: "5", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 3, countRate: 40},
+                {key: "6", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 3, countRate: 40},
+                {key: "7", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 3, countRate: 40},
+                {key: "8", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 3, countRate: 40},
 
 
             ]
         };
     }
+
     GetGridViewItem(item) {
         Alert.alert(item);
     }
@@ -93,7 +94,8 @@ export default class Main extends Component {
                     </Right>
                 </Header>
 
-                <Content>
+                <Content   showsHorizontalScrollIndicator={false}
+                           showsVerticalScrollIndicator={false}>
 
                     {/*search box*/}
                     <View style={styles.container}>
@@ -101,7 +103,7 @@ export default class Main extends Component {
                             <Button transparent style={{flex: 1}}>
                                 <Icon style={styles.iconSearchBox} name='search'/>
                             </Button>
-                            <View style={[styles.itemInputSearch,{alignItems: 'flex-start'}]}>
+                            <View style={[styles.itemInputSearch, {alignItems: 'flex-start'}]}>
 
                                 <Input style={[styles.txtInputSearch]}
                                        placeholderTextColor={strings.color.txtPlaceInput}
@@ -142,10 +144,6 @@ export default class Main extends Component {
 
                     </View>
 
-
-
-
-
                     <View style={styles.container}>
                         <FlatList
                             showsHorizontalScrollIndicator={false}
@@ -155,7 +153,7 @@ export default class Main extends Component {
                             renderItem={({item}) =>
                                 <Card style={{flex: 1, margin: 15, marginTop: 50, padding: 5, borderRadius: 5}}>
                                     <CardItem style={styles.cardBorderRadius}>
-                                        <Body style={{ height: 130,}}>
+                                        <Body style={{height: 130,}}>
                                         <View style={{
                                             position: 'absolute',
                                             alignSelf: 'center',
@@ -196,7 +194,7 @@ export default class Main extends Component {
                                             color: strings.color.text,
                                             fontFamily: strings.font.light,
                                             fontSize: strings.size.smallText,
-                                            marginBottom:7,
+                                            marginBottom: 7,
                                         }}>
                                             {item.location}
                                         </Text>
@@ -209,8 +207,8 @@ export default class Main extends Component {
                                                     startingValue={item.rateStore}
                                                 />
                                             </View>
-                                            <View style={{ height: 20}}>
-                                                <Text  style={{
+                                            <View style={{height: 20}}>
+                                                <Text style={{
                                                     color: strings.color.text,
                                                     fontFamily: strings.font.light,
                                                     fontSize: strings.size.smallerText,
@@ -218,8 +216,8 @@ export default class Main extends Component {
                                                     {item.rateStore}
                                                 </Text>
                                             </View>
-                                            <View style={{ height: 20,marginRight:4,marginLeft:4}}>
-                                                <Text  style={{
+                                            <View style={{height: 20, marginRight: 4, marginLeft: 4}}>
+                                                <Text style={{
                                                     color: strings.color.text,
                                                     fontFamily: strings.font.light,
                                                     fontSize: strings.size.smallerText,
@@ -237,7 +235,6 @@ export default class Main extends Component {
 
                         />
                     </View>
-
 
 
                     <View style={{flex: 1,}}>
@@ -258,7 +255,342 @@ export default class Main extends Component {
                         </TouchableHighlight>
                     </View>
 
+                    <View>
+                        {/* title box*/}
+                        <View style={styles.titleBox}>
+                            <H2 style={styles.titleNormal}>
+                                پرفروش ترین ها
+                            </H2>
+                            <Button transparent small
+                                    onPress={() => (this.props.navigation.navigate('List'))}
+                            >
+                                <Text style={styles.txtMore}>
+                                    نمایش بیشتر
+                                </Text>
+                            </Button>
+                        </View>
 
+                        <View style={{flex: 1, flexDirection: 'row'}}>
+                            <ScrollView horizontal={true}>
+                                {/*          <Card>
+                                    <CardItem>
+                                        <Body>
+                                        </Body>
+                                    </CardItem>
+                                </Card>*/}
+
+                            </ScrollView>
+                        </View>
+
+                    </View>
+
+                    <View style={styles.container}>
+                        <FlatList
+                            showsHorizontalScrollIndicator={false}
+                            showsVerticalScrollIndicator={false}
+                            horizontal
+                            data={this.state.GridListItems}
+                            renderItem={({item}) =>
+                                <Card style={{flex: 1, margin: 15, marginTop: 50, padding: 5, borderRadius: 5}}>
+                                    <CardItem style={styles.cardBorderRadius}>
+                                        <Body style={{height: 130,}}>
+                                        <View style={{
+                                            position: 'absolute',
+                                            alignSelf: 'center',
+                                            top: -50,
+                                            width: "100%",
+                                            height: 180,
+                                        }}>
+                                            <TouchableOpacity
+                                                onPress={() => (this.props.navigation.navigate('Shop'))}
+                                            >
+                                                <Thumbnail
+                                                    style={{
+                                                        height: 100,
+                                                        justifyContent: "flex-start",
+                                                        width: "100%",
+                                                        borderRadius: 7
+                                                    }}
+                                                    square source={{uri: uri}}/>
+                                            </TouchableOpacity>
+                                        </View>
+                                        {/*space between image and text*/}
+                                        <View style={{height: 60}}/>
+
+                                        <TouchableOpacity
+                                            onPress={() => (this.props.navigation.navigate('Shop'))}
+                                        >
+                                            {/* name store */}
+                                            <Text style={{
+                                                color: strings.color.title,
+                                                fontFamily: strings.font.medium,
+                                                fontSize: strings.size.normalText,
+                                            }} onPress={this.GetGridViewItem.bind(this, item.key)}>
+                                                {item.name}
+                                            </Text>
+                                        </TouchableOpacity>
+                                        {/* location store*/}
+                                        <Text style={{
+                                            color: strings.color.text,
+                                            fontFamily: strings.font.light,
+                                            fontSize: strings.size.smallText,
+                                            marginBottom: 7,
+                                        }}>
+                                            {item.location}
+                                        </Text>
+                                        <View style={{flex: 1, flexDirection: 'row'}}>
+                                            <View style={{width: 70, height: 20}}>
+                                                {/* rating store */}
+                                                <Rating
+                                                    readonly
+                                                    imageSize={12}
+                                                    startingValue={item.rateStore}
+                                                />
+                                            </View>
+                                            <View style={{height: 20}}>
+                                                <Text style={{
+                                                    color: strings.color.text,
+                                                    fontFamily: strings.font.light,
+                                                    fontSize: strings.size.smallerText,
+                                                }}>
+                                                    {item.rateStore}
+                                                </Text>
+                                            </View>
+                                            <View style={{height: 20, marginRight: 4, marginLeft: 4}}>
+                                                <Text style={{
+                                                    color: strings.color.text,
+                                                    fontFamily: strings.font.light,
+                                                    fontSize: strings.size.smallerText,
+                                                }}>
+                                                    ({item.countRate})
+                                                </Text>
+                                            </View>
+
+                                        </View>
+
+
+                                        </Body>
+                                    </CardItem>
+                                </Card>}
+
+                        />
+                    </View>
+
+                    <View>
+                        {/* title box*/}
+                        <View style={styles.titleBox}>
+                            <H2 style={styles.titleNormal}>
+                                دسته بندی
+                            </H2>
+                        </View>
+                        <View style={styles.itemColumn}>
+                            <View style={styles.itemRow}>
+                                <View style={{flex:1,margin:4,borderRadius:7}}>
+                                    <TouchableHighlight
+                                        onPress={() => (Alert.alert("banner test"))}
+                                    >
+                                        <Image style={{ width: '100%',
+                                            height: 100,
+                                            borderRadius:7,
+                                            overflow: 'hidden',
+                                            alignItems: 'center',
+                                            backgroundColor: 'orange',}}  source={require('../assets/miveh.jpg')}/>
+                                    </TouchableHighlight>
+                                </View>
+                                <View style={{flex:1,margin:4,borderRadius:7}}>
+                                    <TouchableHighlight
+                                        onPress={() => (Alert.alert("banner test"))}
+                                    >
+                                        <Image style={{ width: '100%',
+                                            height: 100,
+                                            borderRadius:7,
+                                            overflow: 'hidden',
+                                            alignItems: 'center',
+                                            backgroundColor: 'orange',}} source={require('../assets/gosht.jpg')}/>
+                                    </TouchableHighlight>
+                                </View>
+                            </View>
+                            <View style={styles.itemRow}>
+                                <View style={{flex:1,margin:4}}>
+                                    <TouchableHighlight
+                                        onPress={() => (Alert.alert("banner test"))}
+                                    >
+                                        <Image style={{ width: '100%',
+                                            height: 100,
+                                            borderRadius:7,
+                                            overflow: 'hidden',
+                                            alignItems: 'center',
+                                            backgroundColor: 'orange',}}  source={require('../assets/labaniyat.jpg')}/>
+                                    </TouchableHighlight>
+                                </View>
+                                <View style={{flex:1,margin:4}}>
+                                    <TouchableHighlight
+                                        onPress={() => (Alert.alert("banner test"))}
+                                    >
+                                        <Image style={{ width: '100%',
+                                            height: 100,
+                                            overflow: 'hidden',
+                                            borderRadius:7,
+                                            alignItems: 'center',
+                                            backgroundColor: 'orange',}} source={require('../assets/noshidani.jpg')}/>
+                                    </TouchableHighlight>
+                                </View>
+                            </View>
+                            <View style={styles.itemRow}>
+                                <View style={{flex:1,margin:4}}>
+                                    <TouchableHighlight
+                                        onPress={() => (Alert.alert("banner test"))}
+                                    >
+                                        <Image style={{ width: '100%',
+                                            height: 100,
+                                            overflow: 'hidden',
+                                            borderRadius:7,
+                                            alignItems: 'center',
+                                            backgroundColor: 'orange',}}  source={require('../assets/shirini.jpg')}/>
+                                    </TouchableHighlight>
+                                </View>
+                                <View style={{flex:1,margin:4}}>
+                                    <TouchableHighlight
+                                        onPress={() => (Alert.alert("banner test"))}
+                                    >
+                                        <Image style={{ width: '100%',
+                                            height: 100,
+                                            overflow: 'hidden',
+                                            borderRadius:7,
+                                            alignItems: 'center',
+                                            backgroundColor: 'orange',}} source={require('../assets/tanagholat.jpg')}/>
+                                    </TouchableHighlight>
+                                </View>
+                            </View>
+                        </View>
+
+                    </View>
+
+
+                    <View>
+                        {/* title box*/}
+                        <View style={styles.titleBox}>
+                            <H2 style={styles.titleNormal}>
+                                فروشگاه های ویژه
+                            </H2>
+                            <Button transparent small
+                                    onPress={() => (this.props.navigation.navigate('List'))}
+                            >
+                                <Text style={styles.txtMore}>
+                                    نمایش بیشتر
+                                </Text>
+                            </Button>
+                        </View>
+
+                        <View style={{flex: 1, flexDirection: 'row'}}>
+                            <ScrollView horizontal={true}>
+                                {/*          <Card>
+                                    <CardItem>
+                                        <Body>
+                                        </Body>
+                                    </CardItem>
+                                </Card>*/}
+
+                            </ScrollView>
+                        </View>
+
+                    </View>
+
+                    <View style={styles.container}>
+                        <FlatList
+                            showsHorizontalScrollIndicator={false}
+                            showsVerticalScrollIndicator={false}
+                            horizontal
+                            data={this.state.GridListItems}
+                            renderItem={({item}) =>
+                                <Card style={{flex: 1, margin: 15, marginTop: 50, padding: 5, borderRadius: 5}}>
+                                    <CardItem style={styles.cardBorderRadius}>
+                                        <Body style={{height: 130,}}>
+                                        <View style={{
+                                            position: 'absolute',
+                                            alignSelf: 'center',
+                                            top: -50,
+                                            width: "100%",
+                                            height: 180,
+                                        }}>
+                                            <TouchableOpacity
+                                                onPress={() => (this.props.navigation.navigate('Shop'))}
+                                            >
+                                                <Thumbnail
+                                                    style={{
+                                                        height: 100,
+                                                        justifyContent: "flex-start",
+                                                        width: "100%",
+                                                        borderRadius: 7
+                                                    }}
+                                                    square source={{uri: uri}}/>
+                                            </TouchableOpacity>
+                                        </View>
+                                        {/*space between image and text*/}
+                                        <View style={{height: 60}}/>
+
+                                        <TouchableOpacity
+                                            onPress={() => (this.props.navigation.navigate('Shop'))}
+                                        >
+                                            {/* name store */}
+                                            <Text style={{
+                                                color: strings.color.title,
+                                                fontFamily: strings.font.medium,
+                                                fontSize: strings.size.normalText,
+                                            }} onPress={this.GetGridViewItem.bind(this, item.key)}>
+                                                {item.name}
+                                            </Text>
+                                        </TouchableOpacity>
+                                        {/* location store*/}
+                                        <Text style={{
+                                            color: strings.color.text,
+                                            fontFamily: strings.font.light,
+                                            fontSize: strings.size.smallText,
+                                            marginBottom: 7,
+                                        }}>
+                                            {item.location}
+                                        </Text>
+                                        <View style={{flex: 1, flexDirection: 'row'}}>
+                                            <View style={{width: 70, height: 20}}>
+                                                {/* rating store */}
+                                                <Rating
+                                                    readonly
+                                                    imageSize={12}
+                                                    startingValue={item.rateStore}
+                                                />
+                                            </View>
+                                            <View style={{height: 20}}>
+                                                <Text style={{
+                                                    color: strings.color.text,
+                                                    fontFamily: strings.font.light,
+                                                    fontSize: strings.size.smallerText,
+                                                }}>
+                                                    {item.rateStore}
+                                                </Text>
+                                            </View>
+                                            <View style={{height: 20, marginRight: 4, marginLeft: 4}}>
+                                                <Text style={{
+                                                    color: strings.color.text,
+                                                    fontFamily: strings.font.light,
+                                                    fontSize: strings.size.smallerText,
+                                                }}>
+                                                    ({item.countRate})
+                                                </Text>
+                                            </View>
+
+                                        </View>
+
+
+                                        </Body>
+                                    </CardItem>
+                                </Card>}
+
+                        />
+                    </View>
+
+                    <View>
+
+                    </View>
                 </Content>
                 <FooterNavigation/>
 

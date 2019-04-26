@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		008DF308BC2F441E9CFCB8F3 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8882D1B80EFC4F6FAA1C6B92 /* MaterialIcons.ttf */; };
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
@@ -75,6 +74,12 @@
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
 		F6B230B0E341493CADE35B4F /* cat-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED93956C0AF14B6B8D2CCF96 /* cat-2.jpg */; };
+		8E3F99B3F14841DB9B8A51D6 /* gosht.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 983F10B557AA46EFB49C8FD4 /* gosht.jpg */; };
+		47BB2DD185124CBAA8DAB3BE /* labaniyat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97A01B5ED8914E199D40D486 /* labaniyat.jpg */; };
+		1A785D15E039489DA59FC44D /* miveh.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F823333984654081AC7AD916 /* miveh.jpg */; };
+		1D3B445412604B858B7D28F0 /* noshidani.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 31262C1BFF10488B9E87289F /* noshidani.jpg */; };
+		F5199AB4EE2B4F9F8470BBE0 /* shirini.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 98D1565BF4774571A2E21F11 /* shirini.jpg */; };
+		D8DE9D37CEF74FB29F0DAB8B /* tanagholat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 65E6AEA71A074AC280958EBA /* tanagholat.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -462,6 +467,12 @@
 		F4F2C4A619964286B7AD4129 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		F9B69DCF0CBF486D80A4A224 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		FEEDB6ED1CED4CF6B55BE28E /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/native-base/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		983F10B557AA46EFB49C8FD4 /* gosht.jpg */ = {isa = PBXFileReference; name = "gosht.jpg"; path = "../assets/gosht.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		97A01B5ED8914E199D40D486 /* labaniyat.jpg */ = {isa = PBXFileReference; name = "labaniyat.jpg"; path = "../assets/labaniyat.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F823333984654081AC7AD916 /* miveh.jpg */ = {isa = PBXFileReference; name = "miveh.jpg"; path = "../assets/miveh.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		31262C1BFF10488B9E87289F /* noshidani.jpg */ = {isa = PBXFileReference; name = "noshidani.jpg"; path = "../assets/noshidani.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		98D1565BF4774571A2E21F11 /* shirini.jpg */ = {isa = PBXFileReference; name = "shirini.jpg"; path = "../assets/shirini.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		65E6AEA71A074AC280958EBA /* tanagholat.jpg */ = {isa = PBXFileReference; name = "tanagholat.jpg"; path = "../assets/tanagholat.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -728,6 +739,12 @@
 				823B0D5808C94706B4EE8ECB /* cat-7.jpg */,
 				80FFD1FF50974D1AAAABBC1A /* cat-8.jpg */,
 				DDDBD706EF924E568B14538C /* cat-9.jpg */,
+				983F10B557AA46EFB49C8FD4 /* gosht.jpg */,
+				97A01B5ED8914E199D40D486 /* labaniyat.jpg */,
+				F823333984654081AC7AD916 /* miveh.jpg */,
+				31262C1BFF10488B9E87289F /* noshidani.jpg */,
+				98D1565BF4774571A2E21F11 /* shirini.jpg */,
+				65E6AEA71A074AC280958EBA /* tanagholat.jpg */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1329,6 +1346,12 @@
 				31A97E1775874ADF9D51CB93 /* cat-7.jpg in Resources */,
 				70C88DF96EF04D1FA95BF3E1 /* cat-8.jpg in Resources */,
 				76BF5F80A55642F98C90F28B /* cat-9.jpg in Resources */,
+				8E3F99B3F14841DB9B8A51D6 /* gosht.jpg in Resources */,
+				47BB2DD185124CBAA8DAB3BE /* labaniyat.jpg in Resources */,
+				1A785D15E039489DA59FC44D /* miveh.jpg in Resources */,
+				1D3B445412604B858B7D28F0 /* noshidani.jpg in Resources */,
+				F5199AB4EE2B4F9F8470BBE0 /* shirini.jpg in Resources */,
+				D8DE9D37CEF74FB29F0DAB8B /* tanagholat.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

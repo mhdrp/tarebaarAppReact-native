@@ -216,6 +216,10 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         justifyContent: "flex-start", alignItems: "center",
     },
+    itemCenter: {
+        textAlign: 'center',
+        justifyContent: "center", alignItems: "center",
+    },
     titleStore: {
         flex: 1,
         flexDirection: 'row',

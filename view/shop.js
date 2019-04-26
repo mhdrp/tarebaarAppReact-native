@@ -55,9 +55,11 @@ export default class Shop extends Component {
 
                 <Header iosBarStyle={"light-content"} androidStatusBarColor={strings.color.statusBar}
                         style={styles.headerTop}>
-                    <Left style={styles.itemRight}>
-                        <Button transparent onPress={() => goBack()}>
-                            <CustomIcon style={styles.iconHeader} name='chevron-right'/>
+                    <Left>
+                        <Button transparent>
+                            <Button transparent onPress={() => goBack()}>
+                                <CustomIcon style={styles.iconHeader} name='chevron-right'/>
+                            </Button>
                         </Button>
                     </Left>
                     <Body>
@@ -73,7 +75,7 @@ export default class Shop extends Component {
                     </Body>
                     <Right>
                         <Button transparent onPress={() => this.props.navigation.navigate('Messages')}>
-                            <CustomIcon style={[styles.iconHeader, styles.colorPrimary]} name='alert-circle'/>
+                            <CustomIcon style={styles.iconHeader} name='mail'/>
                         </Button>
                     </Right>
                 </Header>
