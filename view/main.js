@@ -270,18 +270,6 @@ export default class Main extends Component {
                             </Button>
                         </View>
 
-                        <View style={{flex: 1, flexDirection: 'row'}}>
-                            <ScrollView horizontal={true}>
-                                {/*          <Card>
-                                    <CardItem>
-                                        <Body>
-                                        </Body>
-                                    </CardItem>
-                                </Card>*/}
-
-                            </ScrollView>
-                        </View>
-
                     </View>
 
                     <View style={styles.container}>

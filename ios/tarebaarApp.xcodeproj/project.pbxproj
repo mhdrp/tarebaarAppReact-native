@@ -80,6 +80,7 @@
 		1D3B445412604B858B7D28F0 /* noshidani.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 31262C1BFF10488B9E87289F /* noshidani.jpg */; };
 		F5199AB4EE2B4F9F8470BBE0 /* shirini.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 98D1565BF4774571A2E21F11 /* shirini.jpg */; };
 		D8DE9D37CEF74FB29F0DAB8B /* tanagholat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 65E6AEA71A074AC280958EBA /* tanagholat.jpg */; };
+		2C3BD89D7A2D4D27A87A0A56 /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C251BC4F4E0A4F4F96C9D3FD /* logo.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -473,6 +474,7 @@
 		31262C1BFF10488B9E87289F /* noshidani.jpg */ = {isa = PBXFileReference; name = "noshidani.jpg"; path = "../assets/noshidani.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		98D1565BF4774571A2E21F11 /* shirini.jpg */ = {isa = PBXFileReference; name = "shirini.jpg"; path = "../assets/shirini.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		65E6AEA71A074AC280958EBA /* tanagholat.jpg */ = {isa = PBXFileReference; name = "tanagholat.jpg"; path = "../assets/tanagholat.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C251BC4F4E0A4F4F96C9D3FD /* logo.jpg */ = {isa = PBXFileReference; name = "logo.jpg"; path = "../assets/logo.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -745,6 +747,7 @@
 				31262C1BFF10488B9E87289F /* noshidani.jpg */,
 				98D1565BF4774571A2E21F11 /* shirini.jpg */,
 				65E6AEA71A074AC280958EBA /* tanagholat.jpg */,
+				C251BC4F4E0A4F4F96C9D3FD /* logo.jpg */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1352,6 +1355,7 @@
 				1D3B445412604B858B7D28F0 /* noshidani.jpg in Resources */,
 				F5199AB4EE2B4F9F8470BBE0 /* shirini.jpg in Resources */,
 				D8DE9D37CEF74FB29F0DAB8B /* tanagholat.jpg in Resources */,
+				2C3BD89D7A2D4D27A87A0A56 /* logo.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
