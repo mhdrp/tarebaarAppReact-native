@@ -81,7 +81,8 @@ export default class Verify extends Component {
                         flexDirection: 'row-reverse',
                         margin: 20,
                         alignItems: "center",
-                        textAlign: 'center'
+                        textAlign: 'center',
+                        justifyContent:"center",
                     }}>
                         <TextInput
                             style={[styles.bgInputVerifyCode]}
