@@ -63,7 +63,7 @@ export default class Shop extends Component {
                     <Body>
 
                     <View style={styles.titleHeader}>
-                        <Icon style={styles.iconTitleHeader} name='pin'/>
+                        <CustomIcon style={styles.iconTitleHeader} name='map-pin'/>
                         <Text style={styles.txtTitleHeader}>خیابان شریعتی </Text>
                     </View>
                     {/*  <Title >

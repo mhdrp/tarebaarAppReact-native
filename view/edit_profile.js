@@ -30,11 +30,11 @@ export default class EditProfile extends Component {
             <Container style={styles.body}>
                 <Header hasTabs iosBarStyle={"light-content"} androidStatusBarColor={strings.color.statusBar}
                         style={styles.headerTop}>
-                    <Right>
+                    <Left>
                         <Button transparent onPress={() => goBack()}>
-                            <Icon style={styles.iconHeaderColor} name='arrow-back'/>
+                            <CustomIcon style={styles.iconHeader} name='chevron-right'/>
                         </Button>
-                    </Right>
+                    </Left>
                 </Header>
                 <View style={styles.titleBoxOne}>
                     <H2 style={styles.txtTitleOne}>
@@ -114,7 +114,7 @@ export default class EditProfile extends Component {
 
                                     <CustomIcon style={[styles.iconItem,,styles.red]} size={20} name="log-out"/>
                                     <TouchableOpacity
-                                        onPress={() => (this.props.navigation.navigate('Wallet'))}
+                                        onPress={() => Alert.alert("test")}
                                     >
                                         <H3 style={styles.txtTitleOneCenter}>
                                             {strings.msg.exitAccount}
@@ -136,7 +136,7 @@ export default class EditProfile extends Component {
                                 block
                                 style={[styles.btnPrimary, styles.btnBorderBlack]}
                                 onPress={() =>{
-                                    this.props.navigation.navigate('Verify');
+                                    this.props.navigation.navigate('Profile');
                                 }}>
                                 <Text style={[styles.txtBtn, styles.btnTextBorderBlack]}>{strings.msg.submitInfo}</Text>
                             </Button>

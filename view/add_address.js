@@ -29,11 +29,11 @@ export default class AddAddress extends Component {
             <Container style={styles.body}>
                 <Header hasTabs iosBarStyle={"light-content"} androidStatusBarColor={strings.color.statusBar}
                         style={styles.headerTop}>
-                    <Right>
+                    <Left>
                         <Button transparent onPress={() => goBack()}>
-                            <Icon style={styles.iconHeaderColor} name='arrow-back'/>
+                            <CustomIcon style={styles.iconHeader} name='chevron-right'/>
                         </Button>
-                    </Right>
+                    </Left>
                 </Header>
                 <View style={styles.titleBoxOne}>
                     <H2 style={styles.txtTitleOne}>
@@ -132,7 +132,7 @@ export default class AddAddress extends Component {
                                 block
                                 style={[styles.btnPrimary, styles.btnBorderBlack]}
                                 onPress={() =>{
-                                    this.props.navigation.navigate('Verify');
+                                    this.props.navigation.navigate('ListAddress');
                                 }}>
                                 <Text style={[styles.txtBtn, styles.btnTextBorderBlack]}>{strings.msg.submitInfo}</Text>
                             </Button>

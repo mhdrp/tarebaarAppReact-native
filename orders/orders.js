@@ -21,6 +21,7 @@ import styles from "../styles";
 import FooterNavigation from "../component/footerNavigation";
 
 import {Alert, I18nManager, View} from 'react-native';
+import CustomIcon from "../icons/CustomIcon";
 
 I18nManager.forceRTL(true);
 export default class Orders extends Component {
@@ -31,11 +32,11 @@ export default class Orders extends Component {
 
                 <Header hasTabs iosBarStyle={"light-content"} androidStatusBarColor={strings.color.statusBar}
                         style={styles.headerTop}>
-                    <Right>
+                    <Left>
                         <Button transparent onPress={() => goBack()}>
-                            <Icon style={styles.iconHeaderColor} name='arrow-back'/>
+                            <CustomIcon style={styles.iconHeader} name='chevron-right'/>
                         </Button>
-                    </Right>
+                    </Left>
                 </Header>
                 <View style={styles.titleBoxOne}>
                     <H2 style={styles.txtTitleOne}>

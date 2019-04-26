@@ -25,6 +25,7 @@ import styles from '../styles'
 import strings from '../strings'
 
 import FooterNavigation from '../component/footerNavigation'
+import CustomIcon from "../icons/CustomIcon";
 
 I18nManager.forceRTL(true);
 
@@ -42,13 +43,13 @@ export default class Main extends Component {
                         style={styles.headerTop}>
                     <Left>
                         <Button transparent>
-                            <Icon style={styles.iconHeaderColor} name='menu'/>
+                            <CustomIcon style={styles.iconHeader} name='menu'/>
                         </Button>
                     </Left>
                     <Body>
 
                     <View style={styles.titleHeader}>
-                        <Icon style={styles.iconTitleHeader} name='pin'/>
+                        <CustomIcon style={styles.iconTitleHeader} name='map-pin'/>
                         <Text style={styles.txtTitleHeader}>خیابان شریعتی </Text>
                     </View>
                     {/*  <Title >
@@ -58,7 +59,7 @@ export default class Main extends Component {
                     </Body>
                     <Right>
                         <Button transparent    onPress={() => this.props.navigation.navigate('Messages')}>
-                            <Icon style={styles.iconHeaderColor} name='mail'/>
+                            <CustomIcon style={styles.iconHeader} name='mail'/>
                         </Button>
                     </Right>
                 </Header>
@@ -77,9 +78,9 @@ export default class Main extends Component {
                                        placeholderTextColor={strings.color.txtPlaceInput}
                                        placeholder={strings.msg.search}/>
                             </View>
-                            <Button transparent style={{flex: 1}}>
-                                <Icon style={styles.iconSearchBox} name='options'/>
-                            </Button>
+                          {/*  <Button transparent style={{flex: 1}}>
+                                <CustomIcon style={styles.iconSearchBox} name='sliders1'/>
+                            </Button>*/}
                         </View>
                     </View>
                     {/* txt */}
@@ -90,7 +91,7 @@ export default class Main extends Component {
                                 میوه فروشی
                             </H2>
                             <Button transparent small
-                                    onPress={() => (Alert.alert("test"))}
+                                    onPress={() => (this.props.navigation.navigate('List'))}
                             >
                                 <Text style={styles.txtMore}>
                                     نمایش بیشتر

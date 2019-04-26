@@ -14,6 +14,7 @@ import {
 import styles from '../styles'
 import strings from '../strings'
 import {I18nManager, Alert, View, TouchableHighlight,} from 'react-native';
+import CustomIcon from "../icons/CustomIcon";
 
 I18nManager.forceRTL(true);
 
@@ -29,11 +30,11 @@ export default class Messages extends Component {
             <Container style={styles.body}>
                 <Header hasTabs iosBarStyle={"light-content"} androidStatusBarColor={strings.color.statusBar}
                         style={styles.headerTop}>
-                    <Right>
+                    <Left>
                         <Button transparent onPress={() => goBack()}>
-                            <Icon style={styles.iconHeaderColor} name='arrow-back'/>
+                            <CustomIcon style={styles.iconHeader} name='chevron-right'/>
                         </Button>
-                    </Right>
+                    </Left>
                 </Header>
                 <View style={styles.titleBoxOne}>
                     <H2 style={styles.txtTitleOne}>

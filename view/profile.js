@@ -53,7 +53,7 @@ export default class Profile extends Component {
                         style={styles.headerTop}>
                     <Left>
                         <Button transparent>
-                            <CustomIcon style={styles.iconHeaderColor} size={20} name='menu'/>
+                            <CustomIcon style={styles.iconHeader} name='chevron-right'/>
                         </Button>
                     </Left>
                     <Body>
@@ -170,7 +170,7 @@ export default class Profile extends Component {
                                         onPress={() => (this.props.navigation.navigate('Orders'))}
                                     >
                                     <H3 style={styles.txtTitleOneCenter}>
-                                      {strings.msg.listAddress}
+                                      {strings.msg.listOrders}
                                     </H3>
                                     </TouchableOpacity>
                                 </View>

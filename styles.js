@@ -318,6 +318,11 @@ const styles = StyleSheet.create({
         borderTopColor: strings.color.borderColor,
     },
 
+    shoppingCart:{
+        position:"relative",
+        top:-8
+    },
+
     /*just margins style*/
     mgTop10: {
         marginTop: 10,
@@ -544,6 +549,9 @@ const styles = StyleSheet.create({
         justifyContent: "center", alignItems: "center",
 
         flexDirection: 'column'
+    },
+    noPadding:{
+        padding:0
     },
 });
 export default styles;

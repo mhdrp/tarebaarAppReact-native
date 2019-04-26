@@ -56,7 +56,11 @@ class FooterNavigation extends Component {
                         this.props.navigation.navigate('Cart');
                     }}>
                         <Badge><Text>51</Text></Badge>
-                        <Icon style={styles.iconFooterTab} name="cart"/>
+                        <CustomIcon
+                            size={22}
+                            name="shopping-cart1"
+                            style={[styles.iconFooterTab,styles.shoppingCart]}
+                        />
                         {/* //TODO custom icon bayad postion begire ke badge biad rosh*/}
                         {/*<CustomIcon
                             size={22}

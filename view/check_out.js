@@ -8,7 +8,7 @@ import {
     CardItem,
     Icon,
     Header,
-    Right, H2, Tabs, Tab, Body, Thumbnail, H3
+    Right, H2, Tabs, Tab, Body, Thumbnail, H3,Left
 } from 'native-base'
 import styles from '../styles'
 import strings from '../strings'
@@ -31,11 +31,11 @@ export default class CheckOut extends Component {
             <Container style={styles.body}>
                 <Header hasTabs iosBarStyle={"light-content"} androidStatusBarColor={strings.color.statusBar}
                         style={styles.headerTop}>
-                    <Right>
+                    <Left>
                         <Button transparent onPress={() => goBack()}>
-                            <Icon style={styles.iconHeaderColor} name='arrow-back'/>
+                            <CustomIcon style={styles.iconHeader} name='chevron-right'/>
                         </Button>
-                    </Right>
+                    </Left>
                 </Header>
 
 

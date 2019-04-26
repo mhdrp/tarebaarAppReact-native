@@ -19,6 +19,7 @@ import {I18nManager, Alert, FlatList, View} from 'react-native';
 import styles from '../styles'
 import strings from '../strings'
 import {Rating, AirbnbRating} from 'react-native-ratings';
+import CustomIcon from "../icons/CustomIcon";
 
 
 I18nManager.forceRTL(true);
@@ -47,52 +48,22 @@ export default class List extends Component {
     }
 
     render() {
-
-
+        const {goBack} = this.props.navigation;
         const uri = "https://img1.cookinglight.timeinc.net/sites/default/files/styles/4_3_horizontal_-_900x675/public/image/2017/06/main/quinoa-bowls-avocado-egg-108p68.jpg?itok=MVkxuumL";
         return (
             <Container style={styles.body}>
 
-                <Header iosBarStyle={"light-content"} androidStatusBarColor={strings.color.statusBar}
+                <Header hasTabs iosBarStyle={"light-content"} androidStatusBarColor={strings.color.statusBar}
                         style={styles.headerTop}>
                     <Left>
-                        <Button transparent>
-                            <Icon style={styles.iconHeaderColor} name='menu'/>
+                        <Button transparent onPress={() => goBack()}>
+                            <CustomIcon style={styles.iconHeader} name='chevron-right'/>
                         </Button>
                     </Left>
-                    <Body>
-
-                    <View style={styles.titleHeader}>
-                        <Icon style={styles.iconTitleHeader} name='pin'/>
-                        <Text style={styles.txtTitleHeader}>خیابان شریعتی </Text>
-                    </View>
-
-                    </Body>
-                    <Right>
-                        <Button transparent onPress={() => this.props.navigation.navigate('Messages')}>
-                            <Icon style={styles.iconHeaderColor} name='mail'/>
-                        </Button>
-                    </Right>
                 </Header>
 
                 <Content>
-                    {/*search box*/}
-                    <View style={styles.container}>
-                        <View style={styles.searchBox}>
-                            <Button transparent style={{flex: 1}}>
-                                <Icon style={styles.iconSearchBox} name='search'/>
-                            </Button>
-                            <View style={styles.itemInputSearch}>
 
-                                <Input style={[styles.txtInputSearch]}
-                                       placeholderTextColor={strings.color.txtPlaceInput}
-                                       placeholder={strings.msg.search}/>
-                            </View>
-                            <Button transparent style={{flex: 1}}>
-                                <Icon style={styles.iconSearchBox} name='options'/>
-                            </Button>
-                        </View>
-                    </View>
                     {/* txt */}
                     <View>
                         {/* title box*/}
