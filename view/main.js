@@ -382,7 +382,7 @@ export default class Main extends Component {
                                             borderRadius:7,
                                             overflow: 'hidden',
                                             alignItems: 'center',
-                                            backgroundColor: 'orange',}}  source={require('../assets/miveh.jpg')}/>
+                                           }}  source={require('../assets/miveh.jpg')}/>
                                     </TouchableHighlight>
                                 </View>
                                 <View style={{flex:1,margin:4,borderRadius:7}}>
@@ -394,7 +394,7 @@ export default class Main extends Component {
                                             borderRadius:7,
                                             overflow: 'hidden',
                                             alignItems: 'center',
-                                            backgroundColor: 'orange',}} source={require('../assets/gosht.jpg')}/>
+                                            }} source={require('../assets/gosht.jpg')}/>
                                     </TouchableHighlight>
                                 </View>
                             </View>
@@ -408,7 +408,7 @@ export default class Main extends Component {
                                             borderRadius:7,
                                             overflow: 'hidden',
                                             alignItems: 'center',
-                                            backgroundColor: 'orange',}}  source={require('../assets/labaniyat.jpg')}/>
+                                           }}  source={require('../assets/labaniyat.jpg')}/>
                                     </TouchableHighlight>
                                 </View>
                                 <View style={{flex:1,margin:4}}>
@@ -420,7 +420,7 @@ export default class Main extends Component {
                                             overflow: 'hidden',
                                             borderRadius:7,
                                             alignItems: 'center',
-                                            backgroundColor: 'orange',}} source={require('../assets/noshidani.jpg')}/>
+                                            }} source={require('../assets/noshidani.jpg')}/>
                                     </TouchableHighlight>
                                 </View>
                             </View>
@@ -434,7 +434,7 @@ export default class Main extends Component {
                                             overflow: 'hidden',
                                             borderRadius:7,
                                             alignItems: 'center',
-                                            backgroundColor: 'orange',}}  source={require('../assets/shirini.jpg')}/>
+                                           }}  source={require('../assets/shirini.jpg')}/>
                                     </TouchableHighlight>
                                 </View>
                                 <View style={{flex:1,margin:4}}>
@@ -446,7 +446,7 @@ export default class Main extends Component {
                                             overflow: 'hidden',
                                             borderRadius:7,
                                             alignItems: 'center',
-                                            backgroundColor: 'orange',}} source={require('../assets/tanagholat.jpg')}/>
+                                           }} source={require('../assets/tanagholat.jpg')}/>
                                     </TouchableHighlight>
                                 </View>
                             </View>

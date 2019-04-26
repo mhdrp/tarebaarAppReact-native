@@ -28,7 +28,7 @@ export default class Splash extends Component {
                    height:176,
                    justifyContent: "center",
                    alignItems: 'center',
-                   backgroundColor: 'orange',}}  source={require('../assets/logo.jpg')}/>
+               }}  source={require('../assets/logo.jpg')}/>
 
            </View>
         );
