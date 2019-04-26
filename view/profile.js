@@ -174,6 +174,7 @@ export default class Profile extends Component {
                                     </H3>
                                     </TouchableOpacity>
                                 </View>
+
                                 <View style={styles.itemBox}>
 
                                     <CustomIcon style={styles.iconItem} size={20} name="banknote"/>
@@ -185,9 +186,6 @@ export default class Profile extends Component {
                                     </H3>
                                     </TouchableOpacity>
                                 </View>
-
-
-
 
                                 </Body>
                             </CardItem>
