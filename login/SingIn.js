@@ -6,7 +6,6 @@ import {I18nManager, TextInput, Alert, View, TouchableOpacity} from 'react-nativ
 import Regex from '../utils/regularExpression'
 I18nManager.forceRTL(true);
 import Modal from "react-native-modal";
-import CustomModal from "../component/customModal";
 
 export default class SingIn extends Component {
     constructor() {
@@ -14,7 +13,7 @@ export default class SingIn extends Component {
         this.state = {
             txtPhoneNumberValue: "",
             txtErrorPhoneNumber: "",
-            secendTxt: "",
+            txtSecond: "",
             isModalVisible: false,
             txtStates: "",
 
@@ -104,7 +103,7 @@ export default class SingIn extends Component {
                                     {this.state.txtStates}
                                 </Text>
                                 <Text style={styles.textModal}>
-                                    {this.state.secendTxt}
+                                    {this.state.txtSecond}
                                 </Text>
                                 <TouchableOpacity onPress={() => this._toggleModal()}>
                                     <View style={styles.btnSmallBorder}>

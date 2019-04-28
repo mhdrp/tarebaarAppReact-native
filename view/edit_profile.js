@@ -15,17 +15,32 @@ import styles from '../styles'
 import strings from '../strings'
 import {I18nManager, Alert, View, TouchableHighlight, TouchableOpacity, ScrollView,} from 'react-native';
 import CustomIcon from "../icons/CustomIcon";
+import Modal from "react-native-modal";
+import Regex from "../utils/regularExpression";
 
 I18nManager.forceRTL(true);
 
 export default class EditProfile extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            txtPhoneNumberValue: "+989120258966",
+            txtNameValue: "",
+            txtEmailValue: "",
+            txtIranianNationalCodeValue: "",
+            txtSecond: "",
+            isModalVisible: false,
+            txtStates: "",
+        };
+    }
+    _toggleModal() {
+        this.setState({isModalVisible: !this.state.isModalVisible});
     }
 
     render() {
         const uri = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlm-Uwv34jrl2PuzQiBjhNXva1-3NEN02so2C1PJbuYK_t6ajl";
         const {goBack} = this.props.navigation;
+        let regex=new Regex();
         return (
             <Container style={styles.body}>
                 <Header hasTabs iosBarStyle={"light-content"} androidStatusBarColor={strings.color.statusBar}
@@ -67,36 +82,59 @@ export default class EditProfile extends Component {
                                     <Form>
                                         <Item style={[styles.itemInputForm]}>
                                             <Input
-                                                value="اشکان خطیبی"
+                                                value={this.state.txtNameValue}
                                                 type="text"
                                                 style={[styles.txtInput]}
                                                 placeholderTextColor={strings.color.txtPlaceInput}
-                                                placeholder={strings.msg.login.phoneNumber}
+                                                placeholder={strings.msg.nameAndFamily}
+                                                onChangeText={(name) => {
+                                                    this.setState({
+                                                        txtNameValue: name,
+                                                    })
+                                                }}
+                                            />
+
+                                        </Item>
+                                        <Item style={[styles.itemInputForm]}>
+                                            <Input
+                                                disabled={true}
+                                                type="text"
+                                                style={[styles.txtInput]}
+                                                placeholderTextColor={strings.color.txtPlaceInput}
+                                                placeholder={this.state.txtPhoneNumberValue}
 
                                             />
 
                                         </Item>
                                         <Item style={[styles.itemInputForm]}>
                                             <Input
-                                                value="+989120258966"
+                                                value={this.state.txtIranianNationalCodeValue}
                                                 type="text"
                                                 style={[styles.txtInput]}
                                                 placeholderTextColor={strings.color.txtPlaceInput}
-                                                placeholder={strings.msg.login.phoneNumber}
+                                                placeholder={strings.msg.codeMeli}
+                                                onChangeText={(codeMeli) => {
+                                                    this.setState({
+                                                        txtIranianNationalCodeValue: codeMeli,
+                                                    })
+                                                }}
 
                                             />
 
                                         </Item>
                                         <Item style={[styles.itemInputForm]}>
                                             <Input
-                                                value="ashkan_khatibi@gmail.com"
+                                                value={this.state.txtEmailValue}
                                                 type="text"
                                                 style={[styles.txtInput]}
                                                 placeholderTextColor={strings.color.txtPlaceInput}
-                                                placeholder={strings.msg.login.phoneNumber}
-
+                                                placeholder={strings.msg.email}
+                                                onChangeText={(email) => {
+                                                    this.setState({
+                                                        txtEmailValue: email,
+                                                    })
+                                                }}
                                             />
-
                                         </Item>
                                     </Form>
                                 </Content>
@@ -106,7 +144,6 @@ export default class EditProfile extends Component {
                         {/* card exit user */}
                         <Card style={[styles.cardStyle, styles.cardBorderRadius]}>
                             <CardItem style={styles.cardBorderRadius}>
-
 
                                 <Body style={{padding: 0}}>
 
@@ -123,9 +160,6 @@ export default class EditProfile extends Component {
                                 </View>
 
 
-
-
-
                                 </Body>
                             </CardItem>
                         </Card>
@@ -135,8 +169,40 @@ export default class EditProfile extends Component {
                             <Button
                                 block
                                 style={[styles.btnPrimary, styles.btnBorderBlack]}
-                                onPress={() =>{
-                                    this.props.navigation.navigate('Profile');
+                                onPress={() => {
+                                    let name = this.state.txtNameValue;
+                                    let email = this.state.txtEmailValue;
+                                    let IranianCode = this.state.txtIranianNationalCodeValue;
+
+                                    /*convert persian IranianCode number to english number*/
+                                    let IranianCodeConvert=regex.convertPhoneNumber(IranianCode);
+
+                                    if(name === "" || email === "" || IranianCode === ""){
+                                        /*zamani ke yeki az feild ha khali bashe */
+                                        this.setState({
+                                            isModalVisible: true,
+                                            txtStates: strings.msg.fillAllFields,
+                                        });
+                                    } else {
+                                        if(!regex.validateIranianNationalCode(IranianCodeConvert)){
+                                            this.setState({
+                                                isModalVisible: true,
+                                                txtStates: strings.msg.correctNationalCode,
+                                            });
+                                        }else if(!regex.validateEmail(email)){
+                                            this.setState({
+                                                isModalVisible: true,
+                                                txtStates: strings.msg.correctEmail,
+                                            });
+                                        }else {
+                                            /*zamani ke inpute phone number dorost bashe*/
+                                           this.props.navigation.navigate('Verify');
+                                        }
+
+
+
+                                    }
+
                                 }}>
                                 <Text style={[styles.txtBtn, styles.btnTextBorderBlack]}>{strings.msg.submitInfo}</Text>
                             </Button>
@@ -146,7 +212,27 @@ export default class EditProfile extends Component {
 
 
                 </Content>
-
+                <View>
+                    <Modal isVisible={this.state.isModalVisible}>
+                        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+                            <View style={styles.boxModal}>
+                                <Text style={styles.textModal}>
+                                    {this.state.txtStates}
+                                </Text>
+                                <Text style={styles.textModal}>
+                                    {this.state.txtSecond}
+                                </Text>
+                                <TouchableOpacity onPress={() => this._toggleModal()}>
+                                    <View style={styles.btnSmallBorder}>
+                                        <Text style={styles.txtSmallBtnBorder}>
+                                            {strings.msg.ok}
+                                        </Text>
+                                    </View>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
+                    </Modal>
+                </View>
             </Container>
         );
     }
