@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Content, Container, Button, H1, Text, Item, Label, Input, Form, Card, CardItem, Icon,} from 'native-base'
 import styles from '../styles'
 import strings from '../strings'
-import {I18nManager, TextInput, Alert, View, TouchableOpacity} from 'react-native';
+import {I18nManager, TextInput, Alert, View, TouchableOpacity,StatusBar} from 'react-native';
 import Regex from '../utils/regularExpression'
 I18nManager.forceRTL(true);
 import Modal from "react-native-modal";
@@ -31,6 +31,7 @@ export default class SingIn extends Component {
 
         return (
             <Container style={[styles.body, styles.textRight]}>
+                <StatusBar backgroundColor={strings.color.statusBar} barStyle="dark-content" />
                 <Content style={styles.container}>
                     <H1 style={[styles.title, styles.mgTop50]}>{strings.msg.login.loginOrRegister}</H1>
                     {/* card input get phone Number */}

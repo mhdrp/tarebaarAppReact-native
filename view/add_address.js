@@ -13,7 +13,7 @@ import {
 } from 'native-base'
 import styles from '../styles'
 import strings from '../strings'
-import {I18nManager, Alert, View, TouchableHighlight, TouchableOpacity, ScrollView,} from 'react-native';
+import {I18nManager, Alert, View, TouchableHighlight, TouchableOpacity, ScrollView, StatusBar,} from 'react-native';
 import CustomIcon from "../icons/CustomIcon";
 import Modal from "react-native-modal";
 
@@ -45,6 +45,7 @@ export default class AddAddress extends Component {
         const {goBack} = this.props.navigation;
         return (
             <Container style={styles.body}>
+                <StatusBar backgroundColor={strings.color.statusBar} barStyle="dark-content" />
                 <Header hasTabs iosBarStyle={"light-content"} androidStatusBarColor={strings.color.statusBar}
                         style={styles.headerTop}>
                     <Left style={styles.itemRight}>
@@ -177,7 +178,7 @@ export default class AddAddress extends Component {
                                             isModalVisible: true,
                                             txtStates: strings.msg.infoRecordedSuccess,
                                             functionBtn: () => {
-                                                this.props.navigation.navigate('ListAddress');
+                                                this.props.navigation.replace('ListAddress');
                                             },
                                         });
                                     }

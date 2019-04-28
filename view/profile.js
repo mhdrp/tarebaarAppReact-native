@@ -49,7 +49,7 @@ export default class Profile extends Component {
         return (
             <Container style={styles.body}>
 
-                <Header iosBarStyle={"light-content"} androidStatusBarColor={strings.color.statusBar}
+                <Header iosBarStyle={"dark-content"} androidStatusBarColor={strings.color.statusBar}
                         style={styles.headerTop}>
 
                     <Body>

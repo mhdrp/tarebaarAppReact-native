@@ -36,7 +36,7 @@ const RootStack = createStackNavigator(
         Splash: Splash,
     },
     {
-        initialRouteName: 'AddAddress',
+        initialRouteName: 'Splash',
         headerMode: 'none',
     }
 );

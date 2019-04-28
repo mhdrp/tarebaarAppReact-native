@@ -65,7 +65,7 @@ export default class Wallet extends Component {
         const {goBack} = this.props.navigation;
         return (
             <Container style={styles.body}>
-                <Header hasTabs iosBarStyle={"light-content"} androidStatusBarColor={strings.color.statusBar}
+                <Header hasTabs iosBarStyle={"dark-content"} androidStatusBarColor={strings.color.statusBar}
                         style={styles.headerTop}>
                     <Left style={styles.itemRight}>
                         <Button transparent onPress={() => goBack()}>

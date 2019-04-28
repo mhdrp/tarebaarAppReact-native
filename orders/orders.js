@@ -20,7 +20,7 @@ import strings from "../strings";
 import styles from "../styles";
 import FooterNavigation from "../component/footerNavigation";
 
-import {Alert, I18nManager, View} from 'react-native';
+import {Alert, I18nManager, StatusBar, View} from 'react-native';
 import CustomIcon from "../icons/CustomIcon";
 
 I18nManager.forceRTL(true);
@@ -30,7 +30,7 @@ export default class Orders extends Component {
         return (
             <Container style={styles.body}>
 
-                <Header hasTabs iosBarStyle={"light-content"} androidStatusBarColor={strings.color.statusBar}
+                <Header hasTabs iosBarStyle={"dark-content"} androidStatusBarColor={strings.color.statusBar}
                         style={styles.headerTop}>
                     <Left style={styles.itemRight}>
                         <Button transparent onPress={() => goBack()}>

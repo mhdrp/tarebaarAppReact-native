@@ -29,7 +29,7 @@ export default class CheckOut extends Component {
         const uri = "https://img1.cookinglight.timeinc.net/sites/default/files/styles/4_3_horizontal_-_900x675/public/image/2017/06/main/quinoa-bowls-avocado-egg-108p68.jpg?itok=MVkxuumL";
         return (
             <Container style={styles.body}>
-                <Header hasTabs iosBarStyle={"light-content"} androidStatusBarColor={strings.color.statusBar}
+                <Header hasTabs iosBarStyle={"dark-content"} androidStatusBarColor={strings.color.statusBar}
                         style={styles.headerTop}>
                     <Left style={styles.itemRight}>
                         <Button transparent onPress={() => goBack()}>

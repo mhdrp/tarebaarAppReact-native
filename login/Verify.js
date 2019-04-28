@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Content, Container, Button, H1, Text} from 'native-base'
 import styles from '../styles'
 import strings from '../strings'
-import {I18nManager, TextInput, View} from 'react-native';
+import {I18nManager, StatusBar, TextInput, View} from 'react-native';
 
 I18nManager.forceRTL(true);
 
@@ -66,6 +66,7 @@ export default class Verify extends Component {
         return (
 
             <Container style={[styles.body, styles.textRight]}>
+                <StatusBar backgroundColor={strings.color.statusBar} barStyle="dark-content" />
                 <Content style={styles.container}>
                     <H1 style={[styles.title, styles.mgTop50]}>{strings.msg.verifyNumMobile}</H1>
 

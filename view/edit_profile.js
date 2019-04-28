@@ -51,7 +51,7 @@ export default class EditProfile extends Component {
         let regex = new Regex();
         return (
             <Container style={styles.body}>
-                <Header hasTabs iosBarStyle={"light-content"} androidStatusBarColor={strings.color.statusBar}
+                <Header hasTabs iosBarStyle={"dark-content"} androidStatusBarColor={strings.color.statusBar}
                         style={styles.headerTop}>
                     <Left style={styles.itemRight}>
                         <Button transparent onPress={() => goBack()}>
@@ -207,13 +207,13 @@ export default class EditProfile extends Component {
                                                 txtStates: strings.msg.correctEmail,
                                             });
                                         } else {
-                                            /*zamani ke inpute phone number dorost bashe*/
+                                            /*zamani ke etelaat dorost bashe*/
 
                                             this.setState({
                                                 isModalVisible: true,
                                                 txtStates: strings.msg.infoRecordedSuccess,
                                                 functionBtn: () => {
-                                                    this.props.navigation.navigate('Verify');
+                                                    this.props.navigation.replace('Verify');
                                                 },
                                             });
                                         }
@@ -260,7 +260,7 @@ export default class EditProfile extends Component {
                                     <TouchableOpacity onPress={() => {
                                         this._toggleModalExit();
 
-                                        this.props.navigation.navigate('SignIn')
+                                        this.props.navigation.replace('SignIn')
                                     }
                                     }>
                                         <View style={[styles.btnSmallBorder, styles.mgAll10]}>
