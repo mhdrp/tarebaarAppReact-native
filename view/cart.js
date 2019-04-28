@@ -31,14 +31,9 @@ export default class Cart extends Component {
         return (
             <Container style={styles.body}>
 
-                <Header hasTabs iosBarStyle={"dark-content"} androidStatusBarColor={strings.color.statusBar}
-                        style={styles.headerTop}>
-                    <Left style={styles.itemRight}>
-                        <Button transparent onPress={() => goBack()}>
-                            <CustomIcon style={styles.iconHeader} name='chevron-right'/>
-                        </Button>
-                    </Left>
-                </Header>
+                <Header iosBarStyle={"dark-content"} androidStatusBarColor={strings.color.statusBar}
+                        style={styles.headerTop}/>
+
                 <View style={styles.titleBoxOne}>
                     <H2 style={styles.txtTitleOne}>
                         سبد خرید

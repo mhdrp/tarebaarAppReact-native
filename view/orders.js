@@ -29,15 +29,9 @@ export default class Orders extends Component {
         const {goBack} = this.props.navigation;
         return (
             <Container style={styles.body}>
+                <Header iosBarStyle={"dark-content"} androidStatusBarColor={strings.color.statusBar}
+                        style={styles.headerTop}/>
 
-                <Header hasTabs iosBarStyle={"dark-content"} androidStatusBarColor={strings.color.statusBar}
-                        style={styles.headerTop}>
-                    <Left style={styles.itemRight}>
-                        <Button transparent onPress={() => goBack()}>
-                            <CustomIcon style={styles.iconHeader} name='chevron-right'/>
-                        </Button>
-                    </Left>
-                </Header>
                 <View style={styles.titleBoxOne}>
                     <H2 style={styles.txtTitleOne}>
                         {strings.msg.orders}
