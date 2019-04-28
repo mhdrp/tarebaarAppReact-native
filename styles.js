@@ -84,7 +84,8 @@ const styles = StyleSheet.create({
     boxModal:{
         borderRadius: 7,
         height: 220,
-        width: "70%",
+        width: "75%",
+        padding:10,
         backgroundColor: "#fff",
         justifyContent: 'center',
         alignItems: 'center'

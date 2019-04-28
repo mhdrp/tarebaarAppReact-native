@@ -8,7 +8,7 @@ import {
     CardItem,
     Icon,
     Header,
-    Right, H2, Body,H3,
+    Right, H2, Body, H3,
     ListItem, Radio, Left, Thumbnail, List, Form, Item, Input,
 } from 'native-base'
 import styles from '../styles'
@@ -30,17 +30,25 @@ export default class EditProfile extends Component {
             txtIranianNationalCodeValue: "",
             txtSecond: "",
             isModalVisible: false,
+            isModalExit: false,
             txtStates: "",
+            functionBtn: () => {
+            },
+
         };
     }
+
     _toggleModal() {
         this.setState({isModalVisible: !this.state.isModalVisible});
     }
 
+    _toggleModalExit() {
+        this.setState({isModalExit: !this.state.isModalExit});
+    }
     render() {
         const uri = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlm-Uwv34jrl2PuzQiBjhNXva1-3NEN02so2C1PJbuYK_t6ajl";
         const {goBack} = this.props.navigation;
-        let regex=new Regex();
+        let regex = new Regex();
         return (
             <Container style={styles.body}>
                 <Header hasTabs iosBarStyle={"light-content"} androidStatusBarColor={strings.color.statusBar}
@@ -60,7 +68,8 @@ export default class EditProfile extends Component {
                 <Content style={styles.container}>
 
                     <View style={styles.container}>
-                        <View style={{flex: 1, flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+                        <View
+                            style={{flex: 1, flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
 
                             <Thumbnail
                                 style={{width: 100, height: 100, justifyContent: "flex-start", borderRadius: 50}}
@@ -76,7 +85,7 @@ export default class EditProfile extends Component {
 
                         </View>
                         {/* card show name user */}
-                        <Card style={[styles.cardStyle,styles.cardBorderRadius,styles.mgNull]}>
+                        <Card style={[styles.cardStyle, styles.cardBorderRadius, styles.mgNull]}>
                             <CardItem style={styles.cardBorderRadius}>
                                 <Content>
                                     <Form>
@@ -147,11 +156,14 @@ export default class EditProfile extends Component {
 
                                 <Body style={{padding: 0}}>
 
-                                <View style={[styles.itemBox,styles.noBorder]}>
+                                <View style={[styles.itemBox, styles.noBorder]}>
 
-                                    <CustomIcon style={[styles.iconItem,,styles.red]} size={20} name="log-out"/>
+                                    <CustomIcon style={[styles.iconItem, , styles.red]} size={20} name="log-out"/>
                                     <TouchableOpacity
-                                        onPress={() => Alert.alert("test")}
+                                        onPress={() =>
+                                            this.setState({
+                                                isModalExit: true,
+                                            })}
                                     >
                                         <H3 style={styles.txtTitleOneCenter}>
                                             {strings.msg.exitAccount}
@@ -175,42 +187,42 @@ export default class EditProfile extends Component {
                                     let IranianCode = this.state.txtIranianNationalCodeValue;
 
                                     /*convert persian IranianCode number to english number*/
-                                    let IranianCodeConvert=regex.convertPhoneNumber(IranianCode);
+                                    let IranianCodeConvert = regex.convertPhoneNumber(IranianCode);
 
-                                    if(name === "" || email === "" || IranianCode === ""){
+                                    if (name === "" || email === "" || IranianCode === "") {
                                         /*zamani ke yeki az feild ha khali bashe */
                                         this.setState({
                                             isModalVisible: true,
                                             txtStates: strings.msg.fillAllFields,
                                         });
                                     } else {
-                                        if(!regex.validateIranianNationalCode(IranianCodeConvert)){
+                                        if (!regex.validateIranianNationalCode(IranianCodeConvert)) {
                                             this.setState({
                                                 isModalVisible: true,
                                                 txtStates: strings.msg.correctNationalCode,
                                             });
-                                        }else if(!regex.validateEmail(email)){
+                                        } else if (!regex.validateEmail(email)) {
                                             this.setState({
                                                 isModalVisible: true,
                                                 txtStates: strings.msg.correctEmail,
                                             });
-                                        }else {
+                                        } else {
                                             /*zamani ke inpute phone number dorost bashe*/
-                                           this.props.navigation.navigate('Verify');
+
+                                            this.setState({
+                                                isModalVisible: true,
+                                                txtStates: strings.msg.infoRecordedSuccess,
+                                                functionBtn: () => {
+                                                    this.props.navigation.navigate('Verify');
+                                                },
+                                            });
                                         }
-
-
-
                                     }
-
                                 }}>
                                 <Text style={[styles.txtBtn, styles.btnTextBorderBlack]}>{strings.msg.submitInfo}</Text>
                             </Button>
                         </Card>
-
                     </View>
-
-
                 </Content>
                 <View>
                     <Modal isVisible={this.state.isModalVisible}>
@@ -222,13 +234,49 @@ export default class EditProfile extends Component {
                                 <Text style={styles.textModal}>
                                     {this.state.txtSecond}
                                 </Text>
-                                <TouchableOpacity onPress={() => this._toggleModal()}>
+                                <TouchableOpacity onPress={() => {
+                                    this._toggleModal();
+                                    this.state.functionBtn();
+                                }}>
                                     <View style={styles.btnSmallBorder}>
                                         <Text style={styles.txtSmallBtnBorder}>
                                             {strings.msg.ok}
                                         </Text>
                                     </View>
                                 </TouchableOpacity>
+                            </View>
+                        </View>
+                    </Modal>
+                </View>
+                <View>
+                    <Modal isVisible={this.state.isModalExit}>
+                        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+                            <View style={styles.boxModal}>
+
+                                <Text style={styles.textModal}>
+                                    {strings.msg.doYouSignOut}
+                                </Text>
+                                <View style={{flexDirection: 'row'}}>
+                                    <TouchableOpacity onPress={() => {
+                                        this._toggleModalExit();
+
+                                        this.props.navigation.navigate('SignIn')
+                                    }
+                                    }>
+                                        <View style={[styles.btnSmallBorder, styles.mgAll10]}>
+                                            <Text style={styles.txtSmallBtnBorder}>
+                                                {strings.msg.ok}
+                                            </Text>
+                                        </View>
+                                    </TouchableOpacity>
+                                    <TouchableOpacity onPress={() => this._toggleModalExit()}>
+                                        <View style={[styles.btnSmallBorder, styles.mgAll10]}>
+                                            <Text style={styles.txtSmallBtnBorder}>
+                                                {strings.msg.cancel}
+                                            </Text>
+                                        </View>
+                                    </TouchableOpacity>
+                                </View>
                             </View>
                         </View>
                     </Modal>
