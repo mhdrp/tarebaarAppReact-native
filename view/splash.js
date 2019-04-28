@@ -9,7 +9,7 @@ export default class Splash extends Component {
         setTimeout(
             ()=>
                 (this.props.navigation.navigate('SignIn')),
-            2300)
+            300)
     }
 
     constructor() {

@@ -53,8 +53,6 @@ export default class Main extends Component {
                 {key: "6", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 3, countRate: 40},
                 {key: "7", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 3, countRate: 40},
                 {key: "8", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 3, countRate: 40},
-
-
             ]
         };
     }
@@ -68,7 +66,6 @@ export default class Main extends Component {
         const win = Dimensions.get('window');
         return (
             <Container style={styles.body}>
-
                 <Header iosBarStyle={"light-content"} androidStatusBarColor={strings.color.statusBar}
                         style={styles.headerTop}>
                     <Left>

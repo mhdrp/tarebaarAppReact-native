@@ -75,6 +75,21 @@ const styles = StyleSheet.create({
         borderRadius: 5
     },
 
+    textModal:{
+        textAlign: 'center',
+        color: strings.color.txtSecondary,
+        fontFamily: strings.font.light,
+        fontSize: strings.size.normalText,
+    },
+    boxModal:{
+        borderRadius: 7,
+        height: 220,
+        width: "70%",
+        backgroundColor: "#fff",
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+
     /*button styles*/
     txtBtn: {
         color: strings.color.txtBtn,

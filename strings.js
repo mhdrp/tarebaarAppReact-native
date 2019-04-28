@@ -88,6 +88,10 @@ export default {
         plaque:"پلاک",
         unit:"واحد",
         submit:"ثبت",
+        ok:"باشه",
+        enterMobileNumber:"شماره موبایل را وارد کنید",
+        enterCorrectMobileNumber:"لطفا شماره موبایل را صحیح وارد کنید",
+        CorrectFormatMobileNumber:"فرمت صحیح : ۰۹xxxxxxxxx",
 
         newAddress:"آدرس جدید",
 
