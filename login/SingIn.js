@@ -67,11 +67,15 @@ export default class SingIn extends Component {
                             style={[styles.btnPrimary, styles.btnColorPrimary]}
                             onPress={() => {
                                 let txtPhoneNumber = this.state.txtPhoneNumberValue;
+
+                                /*convert persian number to english number*/
+                                let phoneNumberConvert=regex.convertPhoneNumber(txtPhoneNumber);
+
                                 /* zamani ke inpute phone number khali bashe */
                                 if (txtPhoneNumber === "") {
                                     this.setState({isModalVisible: true, txtStates: strings.msg.enterMobileNumber,});
 
-                                } else if (!regex.validatePhoneNumber(txtPhoneNumber)) {
+                                } else if (!regex.validatePhoneNumber(phoneNumberConvert)) {
                                     /* zamani ke inpute phone number por bashe */
                                     /*check kardane dorost bodane phone number*/
 
