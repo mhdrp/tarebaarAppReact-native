@@ -24,6 +24,7 @@ export default {
         text: "#afb5c0",
 
         primary: "#535bfe",
+        bgDrawerMenu: "#535bfe",
         primaryBtn: "#535bfe",
         BtnBorder:"#404852",
 

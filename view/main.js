@@ -37,7 +37,8 @@ import FooterNavigation from '../component/footerNavigation'
 import CustomIcon from "../icons/CustomIcon";
 import {Rating} from "react-native-ratings";
 import CompleteComponent from "../counter/CompleteComponent";
-
+import Drawer from 'react-native-drawer'
+import DrawerMenu from '../component/drawer-menu'
 I18nManager.forceRTL(true);
 
 export default class Main extends Component {
@@ -53,23 +54,42 @@ export default class Main extends Component {
                 {key: "6", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 3, countRate: 40},
                 {key: "7", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 3, countRate: 40},
                 {key: "8", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 3, countRate: 40},
-            ]
+            ],
         };
     }
 
     GetGridViewItem(item) {
         Alert.alert(item);
     }
-
+    closeControlPanel = () => {
+        this._drawer.close()
+    };
+    openControlPanel = () => {
+        this._drawer.open()
+    };
     render() {
         const uri = "https://img1.cookinglight.timeinc.net/sites/default/files/styles/4_3_horizontal_-_900x675/public/image/2017/06/main/quinoa-bowls-avocado-egg-108p68.jpg?itok=MVkxuumL";
         const win = Dimensions.get('window');
         return (
+            <Drawer
+                type="overlay"
+                content={<DrawerMenu closeDrawer={() => {this._drawer.close(); }} />}
+                tapToClose={true}
+                openDrawerOffset={0.4} // 40% gap on the right side of drawer
+                panCloseMask={0.4} // 40% baghi mande click koni close she
+                closedDrawerOffset={-3}
+                styles={{shadowColor: '#000000', shadowOpacity: 0.8, shadowRadius: 3}}
+                ref={(ref) => this._drawer = ref}
+                tweenHandler={(ratio) => ({
+                    main: { opacity:(2-ratio)/2 }
+                })}
+
+            >
             <Container style={styles.body}>
                 <Header iosBarStyle={"dark-content"} androidStatusBarColor={strings.color.statusBar}
                         style={styles.headerTop}>
                     <Left>
-                        <Button transparent>
+                        <Button transparent onPress={() => {this._drawer.open()}}>
                             <CustomIcon style={styles.iconHeader} name='menu'/>
                         </Button>
                     </Left>
@@ -577,6 +597,7 @@ export default class Main extends Component {
                 <FooterNavigation main={strings.color.primary} />
 
             </Container>
+            </Drawer>
         );
     }
 }

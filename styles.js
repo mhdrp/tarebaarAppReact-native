@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: 0
     },
     container: {
-        flex:1,
+        flex: 1,
         width: "94%",
         marginLeft: "3%",
         marginRight: "3%",
@@ -75,17 +75,17 @@ const styles = StyleSheet.create({
         borderRadius: 5
     },
 
-    textModal:{
+    textModal: {
         textAlign: 'center',
         color: strings.color.txtSecondary,
         fontFamily: strings.font.light,
         fontSize: strings.size.normalText,
     },
-    boxModal:{
+    boxModal: {
         borderRadius: 7,
         height: 220,
         width: "75%",
-        padding:10,
+        padding: 10,
         backgroundColor: "#fff",
         justifyContent: 'center',
         alignItems: 'center'
@@ -546,7 +546,7 @@ const styles = StyleSheet.create({
         textAlign: "left"
     },
     textAlignRight: {
-        alignSelf:"flex-start",
+        alignSelf: "flex-start",
         textAlign: "right",
 
     },
@@ -592,5 +592,33 @@ const styles = StyleSheet.create({
     noPadding: {
         padding: 0
     },
+    drawerMenu: {
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        backgroundColor: strings.color.bgDrawerMenu,
+        alignItems: "flex-start",
+        paddingRight:40,
+        paddingTop:10,
+        paddingBottom:10,
+        paddingLeft:20,
+    },
+    txtDrawerMenu:{
+        backgroundColor:"#f00",
+        color: strings.color.white,
+        margin:1,
+        fontFamily: strings.font.medium,
+        fontSize: strings.size.normalText,
+    },
+    userNameDrawerMenu:{
+        margin:10,
+        fontSize: strings.size.largeText,
+    },
+    iconDrawerMenu: {
+        color: strings.color.white,
+        marginRight: 7,
+        marginLeft: 7,
+    },
+
 });
 export default styles;
