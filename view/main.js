@@ -573,11 +573,8 @@ export default class Main extends Component {
                         />
                     </View>
 
-                    <View>
-
-                    </View>
                 </Content>
-                <FooterNavigation/>
+                <FooterNavigation main={strings.color.primary} />
 
             </Container>
         );

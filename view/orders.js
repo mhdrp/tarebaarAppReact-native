@@ -56,7 +56,7 @@ export default class Orders extends Component {
                     </Tab>
 
                 </Tabs>
-                <FooterNavigation/>
+                <FooterNavigation orders={strings.color.primary}/>
             </Container>
         );
     }

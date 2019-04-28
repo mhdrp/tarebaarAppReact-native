@@ -158,7 +158,7 @@ export default class Cart extends Component {
 
 
 
-                <FooterNavigation/>
+                <FooterNavigation cart={strings.color.primary}/>
             </Container>
         );
     }

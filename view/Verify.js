@@ -117,7 +117,7 @@ export default class Verify extends Component {
                     <Button
                         block
                         style={[styles.btnPrimary, styles.btnColorPrimary]}
-                        onPress={() => this.props.navigation.navigate('Main')}>
+                        onPress={() => this.props.navigation.replace('Main')}>
                         <Text style={styles.txtBtn}>{strings.msg.verification}</Text>
                     </Button>
 

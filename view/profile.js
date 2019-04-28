@@ -190,10 +190,8 @@ export default class Profile extends Component {
                     </View>
 
 
-
-
                 </Content>
-                <FooterNavigation/>
+                <FooterNavigation profile={strings.color.primary}/>
 
             </Container>
         );
