@@ -1,9 +1,9 @@
 import { createStackNavigator, createAppContainer } from 'react-navigation'; // Version can be specified in package.json
-import SignIn from './login/SingIn';
-import Verify from './login/Verify';
+import SignIn from './view/SingIn';
+import Verify from './view/Verify';
 import Main from './view/main';
 import Cart from './view/cart';
-import Orders from './orders/orders';
+import Orders from './view/orders';
 import Wallet from './view/wallet';
 import Messages from './view/messages';
 import List from './view/list';

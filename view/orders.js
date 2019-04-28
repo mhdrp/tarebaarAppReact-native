@@ -14,8 +14,8 @@ import {
     Right,
     H2
 } from 'native-base';
-import Current from './current';
-import Past from './past';
+import Current from '../component/current';
+import Past from '../component/past';
 import strings from "../strings";
 import styles from "../styles";
 import FooterNavigation from "../component/footerNavigation";
