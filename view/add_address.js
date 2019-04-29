@@ -60,7 +60,9 @@ export default class AddAddress extends Component {
                     </H2>
                 </View>
 
-                <Content style={styles.container}>
+                <Content  style={styles.container}
+                          showsHorizontalScrollIndicator={false}
+                          showsVerticalScrollIndicator={false}>
 
                     <View style={styles.container}>
 

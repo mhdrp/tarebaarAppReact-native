@@ -62,7 +62,9 @@ export default class Profile extends Component {
                     </Right>
                 </Header>
 
-                <Content>
+                <Content
+                          showsHorizontalScrollIndicator={false}
+                          showsVerticalScrollIndicator={false}>
                     {/* title box*/}
                     <View style={styles.titleBox}>
                         <H2 style={styles.txtTitleOne}>

@@ -62,7 +62,9 @@ export default class List extends Component {
                     </Left>
                 </Header>
 
-                <Content>
+                <Content
+                          showsHorizontalScrollIndicator={false}
+                          showsVerticalScrollIndicator={false}>
 
                     {/* txt */}
                     <View>

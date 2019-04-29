@@ -32,7 +32,10 @@ export default class SingIn extends Component {
         return (
             <Container style={[styles.body, styles.textRight]}>
                 <StatusBar backgroundColor={strings.color.statusBar} barStyle="dark-content" />
-                <Content style={styles.container}>
+                <Content  style={styles.container}
+                          showsHorizontalScrollIndicator={false}
+                           showsVerticalScrollIndicator={false}>
+
                     <H1 style={[styles.title, styles.mgTop50]}>{strings.msg.login.loginOrRegister}</H1>
                     {/* card input get phone Number */}
                     <Card style={[styles.cardStyle, styles.cardBorderRadius]}>

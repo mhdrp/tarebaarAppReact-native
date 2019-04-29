@@ -80,7 +80,9 @@ export default class Shop extends Component {
                     </Right>
                 </Header>
 
-                <Content>
+                <Content
+                          showsHorizontalScrollIndicator={false}
+                          showsVerticalScrollIndicator={false}>
 
 
                     <View style={styles.container}>

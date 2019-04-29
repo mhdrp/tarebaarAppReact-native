@@ -42,7 +42,9 @@ export default class Messages extends Component {
                     </H2>
                 </View>
 
-                <Content style={styles.container}>
+                <Content  style={styles.container}
+                          showsHorizontalScrollIndicator={false}
+                          showsVerticalScrollIndicator={false}>
 
 
                     <Card style={[styles.cardStyle,styles.cardBorderRadius]}>

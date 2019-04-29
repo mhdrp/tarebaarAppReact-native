@@ -79,7 +79,9 @@ export default class Wallet extends Component {
                     </H2>
                 </View>
 
-                <Content style={styles.container}>
+                <Content  style={styles.container}
+                          showsHorizontalScrollIndicator={false}
+                          showsVerticalScrollIndicator={false}>
 
                     <View style={styles.titleBoxCenter}>
                         <H2 style={styles.txtTitleOneCenter}>
