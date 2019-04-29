@@ -22,7 +22,8 @@ export default {
 
         title: "#404852",
         text: "#afb5c0",
-
+        textMessage: "#848a95",
+        txt: "#404852",
         primary: "#535bfe",
         bgDrawerMenu: "#535bfe",
         primaryBtn: "#535bfe",
@@ -98,6 +99,7 @@ export default {
         support:"پشتیبانی",
         introduceToFriends:"معرفی به دوستان",
         aboutTarebaar:"درباره تره بار",
+        whayTarebaar:"چرا تره بار",
         nameAndFamily:"نام و نام خانوادگی",
         ok:"باشه",
         cancel:"انصراف",

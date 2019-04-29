@@ -479,8 +479,9 @@ const styles = StyleSheet.create({
         lineHeight: 36,
     },
     txtMessages: {
-        textAlign: 'center',
-        color: strings.color.text,
+        alignSelf:"flex-start",
+        textAlign: 'left',
+        color: strings.color.textMessage,
         fontFamily: strings.font.light,
         fontSize: strings.size.normalText,
         lineHeight: 30,
