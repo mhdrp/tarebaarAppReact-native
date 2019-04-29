@@ -247,6 +247,10 @@ const styles = StyleSheet.create({
     imgStore: {
         width: 50, height: 50, borderRadius: 7, marginLeft: 15, marginRight: 15
     },
+    imgStoreDrawer: {
+        width: 100, height: 100, borderRadius: 10, marginLeft: 15, marginRight: 15
+    },
+
 
     searchBox: {
         flex: 1,
@@ -451,7 +455,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     txtTitleOne: {
-        textAlign: 'right',
+        textAlign: 'left',
         color: strings.color.title,
         fontFamily: strings.font.medium,
         fontSize: strings.size.smallTitle,
@@ -459,7 +463,7 @@ const styles = StyleSheet.create({
     },
 
     titleNormal: {
-        textAlign: 'right',
+        textAlign: 'left',
         color: strings.color.title,
         fontFamily: strings.font.medium,
         fontSize: strings.size.smallerTitle,
@@ -620,5 +624,37 @@ const styles = StyleSheet.create({
         marginLeft: 7,
     },
 
+    drawerShop:{
+        backgroundColor:strings.color.bgColor,
+        flex:1,
+        flexDirection: 'column',
+        alignItems:"center",
+        justifyContent:"flex-start",
+        borderBottomLeftRadius:20,
+        borderBottomRightRadius:20,
+        borderBottomWidth:1,
+        padding:20,
+        paddingTop:50,
+        borderBottomColor:strings.color.borderColor,
+
+    },
+    heightText:{
+        height:25
+    },
+    itemCatShop:{
+        justifyContent:"center",
+        alignItems:"center",
+        textAlign: 'center',
+        backgroundColor:strings.color.bgCat,
+        color: strings.color.primary,
+        fontFamily: strings.font.medium,
+        fontSize: strings.size.smallText,
+        padding:10,
+        overflow:"hidden",
+        borderRadius:15,
+        height:30,
+        lineHeight:13,
+        margin:7,
+    }
 });
 export default styles;

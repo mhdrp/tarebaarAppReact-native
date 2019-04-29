@@ -26,7 +26,8 @@ import strings from '../strings'
 import CustomIcon from '../icons/CustomIcon'
 import {Rating} from "react-native-ratings";
 import CompleteComponent from '../counter/CompleteComponent'
-
+import Drawer from 'react-native-drawer'
+import DrawerShop from '../component/drawer-shop'
 I18nManager.forceRTL(true);
 
 export default class Shop extends Component {
@@ -43,14 +44,30 @@ export default class Shop extends Component {
         };
     }
 
-    GetGridViewItem(item) {
-        Alert.alert(item);
-    }
-
+    closeControlPanel = () => {
+        this._drawer.close()
+    };
+    openControlPanel = () => {
+        this._drawer.open()
+    };
     render() {
         const {goBack} = this.props.navigation;
         const win = Dimensions.get('window');
         return (
+            <Drawer
+                type="overlay"
+                content={<DrawerShop closeDrawer={() => {this._drawer.close(); }} />}
+                tapToClose={true}
+                side="top"
+                openDrawerOffset={0.4} // 40% gap on the right side of drawer
+                panCloseMask={0.4} // 40% baghi mande click koni close she
+                closedDrawerOffset={-3}
+                styles={{shadowColor: '#000000', shadowOpacity: 0.8, shadowRadius: 3}}
+                ref={(ref) => this._drawer = ref}
+                tweenHandler={(ratio) => ({
+                    main: { opacity:(2-ratio)/2 }
+                })}
+            >
             <Container style={styles.body}>
 
                 <Header iosBarStyle={"dark-content"} androidStatusBarColor={strings.color.statusBar}
@@ -74,8 +91,8 @@ export default class Shop extends Component {
                             </Title>*/}
                     </Body>
                     <Right>
-                        <Button transparent onPress={() => this.props.navigation.navigate('Messages')}>
-                            <CustomIcon style={styles.iconHeader} name='mail'/>
+                        <Button transparent onPress={() => {this._drawer.open()}}>
+                            <CustomIcon style={styles.iconHeader} name='alert-circle'/>
                         </Button>
                     </Right>
                 </Header>
@@ -107,14 +124,7 @@ export default class Shop extends Component {
                         </View>
 
                         {/*image and name store*/}
-                        <View style={{
-                            flex: 1,
-                            flexDirection: 'row',
-                            alignItems: 'center',
-                            alignSelf: 'flex-start',
-                            marginBottom: 10,
-                            justifyContent: 'space-between',
-                        }}>
+                        <View style={{flex: 1, flexDirection: 'row', alignItems: 'center', alignSelf: 'flex-start', marginBottom: 10, justifyContent: 'space-between',}}>
                             <View style={styles.itemRow}>
                                 <CustomIcon
                                     style={[styles.itemIcon, styles.colorStar]} name='star'/>
@@ -250,6 +260,7 @@ export default class Shop extends Component {
                 </Content>
 
             </Container>
+            </Drawer>
         );
     }
 }

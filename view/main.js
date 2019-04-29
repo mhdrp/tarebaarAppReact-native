@@ -83,7 +83,6 @@ export default class Main extends Component {
                 tweenHandler={(ratio) => ({
                     main: { opacity:(2-ratio)/2 }
                 })}
-
             >
             <Container style={styles.body}>
                 <Header iosBarStyle={"dark-content"} androidStatusBarColor={strings.color.statusBar}
