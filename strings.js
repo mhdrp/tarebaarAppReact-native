@@ -95,9 +95,13 @@ export default {
         plaque:"پلاک",
         unit:"واحد",
         email:"ایمیل",
+        support:"پشتیبانی",
+        introduceToFriends:"معرفی به دوستان",
+        aboutTarebaar:"درباره تره بار",
         nameAndFamily:"نام و نام خانوادگی",
         ok:"باشه",
         cancel:"انصراف",
+        help:"راهنما",
         enterMobileNumber:"شماره موبایل را وارد کنید",
         enterCorrectMobileNumber:"لطفا شماره موبایل را صحیح وارد کنید",
         CorrectFormatMobileNumber:"فرمت صحیح : ۰۹xxxxxxxxx",
@@ -112,6 +116,7 @@ export default {
 
         /* wallet */
         increaseCredit:"افزایش اعتبار",
+        credit:"اعتبار",
         yourCurrentCredentials:"اعتبار فعلی شما",
         txtSelectAmountPrice:"مبلغ مورد نظر برای افزایش اعتبار را انتخاب/وارد کنید",
 

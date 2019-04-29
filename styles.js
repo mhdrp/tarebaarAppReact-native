@@ -604,7 +604,6 @@ const styles = StyleSheet.create({
         paddingLeft:20,
     },
     txtDrawerMenu:{
-        backgroundColor:"#f00",
         color: strings.color.white,
         margin:1,
         fontFamily: strings.font.medium,
