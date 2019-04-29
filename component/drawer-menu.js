@@ -4,7 +4,7 @@ import {
     H3,
     Text, Thumbnail,
 } from 'native-base'
-import {I18nManager, TouchableOpacity, View,} from 'react-native';
+import {I18nManager, TouchableOpacity, View,Linking} from 'react-native';
 import {withNavigation} from 'react-navigation';
 import styles from '../styles'
 import strings from '../strings'
@@ -13,7 +13,17 @@ import CustomIcon from '../icons/CustomIcon'
 I18nManager.forceRTL(true);
 
 class DrawerMenu extends Component {
-
+    callNumber = (url) =>{
+        Linking.canOpenURL(url).then(supported => {
+            if (!supported) {
+                console.log('Can\'t handle url: ' + url);
+            } else {
+                setTimeout(()=>{
+                    return Linking.openURL(url);
+                },300)
+            }
+        }).catch(err => console.error('An error occurred', err));
+    };
     render() {
         const uri = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlm-Uwv34jrl2PuzQiBjhNXva1-3NEN02so2C1PJbuYK_t6ajl";
         return (
@@ -85,7 +95,7 @@ class DrawerMenu extends Component {
                     <TouchableOpacity style={{flex: 1, flexDirection: 'row', alignItems: 'center', height: 20}}
                                       onPress={() => {
                                           this.props.closeDrawer();
-                                          this.props.navigation.navigate('Messages')
+                                          this.props.navigation.navigate('AboutTarebaar')
                                       }}
                     >
                         <CustomIcon style={styles.iconDrawerMenu} size={20} name="award"/>
@@ -100,7 +110,7 @@ class DrawerMenu extends Component {
                     <TouchableOpacity style={{flex: 1, flexDirection: 'row', alignItems: 'center', height: 20}}
                                       onPress={() => {
                                           this.props.closeDrawer();
-                                          this.props.navigation.navigate('Messages')
+                                          this.callNumber(`tel:+919120258966`);
                                       }}
                     >
                         <CustomIcon style={styles.iconDrawerMenu} size={20} name="headphones"/>
