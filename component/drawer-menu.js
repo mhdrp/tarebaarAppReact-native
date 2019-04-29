@@ -101,7 +101,7 @@ class DrawerMenu extends Component {
                     <TouchableOpacity style={{flex: 1, flexDirection: 'row', alignItems: 'center', height: 20}}
                                       onPress={() => {
                                           this.props.closeDrawer();
-                                          this.props.navigation.navigate('Messages')
+                                          this.props.navigation.navigate('Help')
                                       }}
                     >
                         <CustomIcon style={styles.iconDrawerMenu} size={20} name="book"/>
@@ -117,12 +117,10 @@ class DrawerMenu extends Component {
                                       }}
                     >
                         <CustomIcon style={styles.iconDrawerMenu} size={20} name="award"/>
-
                         <Text style={styles.txtDrawerMenu}>
                             {strings.msg.aboutTarebaar}
                         </Text>
                     </TouchableOpacity>
-
                 </View>
                 <View style={{flex: 1, flexDirection: 'row', alignItems: 'center',}}>
                     <TouchableOpacity style={{flex: 1, flexDirection: 'row', alignItems: 'center', height: 20}}

@@ -14,6 +14,7 @@ import ListAddress from './view/list_address';
 import AddAddress from './view/add_address';
 import HistoryOrder from './view/history_order';
 import AboutTarebaar from './view/about_tarebaar';
+import Help from './view/help';
 import Shop from './view/shop';
 import Splash from './view/splash';
 
@@ -34,6 +35,7 @@ const RootStack = createStackNavigator(
         AddAddress: AddAddress,
         HistoryOrder: HistoryOrder,
         AboutTarebaar: AboutTarebaar,
+        Help: Help,
         Shop: Shop,
         Splash: Splash,
     },
