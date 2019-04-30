@@ -6,7 +6,7 @@ import {withNavigation} from 'react-navigation';
 import styles from '../styles'
 import strings from '../strings'
 import CustomIcon from '../icons/CustomIcon'
-
+import { Rating, AirbnbRating } from 'react-native-ratings';
 I18nManager.forceRTL(true);
 
 class DrawerShop extends Component {
@@ -26,18 +26,38 @@ class DrawerShop extends Component {
                 </View>
                 {/*image and name store*/}
 
-                <View style={{flexDirection: 'row', alignItems: 'flex-start', alignSelf: 'flex-start', marginBottom: 10, justifyContent: 'flex-start',}}>
-                        <H2 style={[styles.txtMore]}>
-                            (250) 4,9
-                        </H2>
-                </View>
-                <View style={{flexDirection: 'row', alignItems: 'center', alignSelf: 'flex-start', marginBottom: 10, justifyContent: 'space-between',}}>
 
+
+                <View style={[styles.titleBox,{justifyContent: 'flex-start'}]}>
+                   <View style={{    justifyContent: 'center',
+                       alignItems: 'center', marginRight:7}}>
+                       {/* rating store */}
+                       <Rating
+                           type='custom'
+                           readonly
+                           imageSize={10}
+                           startingValue={5}
+                       />
+                   </View>
+                    <Text style={[styles.txtMore,styles.heightText]}>
+                        (250) 4,9
+                    </Text>
+                </View>
+
+                <View style={{flexDirection: 'row', alignItems: 'center', alignSelf: 'flex-start', marginBottom: 10, justifyContent: 'space-between',}}>
                     <View style={styles.itemRow}>
                         <CustomIcon
                             style={[styles.itemIcon, styles.colorPrimary]} name='dollar-sign'/>
                         <H2 style={styles.txtMore}>
                             تخفیف تا ۱۰٪
+                        </H2>
+
+                    </View>
+                    <View style={styles.itemRow}>
+                        <CustomIcon
+                            style={[styles.itemIcon, styles.colorPrimary]} name='banknote'/>
+                        <H2 style={styles.txtMore}>
+                           پرداخت آنلاین
                         </H2>
 
                     </View>
@@ -50,15 +70,14 @@ class DrawerShop extends Component {
 
                     </View>
                 </View>
-                <View style={{ flexDirection: 'row', alignItems: 'center', alignSelf: 'flex-start', marginBottom: 10, justifyContent: 'space-between',}}>
-                    <View style={styles.itemRow}>
-                        <CustomIcon
-                            style={[styles.itemIcon, styles.colorPrimary]} name='map-pin'/>
-                        <H2 style={styles.txtMore}>
-                           خیابان شریعتی , خیابان شهرید رجایی ,کوچه مقصمی ,پلاک ۱۰
-                        </H2>
-                    </View>
 
+
+                <View style={[styles.titleBox,{justifyContent: 'flex-start',}]}>
+                    <CustomIcon
+                        style={[styles.itemIcon, styles.colorPrimary]} name='map-pin'/>
+                    <Text style={[styles.txtMore,styles.heightText]}>
+                        خیابان شریعتی , خیابان شهرید رجایی ,کوچه مقصمی ,پلاک ۱۰
+                    </Text>
                 </View>
 
                 {/* hours work*/}

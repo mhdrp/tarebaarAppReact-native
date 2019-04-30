@@ -40,7 +40,7 @@ const RootStack = createStackNavigator(
         Splash: Splash,
     },
     {
-        initialRouteName: 'Shop',
+        initialRouteName: 'Main',
         headerMode: 'none',
     }
 );

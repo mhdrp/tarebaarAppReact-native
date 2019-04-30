@@ -64,9 +64,7 @@ export default class Shop extends Component {
                 closedDrawerOffset={-3}
                 styles={{shadowColor: '#000000', shadowOpacity: 0.8, shadowRadius: 3}}
                 ref={(ref) => this._drawer = ref}
-                tweenHandler={(ratio) => ({
-                    main: { opacity:(2-ratio)/2 }
-                })}
+                tweenHandler={(ratio) => ({ mainOverlay:{ backgroundColor:"rgba(50, 50, 50,"+ (ratio)/1.5+")"}, })}
             >
             <Container style={styles.body}>
 

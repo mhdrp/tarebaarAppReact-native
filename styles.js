@@ -625,7 +625,7 @@ const styles = StyleSheet.create({
     },
 
     drawerShop:{
-        backgroundColor:strings.color.bgColor,
+        backgroundColor:strings.color.bgDrawerShop,
         flex:1,
         flexDirection: 'column',
         alignItems:"center",
