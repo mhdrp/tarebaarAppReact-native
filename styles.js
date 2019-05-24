@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row-reverse'
     },
     rightText: {
-        textAlign: "right",
+        textAlign: "left",
         alignItems: "flex-start",
     },
     title: {
@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
         height: 40,
         paddingBottom: 2,
         /* TODO change textAlign to left in android */
-        textAlign: "right",
+        textAlign: "left",
         alignItems: 'flex-start',
         alignSelf: 'flex-start',
     },
@@ -276,7 +276,7 @@ const styles = StyleSheet.create({
         fontFamily: strings.font.light,
         fontSize: strings.size.normalText,
         height: 40,
-        textAlign: "right",
+        textAlign: "left",
         paddingBottom: 4,
     },
     iconSearchBox: {
@@ -552,7 +552,7 @@ const styles = StyleSheet.create({
     },
     textAlignRight: {
         alignSelf: "flex-start",
-        textAlign: "right",
+        textAlign: "left",
 
     },
 
@@ -655,6 +655,19 @@ const styles = StyleSheet.create({
         height:30,
         lineHeight:13,
         margin:7,
+    },
+    loading:{
+        backgroundColor:strings.color.bgColor,
+        width:"100%",
+        height:"100%",
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    loadingPleaseWait:{
+        marginTop:20,
+        color: strings.color.text,
+        fontFamily: strings.font.medium,
+        fontSize: strings.size.normalText,
     }
 });
 export default styles;

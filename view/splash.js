@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Alert, I18nManager, Image, StatusBar, TouchableHighlight, View} from 'react-native';
+import {ActivityIndicator, Alert, I18nManager, Image, StatusBar, TouchableHighlight, View} from 'react-native';
 
 import styles from '../styles'
 import strings from "../strings";
@@ -11,7 +11,7 @@ export default class Splash extends Component {
         setTimeout(
             ()=>
                 (this.props.navigation.replace('SignIn')),
-            300)
+            3000)
     }
 
     constructor() {
@@ -31,7 +31,10 @@ export default class Splash extends Component {
                    justifyContent: "center",
                    alignItems: 'center',
                }}  source={require('../assets/logo.jpg')}/>
-
+           <View style={{ marginTop:20
+           }} >
+               <ActivityIndicator size="large" color={strings.color.primary} />
+           </View>
            </View>
         );
     }

@@ -17,12 +17,29 @@ import CompleteComponent from '../counter/CompleteComponent'
 
 import FooterNavigation from "../component/footerNavigation";
 import CustomIcon from "../icons/CustomIcon";
+import Loading from "../component/loading";
+import Drawer from "react-native-drawer";
 
 I18nManager.forceRTL(true);
 
 export default class Cart extends Component {
     constructor() {
         super();
+        this.state = {
+            stateLoading: true,
+        };
+    }
+
+    loading() {
+        setTimeout(() => {
+            this.setState({
+                stateLoading: false,
+            })
+        }, 1000)
+    }
+
+    componentDidMount() {
+        this.loading();
     }
 
     render() {
@@ -30,7 +47,7 @@ export default class Cart extends Component {
         const uri = "https://img1.cookinglight.timeinc.net/sites/default/files/styles/4_3_horizontal_-_900x675/public/image/2017/06/main/quinoa-bowls-avocado-egg-108p68.jpg?itok=MVkxuumL";
         return (
             <Container style={styles.body}>
-
+                {this.state.stateLoading ? <Loading/> : null}
                 <Header iosBarStyle={"dark-content"} androidStatusBarColor={strings.color.statusBar}
                         style={styles.headerTop}/>
 
@@ -41,16 +58,16 @@ export default class Cart extends Component {
                 </View>
 
 
-                <View style={{flex:1}}>
+                <View style={{flex: 1}}>
 
-                    <View style={{flex:4}}>
+                    <View style={{flex: 6}}>
                         <Content style={styles.container}
                                  showsHorizontalScrollIndicator={false}
                                  showsVerticalScrollIndicator={false}
                         >
                             <Card style={{flex: 1, marginLeft: "10%", height: 100, borderRadius: 5}}>
                                 <CardItem style={styles.cardBorderRadius}>
-                                    <Body style={{paddingLeft:45}}>
+                                    <Body style={{paddingLeft: 45}}>
                                     <View style={{
                                         position: 'absolute',
                                         top: -2,
@@ -61,7 +78,12 @@ export default class Cart extends Component {
                                         elevation: 1,
                                     }}>
                                         <Thumbnail
-                                            style={{height: 80, justifyContent: "flex-start", width: "100%", borderRadius: 7}}
+                                            style={{
+                                                height: 80,
+                                                justifyContent: "flex-start",
+                                                width: "100%",
+                                                borderRadius: 7
+                                            }}
                                             square source={{uri: uri}}/>
                                     </View>
                                     <Text style={{
@@ -97,7 +119,7 @@ export default class Cart extends Component {
                                         <View style={{
                                             textAlign: "right",
                                             lineHeight: 24,
-                                            height:25,
+                                            height: 25,
                                             alignItems: 'center',
                                             justifyContent: 'center',
                                             color: strings.color.primary,
@@ -114,11 +136,10 @@ export default class Cart extends Component {
                             </Card>
 
 
-
                         </Content>
 
                     </View>
-                    <View style={{flex:1}}>
+                    <View style={{flex: 2}}>
                         <View style={{padding: 15, flex: 1}}>
                             {/* title box*/}
                             <View style={{flex: 1, justifyContent: 'space-between', flexDirection: 'row',}}>
@@ -149,8 +170,19 @@ export default class Cart extends Component {
                         </View>
                     </View>
 
-                </View>
+                    <View style={{flex: 1, width: "94%",
+                        marginLeft: "3%",
+                        marginRight: "3%",}}>
+                        <Button
+                            block
+                            style={[styles.btnPrimary, styles.btnColorPrimary]}
+                            onPress={() => this.props.navigation.replace('CheckOut')}>
+                            <Text style={styles.txtBtn}>{strings.msg.verification}</Text>
+                        </Button>
+                    </View>
 
+
+                </View>
 
 
                 <FooterNavigation cart={strings.color.primary}/>

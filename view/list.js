@@ -20,6 +20,8 @@ import styles from '../styles'
 import strings from '../strings'
 import {Rating, AirbnbRating} from 'react-native-ratings';
 import CustomIcon from "../icons/CustomIcon";
+import Loading from "../component/loading";
+import Drawer from "react-native-drawer";
 
 
 I18nManager.forceRTL(true);
@@ -28,6 +30,7 @@ export default class List extends Component {
     constructor() {
         super();
         this.state = {
+            stateLoading: true,
             GridListItems: [
                 {key: "1", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 5,countRate:40},
                 {key: "2", name: "فروشگاه سوپر علی", location: "خیابان شریعتی", rateStore: 4,countRate:40},
@@ -46,13 +49,22 @@ export default class List extends Component {
     GetGridViewItem(item) {
         Alert.alert(item);
     }
-
+    loading() {
+        setTimeout(() => {
+            this.setState({
+                stateLoading: false,
+            })
+        }, 2000)
+    }
+    componentDidMount() {
+        this.loading();
+    }
     render() {
         const {goBack} = this.props.navigation;
         const uri = "https://img1.cookinglight.timeinc.net/sites/default/files/styles/4_3_horizontal_-_900x675/public/image/2017/06/main/quinoa-bowls-avocado-egg-108p68.jpg?itok=MVkxuumL";
         return (
             <Container style={styles.body}>
-
+                {this.state.stateLoading ? <Loading/> : null}
                 <Header hasTabs iosBarStyle={"dark-content"} androidStatusBarColor={strings.color.statusBar}
                         style={styles.headerTop}>
                     <Left style={styles.itemRight}>

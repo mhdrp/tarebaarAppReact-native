@@ -15,8 +15,8 @@ class Past extends Component {
         return (
             <Container style={styles.body}>
                 <Content style={styles.container}>
-                    <TouchableHighlight
-                        onPress={() => this.props.navigation.navigate('History_order')}
+                    <TouchableOpacity
+                        onPress={() => this.props.navigation.navigate('HistoryOrder')}
                     >
                     <Card style={styles.cardBorderRadius}>
                         <CardItem style={styles.cardBorderRadius}>
@@ -110,7 +110,7 @@ class Past extends Component {
                         </CardItem>
 
                     </Card>
-                    </TouchableHighlight>
+                    </TouchableOpacity>
                 </Content>
             </Container>
         );

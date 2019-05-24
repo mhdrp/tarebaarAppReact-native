@@ -8,7 +8,7 @@ import {
     CardItem,
     Icon,
     Header,
-    Right, H2, Tabs, Tab, Body, Thumbnail, H3,Left
+    Right, H2, Tabs, Tab, Body, Thumbnail, H3, Left
 } from 'native-base'
 import styles from '../styles'
 import strings from '../strings'
@@ -16,12 +16,27 @@ import {I18nManager, Alert, View, ScrollView, TouchableOpacity,} from 'react-nat
 import CompleteComponent from '../counter/CompleteComponent'
 
 import CustomIcon from '../icons/CustomIcon'
+import Loading from "../component/loading";
 
 I18nManager.forceRTL(true);
 
 export default class CheckOut extends Component {
     constructor() {
         super();
+        this.state = {
+            stateLoading: true,
+        };
+    }
+    loading() {
+        setTimeout(() => {
+            this.setState({
+                stateLoading: false,
+            })
+        }, 1000)
+    }
+
+    componentDidMount() {
+        this.loading();
     }
 
     render() {
@@ -29,6 +44,7 @@ export default class CheckOut extends Component {
         const uri = "https://img1.cookinglight.timeinc.net/sites/default/files/styles/4_3_horizontal_-_900x675/public/image/2017/06/main/quinoa-bowls-avocado-egg-108p68.jpg?itok=MVkxuumL";
         return (
             <Container style={styles.body}>
+                {this.state.stateLoading ? <Loading/> : null}
                 <Header hasTabs iosBarStyle={"dark-content"} androidStatusBarColor={strings.color.statusBar}
                         style={styles.headerTop}>
                     <Left style={styles.itemRight}>
@@ -38,7 +54,7 @@ export default class CheckOut extends Component {
                     </Left>
                 </Header>
 
-
+                <View style={{flex:8}}>
                 <Content style={styles.container}
                          showsHorizontalScrollIndicator={false}
                          showsVerticalScrollIndicator={false}
@@ -316,7 +332,8 @@ export default class CheckOut extends Component {
                                     alignItems: 'center'
 
                                 }}>
-                                    <View style={{justifyContent: 'space-between', flexDirection: 'column',      padding: 7, }}>
+                                    <View
+                                        style={{justifyContent: 'space-between', flexDirection: 'column', padding: 7,}}>
 
                                         <H3 style={[styles.txtMorePrimary, styles.mgBottom10]}>
                                             خیابان شریعتی,ابتدای پل صدر خ مصطفی
@@ -358,7 +375,8 @@ export default class CheckOut extends Component {
                                     alignItems: 'center'
 
                                 }}>
-                                    <View style={{justifyContent: 'space-between', flexDirection: 'column',      padding: 7, }}>
+                                    <View
+                                        style={{justifyContent: 'space-between', flexDirection: 'column', padding: 7,}}>
 
                                         <H3 style={[styles.txtMorePrimary, styles.mgBottom10]}>
                                             خیابان شریعتی,ابتدای پل صدر خ مصطفی
@@ -421,22 +439,24 @@ export default class CheckOut extends Component {
                     </View>
 
                 </Content>
-
-                <View style={styles.container}>
-                    {/* card button */}
-
-                    <Card style={[styles.cardBorderButton]}>
-                        <Button
-                            block
-                            style={[styles.btnPrimary, styles.btnColorPrimary]}
-                            onPress={() => {
-                                this.props.navigation.navigate('Verify');
-                            }}>
-                            <Text style={styles.txtBtn}>{strings.msg.continueShopping}</Text>
-                        </Button>
-                    </Card>
                 </View>
+                <View style={{flex:1}}>
+                    <View style={styles.container}>
+                        {/* card button */}
 
+                        <Card style={[styles.cardBorderButton]}>
+                            <Button
+                                block
+                                style={[styles.btnPrimary, styles.btnColorPrimary]}
+                                onPress={() => {
+                                    this.props.navigation.navigate('HistoryOrder');
+                                }}>
+                                <Text style={styles.txtBtn}>{strings.msg.continueShopping}</Text>
+                            </Button>
+                        </Card>
+                    </View>
+
+                </View>
 
             </Container>
         );

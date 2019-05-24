@@ -35,14 +35,29 @@ import strings from '../strings'
 
 import FooterNavigation from '../component/footerNavigation'
 import CustomIcon from '../icons/CustomIcon'
+import Modal from "react-native-modal";
 
 I18nManager.forceRTL(true);
 
 export default class Profile extends Component {
     constructor() {
         super();
+        this.state = {
+
+            isModalExit: false,
+            txtStates: "",
+            functionBtn: () => {
+            },
+
+        };
+    }
+    _toggleModal() {
+        this.setState({isModalVisible: !this.state.isModalVisible});
     }
 
+    _toggleModalExit() {
+        this.setState({isModalExit: !this.state.isModalExit});
+    }
     render() {
         const uri = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlm-Uwv34jrl2PuzQiBjhNXva1-3NEN02so2C1PJbuYK_t6ajl";
         const win = Dimensions.get('window');
@@ -56,7 +71,10 @@ export default class Profile extends Component {
 
                     </Body>
                     <Right>
-                        <Button transparent onPress={() => (Alert.alert("go out"))}>
+                        <Button transparent  onPress={() =>
+                            this.setState({
+                                isModalExit: true,
+                            })}>
                             <CustomIcon style={styles.iconHeaderColor} size={20} name="log-out"/>
                         </Button>
                     </Right>
@@ -194,7 +212,39 @@ export default class Profile extends Component {
 
                 </Content>
                 <FooterNavigation profile={strings.color.primary}/>
+                <View>
+                    <Modal isVisible={this.state.isModalExit}>
+                        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+                            <View style={styles.boxModal}>
 
+                                <Text style={styles.textModal}>
+                                    {strings.msg.doYouSignOut}
+                                </Text>
+                                <View style={{flexDirection: 'row'}}>
+                                    <TouchableOpacity onPress={() => {
+                                        this._toggleModalExit();
+
+                                        this.props.navigation.replace('SignIn')
+                                    }
+                                    }>
+                                        <View style={[styles.btnSmallBorder, styles.mgAll10]}>
+                                            <Text style={styles.txtSmallBtnBorder}>
+                                                {strings.msg.ok}
+                                            </Text>
+                                        </View>
+                                    </TouchableOpacity>
+                                    <TouchableOpacity onPress={() => this._toggleModalExit()}>
+                                        <View style={[styles.btnSmallBorder, styles.mgAll10]}>
+                                            <Text style={styles.txtSmallBtnBorder}>
+                                                {strings.msg.cancel}
+                                            </Text>
+                                        </View>
+                                    </TouchableOpacity>
+                                </View>
+                            </View>
+                        </View>
+                    </Modal>
+                </View>
             </Container>
         );
     }

@@ -130,6 +130,7 @@ export default {
         /* messages*/
         messages: "پیام ها",
         continueShopping: "ادامه خرید",
+        pleaseWait: "لطفا منتظر بمانید",
     },
 
     size: {
@@ -159,7 +160,7 @@ export default {
     },
 
     font: {
-        medium: "IRANSansWeb-Medium",
-        light: "IRANSansWeb-Light",
+        medium: "IRANSansWeb Medium",
+        light: "IRANSansWeb Light",
     },
 }

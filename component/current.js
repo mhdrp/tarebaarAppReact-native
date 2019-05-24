@@ -14,8 +14,8 @@ class Current extends Component {
             <Container style={styles.body}>
 
                 <Content style={styles.container}>
-                    <TouchableHighlight
-                        onPress={() => this.props.navigation.navigate('History_order')}
+                    <TouchableOpacity
+                        onPress={() => this.props.navigation.navigate('HistoryOrder')}
                     >
                         <Card style={styles.cardBorderRadius}>
                             <CardItem style={styles.cardBorderRadius}>
@@ -92,7 +92,7 @@ class Current extends Component {
                                 </Body>
                             </CardItem>
                         </Card>
-                    </TouchableHighlight>
+                    </TouchableOpacity>
 
                 </Content>
             </Container>

@@ -28,12 +28,14 @@ import {Rating} from "react-native-ratings";
 import CompleteComponent from '../counter/CompleteComponent'
 import Drawer from 'react-native-drawer'
 import DrawerShop from '../component/drawer-shop'
+import Loading from '../component/loading'
 I18nManager.forceRTL(true);
 
 export default class Shop extends Component {
     constructor() {
         super();
         this.state = {
+            stateLoading: true,
             GridListItems: [
                 {key: "1", name: "چیز برگر فرانسوی", price: 1000, priceOff: 900},
                 {key: "2", name: "چیز برگر", price: 2000, priceOff: 15000},
@@ -42,6 +44,17 @@ export default class Shop extends Component {
 
             ]
         };
+    }
+
+    loading() {
+        setTimeout(() => {
+            this.setState({
+                stateLoading: false,
+            })
+        }, 2000)
+    }
+    componentDidMount() {
+        this.loading();
     }
 
     closeControlPanel = () => {
@@ -66,6 +79,7 @@ export default class Shop extends Component {
                 ref={(ref) => this._drawer = ref}
                 tweenHandler={(ratio) => ({ mainOverlay:{ backgroundColor:"rgba(50, 50, 50,"+ (ratio)/1.5+")"}, })}
             >
+                {this.state.stateLoading ? <Loading/> : null}
             <Container style={styles.body}>
 
                 <Header iosBarStyle={"dark-content"} androidStatusBarColor={strings.color.statusBar}
@@ -153,7 +167,7 @@ export default class Shop extends Component {
                             <Button transparent style={{flex: 1}}>
                                 <Icon style={styles.iconSearchBox} name='search'/>
                             </Button>
-                            <View style={styles.itemInputSearch}>
+                            <View style={[styles.itemInputSearch, {alignItems: 'flex-start'}]}>
 
                                 <Input style={[styles.txtInputSearch]}
                                        placeholderTextColor={strings.color.txtPlaceInput}
